@@ -8,13 +8,52 @@
 
 /* Begin PBXBuildFile section */
 		18DD46481AF9104500A7992C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46471AF9104500A7992C /* AppDelegate.swift */; };
-		18DD464A1AF9104500A7992C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 18DD46491AF9104500A7992C /* GameScene.sks */; };
-		18DD464C1AF9104500A7992C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD464B1AF9104500A7992C /* GameScene.swift */; };
 		18DD464E1AF9104500A7992C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD464D1AF9104500A7992C /* GameViewController.swift */; };
 		18DD46511AF9104500A7992C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DD464F1AF9104500A7992C /* Main.storyboard */; };
 		18DD46531AF9104500A7992C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DD46521AF9104500A7992C /* Images.xcassets */; };
 		18DD46561AF9104500A7992C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DD46541AF9104500A7992C /* LaunchScreen.xib */; };
 		18DD46621AF9104500A7992C /* ActionSwiftSKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46611AF9104500A7992C /* ActionSwiftSKTests.swift */; };
+		18DD46751AF9105700A7992C /* ActionSwift3.h in Headers */ = {isa = PBXBuildFile; fileRef = 18DD46741AF9105700A7992C /* ActionSwift3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18DD467B1AF9105700A7992C /* ActionSwift3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DD46701AF9105700A7992C /* ActionSwift3.framework */; };
+		18DD46841AF9105700A7992C /* ActionSwift3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46831AF9105700A7992C /* ActionSwift3Tests.swift */; };
+		18DD46871AF9105700A7992C /* ActionSwift3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DD46701AF9105700A7992C /* ActionSwift3.framework */; };
+		18DD46881AF9105700A7992C /* ActionSwift3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18DD46701AF9105700A7992C /* ActionSwift3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18DD46911AF9110500A7992C /* EventDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46901AF9110500A7992C /* EventDispatcher.swift */; };
+		18DD46C31AF92D9700A7992C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46C21AF92D9700A7992C /* Event.swift */; };
+		18DD46C81AF9345B00A7992C /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46C71AF9345B00A7992C /* Object.swift */; };
+		18DD46CA1AF9423100A7992C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46C91AF9423100A7992C /* Array.swift */; };
+		18DD46CD1AF9510100A7992C /* DisplayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46CC1AF9510100A7992C /* DisplayObject.swift */; };
+		18DD46D31AF96D3F00A7992C /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46D21AF96D3F00A7992C /* EventHandler.swift */; };
+		18DD46D51AF9B3A000A7992C /* InteractiveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46D41AF9B3A000A7992C /* InteractiveObject.swift */; };
+		18DD46D71AF9B3B400A7992C /* DisplayObjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46D61AF9B3B400A7992C /* DisplayObjectContainer.swift */; };
+		18DD46DB1AFA5F6800A7992C /* Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46DA1AFA5F6800A7992C /* Touch.swift */; };
+		18DD46DD1AFA612D00A7992C /* TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46DC1AFA612D00A7992C /* TouchEvent.swift */; };
+		18DD46DF1AFA831200A7992C /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46DE1AFA831200A7992C /* Global.swift */; };
+		18DD46E11AFAC8E300A7992C /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46E01AFAC8E300A7992C /* Sprite.swift */; };
+		18DD46E31AFAC96100A7992C /* Graphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46E21AFAC96100A7992C /* Graphics.swift */; };
+		18DD46E61AFB040600A7992C /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46E51AFB040600A7992C /* Stage.swift */; };
+		18DD46E81AFB0BEC00A7992C /* MyDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46E71AFB0BEC00A7992C /* MyDrawView.swift */; };
+		18DD46EB1AFBAE9500A7992C /* StageScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46EA1AFBAE9500A7992C /* StageScene.swift */; };
+		18DD46FD1AFBB4A300A7992C /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46E51AFB040600A7992C /* Stage.swift */; };
+		18DD46FE1AFBB4A700A7992C /* EventDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46901AF9110500A7992C /* EventDispatcher.swift */; };
+		18DD46FF1AFBB4A700A7992C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46C21AF92D9700A7992C /* Event.swift */; };
+		18DD47001AFBB4A700A7992C /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46D21AF96D3F00A7992C /* EventHandler.swift */; };
+		18DD47011AFBB4A700A7992C /* Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46DA1AFA5F6800A7992C /* Touch.swift */; };
+		18DD47021AFBB4A700A7992C /* TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46DC1AFA612D00A7992C /* TouchEvent.swift */; };
+		18DD47031AFBB4A700A7992C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46C91AF9423100A7992C /* Array.swift */; };
+		18DD47041AFBB4A700A7992C /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46C71AF9345B00A7992C /* Object.swift */; };
+		18DD47051AFBB4A700A7992C /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46DE1AFA831200A7992C /* Global.swift */; };
+		18DD47061AFBB4A700A7992C /* MyDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46E71AFB0BEC00A7992C /* MyDrawView.swift */; };
+		18DD47081AFBB4DF00A7992C /* StageScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46EA1AFBAE9500A7992C /* StageScene.swift */; };
+		18DD47091AFBB4E600A7992C /* DisplayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46CC1AF9510100A7992C /* DisplayObject.swift */; };
+		18DD470A1AFBB4E600A7992C /* InteractiveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46D41AF9B3A000A7992C /* InteractiveObject.swift */; };
+		18DD470B1AFBB4E600A7992C /* DisplayObjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46D61AF9B3B400A7992C /* DisplayObjectContainer.swift */; };
+		18DD470C1AFBB4E600A7992C /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46E01AFAC8E300A7992C /* Sprite.swift */; };
+		18DD470D1AFBB4E600A7992C /* Graphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46E21AFAC96100A7992C /* Graphics.swift */; };
+		18DD470F1AFBFDEE00A7992C /* GraphicsNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD470E1AFBFDEE00A7992C /* GraphicsNode.swift */; };
+		18DD47101AFBFE3D00A7992C /* GraphicsNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD470E1AFBFDEE00A7992C /* GraphicsNode.swift */; };
+		18DD47131AFC059F00A7992C /* SpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD47121AFC059F00A7992C /* SpriteNode.swift */; };
+		18DD47141AFC064100A7992C /* SpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD47121AFC059F00A7992C /* SpriteNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,14 +64,47 @@
 			remoteGlobalIDString = 18DD46411AF9104500A7992C;
 			remoteInfo = ActionSwiftSK;
 		};
+		18DD467C1AF9105700A7992C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18DD463A1AF9104500A7992C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18DD466F1AF9105700A7992C;
+			remoteInfo = ActionSwift3;
+		};
+		18DD467E1AF9105700A7992C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18DD463A1AF9104500A7992C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18DD46411AF9104500A7992C;
+			remoteInfo = ActionSwiftSK;
+		};
+		18DD46851AF9105700A7992C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18DD463A1AF9104500A7992C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18DD466F1AF9105700A7992C;
+			remoteInfo = ActionSwift3;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		18DD468C1AF9105700A7992C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				18DD46881AF9105700A7992C /* ActionSwift3.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		18DD46421AF9104500A7992C /* ActionSwiftSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActionSwiftSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DD46461AF9104500A7992C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DD46471AF9104500A7992C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18DD46491AF9104500A7992C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		18DD464B1AF9104500A7992C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		18DD464D1AF9104500A7992C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		18DD46501AF9104500A7992C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18DD46521AF9104500A7992C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -40,6 +112,30 @@
 		18DD465B1AF9104500A7992C /* ActionSwiftSKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActionSwiftSKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DD46601AF9104500A7992C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DD46611AF9104500A7992C /* ActionSwiftSKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSwiftSKTests.swift; sourceTree = "<group>"; };
+		18DD46701AF9105700A7992C /* ActionSwift3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionSwift3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18DD46731AF9105700A7992C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18DD46741AF9105700A7992C /* ActionSwift3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionSwift3.h; sourceTree = "<group>"; };
+		18DD467A1AF9105700A7992C /* ActionSwift3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActionSwift3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18DD46821AF9105700A7992C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18DD46831AF9105700A7992C /* ActionSwift3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSwift3Tests.swift; sourceTree = "<group>"; };
+		18DD46901AF9110500A7992C /* EventDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDispatcher.swift; path = com/actionswift/events/EventDispatcher.swift; sourceTree = "<group>"; };
+		18DD46C21AF92D9700A7992C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = com/actionswift/events/Event.swift; sourceTree = "<group>"; };
+		18DD46C71AF9345B00A7992C /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		18DD46C91AF9423100A7992C /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		18DD46CC1AF9510100A7992C /* DisplayObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayObject.swift; path = display/DisplayObject.swift; sourceTree = "<group>"; };
+		18DD46D21AF96D3F00A7992C /* EventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventHandler.swift; path = com/actionswift/events/EventHandler.swift; sourceTree = "<group>"; };
+		18DD46D41AF9B3A000A7992C /* InteractiveObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InteractiveObject.swift; path = display/InteractiveObject.swift; sourceTree = "<group>"; };
+		18DD46D61AF9B3B400A7992C /* DisplayObjectContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayObjectContainer.swift; path = display/DisplayObjectContainer.swift; sourceTree = "<group>"; };
+		18DD46DA1AFA5F6800A7992C /* Touch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Touch.swift; path = com/actionswift/events/Touch.swift; sourceTree = "<group>"; };
+		18DD46DC1AFA612D00A7992C /* TouchEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchEvent.swift; path = com/actionswift/events/TouchEvent.swift; sourceTree = "<group>"; };
+		18DD46DE1AFA831200A7992C /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		18DD46E01AFAC8E300A7992C /* Sprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sprite.swift; path = display/Sprite.swift; sourceTree = "<group>"; };
+		18DD46E21AFAC96100A7992C /* Graphics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Graphics.swift; path = display/Graphics.swift; sourceTree = "<group>"; };
+		18DD46E51AFB040600A7992C /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stage.swift; path = display/Stage.swift; sourceTree = "<group>"; };
+		18DD46E71AFB0BEC00A7992C /* MyDrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDrawView.swift; sourceTree = "<group>"; };
+		18DD46EA1AFBAE9500A7992C /* StageScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StageScene.swift; path = display/StageScene.swift; sourceTree = "<group>"; };
+		18DD470E1AFBFDEE00A7992C /* GraphicsNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphicsNode.swift; path = display/GraphicsNode.swift; sourceTree = "<group>"; };
+		18DD47121AFC059F00A7992C /* SpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpriteNode.swift; path = display/SpriteNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DD46871AF9105700A7992C /* ActionSwift3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +151,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18DD466C1AF9105700A7992C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18DD46771AF9105700A7992C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18DD467B1AF9105700A7992C /* ActionSwift3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +177,8 @@
 			children = (
 				18DD46441AF9104500A7992C /* ActionSwiftSK */,
 				18DD465E1AF9104500A7992C /* ActionSwiftSKTests */,
+				18DD46711AF9105700A7992C /* ActionSwift3 */,
+				18DD46801AF9105700A7992C /* ActionSwift3Tests */,
 				18DD46431AF9104500A7992C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +188,8 @@
 			children = (
 				18DD46421AF9104500A7992C /* ActionSwiftSK.app */,
 				18DD465B1AF9104500A7992C /* ActionSwiftSKTests.xctest */,
+				18DD46701AF9105700A7992C /* ActionSwift3.framework */,
+				18DD467A1AF9105700A7992C /* ActionSwift3Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,8 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				18DD46471AF9104500A7992C /* AppDelegate.swift */,
-				18DD46491AF9104500A7992C /* GameScene.sks */,
-				18DD464B1AF9104500A7992C /* GameScene.swift */,
 				18DD464D1AF9104500A7992C /* GameViewController.swift */,
 				18DD464F1AF9104500A7992C /* Main.storyboard */,
 				18DD46521AF9104500A7992C /* Images.xcassets */,
@@ -118,7 +232,110 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		18DD46711AF9105700A7992C /* ActionSwift3 */ = {
+			isa = PBXGroup;
+			children = (
+				18DD46741AF9105700A7992C /* ActionSwift3.h */,
+				18DD46721AF9105700A7992C /* Supporting Files */,
+				18DD46C61AF92DD500A7992C /* com */,
+				18DD46C91AF9423100A7992C /* Array.swift */,
+				18DD46C71AF9345B00A7992C /* Object.swift */,
+				18DD46DE1AFA831200A7992C /* Global.swift */,
+				18DD46E71AFB0BEC00A7992C /* MyDrawView.swift */,
+			);
+			path = ActionSwift3;
+			sourceTree = "<group>";
+		};
+		18DD46721AF9105700A7992C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18DD46731AF9105700A7992C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18DD46801AF9105700A7992C /* ActionSwift3Tests */ = {
+			isa = PBXGroup;
+			children = (
+				18DD46831AF9105700A7992C /* ActionSwift3Tests.swift */,
+				18DD46811AF9105700A7992C /* Supporting Files */,
+			);
+			path = ActionSwift3Tests;
+			sourceTree = "<group>";
+		};
+		18DD46811AF9105700A7992C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18DD46821AF9105700A7992C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18DD46C41AF92DA800A7992C /* events */ = {
+			isa = PBXGroup;
+			children = (
+				18DD46901AF9110500A7992C /* EventDispatcher.swift */,
+				18DD46C21AF92D9700A7992C /* Event.swift */,
+				18DD46D21AF96D3F00A7992C /* EventHandler.swift */,
+				18DD46DA1AFA5F6800A7992C /* Touch.swift */,
+				18DD46DC1AFA612D00A7992C /* TouchEvent.swift */,
+			);
+			name = events;
+			sourceTree = "<group>";
+		};
+		18DD46C51AF92DC100A7992C /* actionswift */ = {
+			isa = PBXGroup;
+			children = (
+				18DD46CB1AF950D800A7992C /* display */,
+				18DD46C41AF92DA800A7992C /* events */,
+			);
+			name = actionswift;
+			sourceTree = "<group>";
+		};
+		18DD46C61AF92DD500A7992C /* com */ = {
+			isa = PBXGroup;
+			children = (
+				18DD46C51AF92DC100A7992C /* actionswift */,
+			);
+			name = com;
+			sourceTree = "<group>";
+		};
+		18DD46CB1AF950D800A7992C /* display */ = {
+			isa = PBXGroup;
+			children = (
+				18DD46E91AFBADAD00A7992C /* internal */,
+				18DD46CC1AF9510100A7992C /* DisplayObject.swift */,
+				18DD46D41AF9B3A000A7992C /* InteractiveObject.swift */,
+				18DD46D61AF9B3B400A7992C /* DisplayObjectContainer.swift */,
+				18DD46E01AFAC8E300A7992C /* Sprite.swift */,
+				18DD46E21AFAC96100A7992C /* Graphics.swift */,
+				18DD46E51AFB040600A7992C /* Stage.swift */,
+			);
+			name = display;
+			sourceTree = "<group>";
+		};
+		18DD46E91AFBADAD00A7992C /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				18DD46EA1AFBAE9500A7992C /* StageScene.swift */,
+				18DD470E1AFBFDEE00A7992C /* GraphicsNode.swift */,
+				18DD47121AFC059F00A7992C /* SpriteNode.swift */,
+			);
+			name = internal;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		18DD466D1AF9105700A7992C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18DD46751AF9105700A7992C /* ActionSwift3.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		18DD46411AF9104500A7992C /* ActionSwiftSK */ = {
@@ -128,10 +345,12 @@
 				18DD463E1AF9104500A7992C /* Sources */,
 				18DD463F1AF9104500A7992C /* Frameworks */,
 				18DD46401AF9104500A7992C /* Resources */,
+				18DD468C1AF9105700A7992C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				18DD46861AF9105700A7992C /* PBXTargetDependency */,
 			);
 			name = ActionSwiftSK;
 			productName = ActionSwiftSK;
@@ -156,6 +375,43 @@
 			productReference = 18DD465B1AF9104500A7992C /* ActionSwiftSKTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		18DD466F1AF9105700A7992C /* ActionSwift3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18DD46891AF9105700A7992C /* Build configuration list for PBXNativeTarget "ActionSwift3" */;
+			buildPhases = (
+				18DD466B1AF9105700A7992C /* Sources */,
+				18DD466C1AF9105700A7992C /* Frameworks */,
+				18DD466D1AF9105700A7992C /* Headers */,
+				18DD466E1AF9105700A7992C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActionSwift3;
+			productName = ActionSwift3;
+			productReference = 18DD46701AF9105700A7992C /* ActionSwift3.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		18DD46791AF9105700A7992C /* ActionSwift3Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18DD468D1AF9105700A7992C /* Build configuration list for PBXNativeTarget "ActionSwift3Tests" */;
+			buildPhases = (
+				18DD46761AF9105700A7992C /* Sources */,
+				18DD46771AF9105700A7992C /* Frameworks */,
+				18DD46781AF9105700A7992C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18DD467D1AF9105700A7992C /* PBXTargetDependency */,
+				18DD467F1AF9105700A7992C /* PBXTargetDependency */,
+			);
+			name = ActionSwift3Tests;
+			productName = ActionSwift3Tests;
+			productReference = 18DD467A1AF9105700A7992C /* ActionSwift3Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -169,6 +425,13 @@
 						CreatedOnToolsVersion = 6.3;
 					};
 					18DD465A1AF9104500A7992C = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 18DD46411AF9104500A7992C;
+					};
+					18DD466F1AF9105700A7992C = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					18DD46791AF9105700A7992C = {
 						CreatedOnToolsVersion = 6.3;
 						TestTargetID = 18DD46411AF9104500A7992C;
 					};
@@ -189,6 +452,8 @@
 			targets = (
 				18DD46411AF9104500A7992C /* ActionSwiftSK */,
 				18DD465A1AF9104500A7992C /* ActionSwiftSKTests */,
+				18DD466F1AF9105700A7992C /* ActionSwift3 */,
+				18DD46791AF9105700A7992C /* ActionSwift3Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -200,12 +465,25 @@
 			files = (
 				18DD46561AF9104500A7992C /* LaunchScreen.xib in Resources */,
 				18DD46531AF9104500A7992C /* Images.xcassets in Resources */,
-				18DD464A1AF9104500A7992C /* GameScene.sks in Resources */,
 				18DD46511AF9104500A7992C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		18DD46591AF9104500A7992C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18DD466E1AF9105700A7992C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18DD46781AF9105700A7992C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -219,9 +497,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18DD464C1AF9104500A7992C /* GameScene.swift in Sources */,
+				18DD47041AFBB4A700A7992C /* Object.swift in Sources */,
+				18DD47031AFBB4A700A7992C /* Array.swift in Sources */,
+				18DD47021AFBB4A700A7992C /* TouchEvent.swift in Sources */,
+				18DD47011AFBB4A700A7992C /* Touch.swift in Sources */,
+				18DD47141AFC064100A7992C /* SpriteNode.swift in Sources */,
+				18DD46FD1AFBB4A300A7992C /* Stage.swift in Sources */,
+				18DD47081AFBB4DF00A7992C /* StageScene.swift in Sources */,
+				18DD470A1AFBB4E600A7992C /* InteractiveObject.swift in Sources */,
+				18DD47001AFBB4A700A7992C /* EventHandler.swift in Sources */,
+				18DD470B1AFBB4E600A7992C /* DisplayObjectContainer.swift in Sources */,
+				18DD470D1AFBB4E600A7992C /* Graphics.swift in Sources */,
+				18DD470C1AFBB4E600A7992C /* Sprite.swift in Sources */,
+				18DD47061AFBB4A700A7992C /* MyDrawView.swift in Sources */,
+				18DD47051AFBB4A700A7992C /* Global.swift in Sources */,
+				18DD47091AFBB4E600A7992C /* DisplayObject.swift in Sources */,
+				18DD46FE1AFBB4A700A7992C /* EventDispatcher.swift in Sources */,
+				18DD47101AFBFE3D00A7992C /* GraphicsNode.swift in Sources */,
 				18DD464E1AF9104500A7992C /* GameViewController.swift in Sources */,
 				18DD46481AF9104500A7992C /* AppDelegate.swift in Sources */,
+				18DD46FF1AFBB4A700A7992C /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +528,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18DD466B1AF9105700A7992C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18DD46CD1AF9510100A7992C /* DisplayObject.swift in Sources */,
+				18DD46D31AF96D3F00A7992C /* EventHandler.swift in Sources */,
+				18DD46DB1AFA5F6800A7992C /* Touch.swift in Sources */,
+				18DD46E11AFAC8E300A7992C /* Sprite.swift in Sources */,
+				18DD46C31AF92D9700A7992C /* Event.swift in Sources */,
+				18DD46CA1AF9423100A7992C /* Array.swift in Sources */,
+				18DD46EB1AFBAE9500A7992C /* StageScene.swift in Sources */,
+				18DD46D51AF9B3A000A7992C /* InteractiveObject.swift in Sources */,
+				18DD46C81AF9345B00A7992C /* Object.swift in Sources */,
+				18DD470F1AFBFDEE00A7992C /* GraphicsNode.swift in Sources */,
+				18DD46E61AFB040600A7992C /* Stage.swift in Sources */,
+				18DD46E81AFB0BEC00A7992C /* MyDrawView.swift in Sources */,
+				18DD47131AFC059F00A7992C /* SpriteNode.swift in Sources */,
+				18DD46DF1AFA831200A7992C /* Global.swift in Sources */,
+				18DD46E31AFAC96100A7992C /* Graphics.swift in Sources */,
+				18DD46911AF9110500A7992C /* EventDispatcher.swift in Sources */,
+				18DD46D71AF9B3B400A7992C /* DisplayObjectContainer.swift in Sources */,
+				18DD46DD1AFA612D00A7992C /* TouchEvent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18DD46761AF9105700A7992C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18DD46841AF9105700A7992C /* ActionSwift3Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -240,6 +568,21 @@
 			isa = PBXTargetDependency;
 			target = 18DD46411AF9104500A7992C /* ActionSwiftSK */;
 			targetProxy = 18DD465C1AF9104500A7992C /* PBXContainerItemProxy */;
+		};
+		18DD467D1AF9105700A7992C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18DD466F1AF9105700A7992C /* ActionSwift3 */;
+			targetProxy = 18DD467C1AF9105700A7992C /* PBXContainerItemProxy */;
+		};
+		18DD467F1AF9105700A7992C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18DD46411AF9104500A7992C /* ActionSwiftSK */;
+			targetProxy = 18DD467E1AF9105700A7992C /* PBXContainerItemProxy */;
+		};
+		18DD46861AF9105700A7992C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18DD466F1AF9105700A7992C /* ActionSwift3 */;
+			targetProxy = 18DD46851AF9105700A7992C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -400,6 +743,81 @@
 			};
 			name = Release;
 		};
+		18DD468A1AF9105700A7992C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ActionSwift3/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		18DD468B1AF9105700A7992C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ActionSwift3/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		18DD468E1AF9105700A7992C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ActionSwift3Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActionSwiftSK.app/ActionSwiftSK";
+			};
+			name = Debug;
+		};
+		18DD468F1AF9105700A7992C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ActionSwift3Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActionSwiftSK.app/ActionSwiftSK";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -419,6 +837,7 @@
 				18DD46671AF9104500A7992C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18DD46681AF9104500A7992C /* Build configuration list for PBXNativeTarget "ActionSwiftSKTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +846,25 @@
 				18DD466A1AF9104500A7992C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18DD46891AF9105700A7992C /* Build configuration list for PBXNativeTarget "ActionSwift3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18DD468A1AF9105700A7992C /* Debug */,
+				18DD468B1AF9105700A7992C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18DD468D1AF9105700A7992C /* Build configuration list for PBXNativeTarget "ActionSwift3Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18DD468E1AF9105700A7992C /* Debug */,
+				18DD468F1AF9105700A7992C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,43 +9,39 @@
 import UIKit
 import SpriteKit
 
-extension SKNode {
-    class func unarchiveFromFile(file : String) -> SKNode? {
-        if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
-            var sceneData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: nil)!
-            var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
-            
-            archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
-            let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! GameScene
-            archiver.finishDecoding()
-            return scene
-        } else {
-            return nil
-        }
-    }
-}
 
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
-            // Configure the view.
-            let skView = self.view as! SKView
-            skView.showsFPS = true
-            skView.showsNodeCount = true
-            
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
-            
-            /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .AspectFill
-            
-            skView.presentScene(scene)
+        let stage = Stage(self.view as! SKView)
+        
+        let sprite = Sprite()
+        sprite.graphics.beginFill(UIColor.redColor())
+        sprite.graphics.drawRect(10,10,10,10)
+        sprite.graphics.drawCircle(100, 100, 10)
+        sprite.graphics.drawCircle(200, 200, 10)
+        sprite.addEventListener(EventType.Added.rawValue, EventHandler(spriteAdded, "spriteAdded"))
+        sprite.addEventListener(InteractiveEventType.TouchBegin.rawValue, EventHandler(spriteTouched, "spriteTouched"))
+        sprite.addEventListener(InteractiveEventType.TouchEnd.rawValue, EventHandler(spriteTouched, "spriteTouched"))
+        sprite.objectName = "shapes"
+        stage.addChild(sprite)
+    }
+    func spriteAdded(event:Event) -> Void {
+        trace("sprite added ")
+    }
+    func spriteTouched(event:Event) -> Void {
+        if let touchEvent = event as? TouchEvent {
+            if let currentTarget = touchEvent.currentTarget as? Sprite {
+                if touchEvent.type == InteractiveEventType.TouchBegin.rawValue {
+                    //trace("sprite touched \(currentTarget.objectName) - \(touchEvent.type)")
+                    currentTarget.startDrag()
+                } else if touchEvent.type == InteractiveEventType.TouchEnd.rawValue {
+                    currentTarget.stopDrag()
+                }
+            }
         }
     }
-
     override func shouldAutorotate() -> Bool {
         return true
     }
