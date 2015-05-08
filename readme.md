@@ -106,7 +106,7 @@ Ideas for enhancements:
 
 ***Credits***
 
-"Walking animation" by [Kyoux](http://kyoux.deviantart.com/)
-"ActionScript" by Adobe Systems Inc.
-"Swift" by Apple Inc.
-"Swift logo" by Apple Inc.
+*   "Walking animation" by [Kyoux](http://kyoux.deviantart.com/)
+*   "ActionScript" by Adobe Systems Inc.
+*   "Swift" by Apple Inc.
+*   "Swift logo" by Apple Inc.
