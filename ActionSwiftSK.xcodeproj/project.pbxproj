@@ -61,6 +61,8 @@
 		18DD47101AFBFE3D00A7992C /* GraphicsNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD470E1AFBFDEE00A7992C /* GraphicsNode.swift */; };
 		18DD47131AFC059F00A7992C /* SpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD47121AFC059F00A7992C /* SpriteNode.swift */; };
 		18DD47141AFC064100A7992C /* SpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD47121AFC059F00A7992C /* SpriteNode.swift */; };
+		18EEBF871AFD5AC0007D8C4E /* ActionSwift.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EEBF861AFD5AC0007D8C4E /* ActionSwift.png */; };
+		18EEBF8A1AFD6B90007D8C4E /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EEBF891AFD6B90007D8C4E /* screenshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +151,8 @@
 		18DD46EA1AFBAE9500A7992C /* StageScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StageScene.swift; path = display/StageScene.swift; sourceTree = "<group>"; };
 		18DD470E1AFBFDEE00A7992C /* GraphicsNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphicsNode.swift; path = display/GraphicsNode.swift; sourceTree = "<group>"; };
 		18DD47121AFC059F00A7992C /* SpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpriteNode.swift; path = display/SpriteNode.swift; sourceTree = "<group>"; };
+		18EEBF861AFD5AC0007D8C4E /* ActionSwift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionSwift.png; sourceTree = "<group>"; };
+		18EEBF891AFD6B90007D8C4E /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				18C942A61AFD34CE00D20904 /* readme.md */,
+				18EEBF861AFD5AC0007D8C4E /* ActionSwift.png */,
+				18EEBF891AFD6B90007D8C4E /* screenshot.png */,
 				18DD46441AF9104500A7992C /* ActionSwiftSK */,
 				18DD465E1AF9104500A7992C /* ActionSwiftSKTests */,
 				18DD46711AF9105700A7992C /* ActionSwift3 */,
@@ -490,6 +496,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18EEBF871AFD5AC0007D8C4E /* ActionSwift.png in Resources */,
+				18EEBF8A1AFD6B90007D8C4E /* screenshot.png in Resources */,
 				18DD46561AF9104500A7992C /* LaunchScreen.xib in Resources */,
 				18C942A51AFD209500D20904 /* images.atlas in Resources */,
 				18DD46531AF9104500A7992C /* Images.xcassets in Resources */,

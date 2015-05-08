@@ -48,9 +48,9 @@ public class DisplayObjectContainer: InteractiveObject {
     public func getChildAt(index:UInt)->DisplayObject? {
         return(children.get(Int(index)))
     }
-    public func getChildByName(objectName:String)->DisplayObject? {
+    public func getChildByName(name:String)->DisplayObject? {
         for child in children {
-            if (child.objectName==objectName) {
+            if (child.name==name) {
                 return child
             }
         }

@@ -58,7 +58,15 @@ public class Graphics: Object {
         let shapeNode = GraphicsNode(rect: CGRect(x: x, y: Stage.size.height - (y + height), width: width, height: height))
         drawShape(shapeNode)
     }
-    
+    public func drawTriangle(x1:CGFloat,_ y1:CGFloat,_ x2:CGFloat,_ y2:CGFloat,_ x3:CGFloat,_ y3:CGFloat) {
+        var path = CGPathCreateMutable()
+        CGPathMoveToPoint(path, nil, x1, Stage.size.height - y1)
+        CGPathAddLineToPoint(path, nil, x2, Stage.size.height - y2)
+        CGPathAddLineToPoint(path, nil, x3, Stage.size.height - y3)
+        CGPathCloseSubpath(path)
+        let shapeNode = GraphicsNode(path: path)
+        drawShape(shapeNode)
+    }
     private func drawShape(shapeNode:GraphicsNode) {
         shapeNode.fillColor = fillColor
         shapeNode.strokeColor = lineColor

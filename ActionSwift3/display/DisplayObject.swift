@@ -9,7 +9,7 @@
 import SpriteKit
 public class DisplayObject: EventDispatcher, Equatable, StageSceneProtocol {
     var parent:DisplayObjectContainer?
-    var objectName:String = ""
+    var name:String = ""
     internal var node = SKNode()
     
     override init() {

@@ -12,24 +12,36 @@ import SpriteKit
 
 class GameViewController: UIViewController {
     let walkingTextures = ["walking1","walking2","walking3","walking4","walking5","walking6","walking7","walking8","walking9"]
+    var movieClip:MovieClip!
     override func viewDidLoad() {
         super.viewDidLoad()
         //create stage
         let stage = Stage(self.view as! SKView)
         //create a sprite, add a rectangle and a circle to its graphics property
-        let sprite = Sprite()
-        sprite.graphics.beginFill(UIColor.redColor())
-        sprite.graphics.drawRect(10,10,100,44)
-        sprite.graphics.beginFill(UIColor.yellowColor())
-        sprite.graphics.drawCircle(Stage.size.width - 30, 30, 22)
-        sprite.objectName = "shapes"
-        stage.addChild(sprite)
+        let playButtonX = Stage.size.width - 30
+        let play = Sprite()
+        play.graphics.beginFill(UIColor.whiteColor())
+        play.graphics.drawCircle(playButtonX, 30, 22)
+        play.graphics.beginFill(UIColor.blueColor())
+        play.graphics.drawTriangle(playButtonX - 8, 20, playButtonX - 8, 40, playButtonX + 12, 30)
+        play.name = "play"
+        play.addEventListener(InteractiveEventType.TouchBegin.rawValue, EventHandler(spriteTouched, "spriteTouched"))
+        stage.addChild(play)
+        let stop = Sprite()
+        stop.graphics.beginFill(UIColor.whiteColor())
+        stop.graphics.drawRect(10,10,44,44)
+        stop.graphics.beginFill(UIColor.redColor())
+        stop.graphics.drawRect(20,20,24,24)
+        stop.name = "stop"
+        stop.addEventListener(InteractiveEventType.TouchBegin.rawValue, EventHandler(spriteTouched, "spriteTouched"))
+        stage.addChild(stop)
         //create a movieclip, add textures from 'images.atlas', then control it just as you would in AS3
-        let movieClip = MovieClip(textureNames: walkingTextures)
+        movieClip = MovieClip(textureNames: walkingTextures)
         movieClip.x = 0
         movieClip.y = Stage.size.height - movieClip.height
         movieClip.addEventListener(InteractiveEventType.TouchBegin.rawValue, EventHandler(spriteTouched, "spriteTouched"))
         movieClip.addEventListener(InteractiveEventType.TouchEnd.rawValue, EventHandler(spriteTouched, "spriteTouched"))
+        movieClip.name = "walkingman"
         stage.addChild(movieClip)
 
     }
@@ -39,11 +51,17 @@ class GameViewController: UIViewController {
     func spriteTouched(event:Event) -> Void {
         if let touchEvent = event as? TouchEvent {
             if let currentTarget = touchEvent.currentTarget as? Sprite {
-                //drag/drop
-                if touchEvent.type == InteractiveEventType.TouchBegin.rawValue {
-                    currentTarget.startDrag()
-                } else if touchEvent.type == InteractiveEventType.TouchEnd.rawValue {
-                    currentTarget.stopDrag()
+                if (currentTarget.name == "walkingman") {
+                    //drag/drop
+                    if touchEvent.type == InteractiveEventType.TouchBegin.rawValue {
+                        currentTarget.startDrag()
+                    } else if touchEvent.type == InteractiveEventType.TouchEnd.rawValue {
+                        currentTarget.stopDrag()
+                    }
+                } else if (currentTarget.name == "play") {
+                    movieClip.play()
+                } else if (currentTarget.name == "stop") {
+                    movieClip.stop()
                 }
             }
         }

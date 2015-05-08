@@ -5,7 +5,8 @@
 //  Created by Craig on 5/05/2015.
 //  Copyright (c) 2015 Interactive Coconut. All rights reserved.
 //
-
+// Unfortunately extensions in frameworks can't be made public, at least for now - watch this space...
+//
 import Foundation
 extension Array {
     var length:Int {
