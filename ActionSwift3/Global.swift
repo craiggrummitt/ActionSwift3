@@ -14,3 +14,15 @@ public func ==(lhs: DisplayObject, rhs: DisplayObject) -> Bool {
 public func trace(parms:String ...) {
     println(parms)
 }
+public func trace(parms:Int) {
+    println(parms)
+}
+public func trace(parms:CGFloat) {
+    println(parms)
+}
+public func trace(parms:UInt) {
+    println(parms)
+}
+public func trace(parms:Double) {
+    println(parms)
+}

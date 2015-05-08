@@ -42,7 +42,7 @@ public class Sprite: DisplayObjectContainer {
                 if let currentTarget = touchEvent.currentTarget as? DisplayObject {
                     if let touch = touchEvent.touches.first {
                         self.x = initialLoc.x + touch.stageX - initialTouch.x
-                        self.y = initialLoc.y - touch.stageY + initialTouch.y
+                        self.yRaw = initialLoc.y - touch.stageY + initialTouch.y
                     }
                 }
             }

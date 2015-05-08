@@ -7,21 +7,13 @@
 //
 
 import SpriteKit
-enum DisplayEvent:String {
-    case Added = "Added"
-    case Removed = "Removed"
-}
 public class DisplayObject: EventDispatcher, Equatable, StageSceneProtocol {
     var parent:DisplayObjectContainer?
     var objectName:String = ""
-    internal var spriteNode  = SpriteNode()
     internal var node = SKNode()
     
     override init() {
         super.init()
-        node.addChild(spriteNode)
-        spriteNode.owner = self
-        spriteNode.userInteractionEnabled = true
 
     }
     public var alpha:CGFloat {
@@ -52,9 +44,17 @@ public class DisplayObject: EventDispatcher, Equatable, StageSceneProtocol {
     }
     public var y:CGFloat {
         get {return node.position.y}
-        set (newValue) {node.position.y = newValue}
+        set (newValue) {
+            node.position.y = -newValue
+        }
+    }
+    internal var yRaw:CGFloat {
+        get {return node.position.y}
+        set (newValue) {
+            node.position.y = newValue
+        }
     }
     internal func update(currentTime:CFTimeInterval) {
-        
+        dispatchEvent(Event(EventType.EnterFrame.rawValue,false))
     }
 }

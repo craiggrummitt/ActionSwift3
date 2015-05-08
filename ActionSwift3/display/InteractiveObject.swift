@@ -20,6 +20,5 @@ public class InteractiveObject: DisplayObject {
         }
     }
     internal func enableUserInteraction(enabled:Bool) {
-        self.spriteNode.userInteractionEnabled = enabled
     }
 }

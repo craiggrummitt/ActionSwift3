@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18C9425D1AFC31A900D20904 /* MovieClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9425C1AFC31A900D20904 /* MovieClip.swift */; };
+		18C9425E1AFC32B500D20904 /* MovieClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9425C1AFC31A900D20904 /* MovieClip.swift */; };
+		18C9429F1AFD007800D20904 /* easing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9429C1AFD007800D20904 /* easing.swift */; };
+		18C942A01AFD007800D20904 /* EasingDeclarations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9429D1AFD007800D20904 /* EasingDeclarations.swift */; };
+		18C942A11AFD007800D20904 /* SKEase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9429E1AFD007800D20904 /* SKEase.swift */; };
+		18C942A51AFD209500D20904 /* images.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18C942A41AFD209500D20904 /* images.atlas */; };
+		18C942A71AFD34CE00D20904 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 18C942A61AFD34CE00D20904 /* readme.md */; };
 		18DD46481AF9104500A7992C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46471AF9104500A7992C /* AppDelegate.swift */; };
 		18DD464E1AF9104500A7992C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD464D1AF9104500A7992C /* GameViewController.swift */; };
 		18DD46511AF9104500A7992C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DD464F1AF9104500A7992C /* Main.storyboard */; };
@@ -102,6 +109,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		18C9425C1AFC31A900D20904 /* MovieClip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieClip.swift; path = display/MovieClip.swift; sourceTree = "<group>"; };
+		18C9429C1AFD007800D20904 /* easing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = easing.swift; sourceTree = "<group>"; };
+		18C9429D1AFD007800D20904 /* EasingDeclarations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasingDeclarations.swift; sourceTree = "<group>"; };
+		18C9429E1AFD007800D20904 /* SKEase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEase.swift; sourceTree = "<group>"; };
+		18C942A41AFD209500D20904 /* images.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = images.atlas; sourceTree = "<group>"; };
+		18C942A61AFD34CE00D20904 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		18DD46421AF9104500A7992C /* ActionSwiftSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActionSwiftSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DD46461AF9104500A7992C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DD46471AF9104500A7992C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -172,9 +185,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18C9429B1AFD004D00D20904 /* easing */ = {
+			isa = PBXGroup;
+			children = (
+				18C9429C1AFD007800D20904 /* easing.swift */,
+				18C9429D1AFD007800D20904 /* EasingDeclarations.swift */,
+				18C9429E1AFD007800D20904 /* SKEase.swift */,
+			);
+			name = easing;
+			sourceTree = "<group>";
+		};
 		18DD46391AF9104500A7992C = {
 			isa = PBXGroup;
 			children = (
+				18C942A61AFD34CE00D20904 /* readme.md */,
 				18DD46441AF9104500A7992C /* ActionSwiftSK */,
 				18DD465E1AF9104500A7992C /* ActionSwiftSKTests */,
 				18DD46711AF9105700A7992C /* ActionSwift3 */,
@@ -197,6 +221,7 @@
 		18DD46441AF9104500A7992C /* ActionSwiftSK */ = {
 			isa = PBXGroup;
 			children = (
+				18C942A41AFD209500D20904 /* images.atlas */,
 				18DD46471AF9104500A7992C /* AppDelegate.swift */,
 				18DD464D1AF9104500A7992C /* GameViewController.swift */,
 				18DD464F1AF9104500A7992C /* Main.storyboard */,
@@ -287,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				18DD46CB1AF950D800A7992C /* display */,
+				18C9429B1AFD004D00D20904 /* easing */,
 				18DD46C41AF92DA800A7992C /* events */,
 			);
 			name = actionswift;
@@ -310,6 +336,7 @@
 				18DD46E01AFAC8E300A7992C /* Sprite.swift */,
 				18DD46E21AFAC96100A7992C /* Graphics.swift */,
 				18DD46E51AFB040600A7992C /* Stage.swift */,
+				18C9425C1AFC31A900D20904 /* MovieClip.swift */,
 			);
 			name = display;
 			sourceTree = "<group>";
@@ -464,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DD46561AF9104500A7992C /* LaunchScreen.xib in Resources */,
+				18C942A51AFD209500D20904 /* images.atlas in Resources */,
 				18DD46531AF9104500A7992C /* Images.xcassets in Resources */,
 				18DD46511AF9104500A7992C /* Main.storyboard in Resources */,
 			);
@@ -497,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C942A71AFD34CE00D20904 /* readme.md in Sources */,
 				18DD47041AFBB4A700A7992C /* Object.swift in Sources */,
 				18DD47031AFBB4A700A7992C /* Array.swift in Sources */,
 				18DD47021AFBB4A700A7992C /* TouchEvent.swift in Sources */,
@@ -513,6 +542,7 @@
 				18DD47051AFBB4A700A7992C /* Global.swift in Sources */,
 				18DD47091AFBB4E600A7992C /* DisplayObject.swift in Sources */,
 				18DD46FE1AFBB4A700A7992C /* EventDispatcher.swift in Sources */,
+				18C9425E1AFC32B500D20904 /* MovieClip.swift in Sources */,
 				18DD47101AFBFE3D00A7992C /* GraphicsNode.swift in Sources */,
 				18DD464E1AF9104500A7992C /* GameViewController.swift in Sources */,
 				18DD46481AF9104500A7992C /* AppDelegate.swift in Sources */,
@@ -534,10 +564,12 @@
 			files = (
 				18DD46CD1AF9510100A7992C /* DisplayObject.swift in Sources */,
 				18DD46D31AF96D3F00A7992C /* EventHandler.swift in Sources */,
+				18C942A01AFD007800D20904 /* EasingDeclarations.swift in Sources */,
 				18DD46DB1AFA5F6800A7992C /* Touch.swift in Sources */,
 				18DD46E11AFAC8E300A7992C /* Sprite.swift in Sources */,
 				18DD46C31AF92D9700A7992C /* Event.swift in Sources */,
 				18DD46CA1AF9423100A7992C /* Array.swift in Sources */,
+				18C9429F1AFD007800D20904 /* easing.swift in Sources */,
 				18DD46EB1AFBAE9500A7992C /* StageScene.swift in Sources */,
 				18DD46D51AF9B3A000A7992C /* InteractiveObject.swift in Sources */,
 				18DD46C81AF9345B00A7992C /* Object.swift in Sources */,
@@ -547,8 +579,10 @@
 				18DD47131AFC059F00A7992C /* SpriteNode.swift in Sources */,
 				18DD46DF1AFA831200A7992C /* Global.swift in Sources */,
 				18DD46E31AFAC96100A7992C /* Graphics.swift in Sources */,
+				18C942A11AFD007800D20904 /* SKEase.swift in Sources */,
 				18DD46911AF9110500A7992C /* EventDispatcher.swift in Sources */,
 				18DD46D71AF9B3B400A7992C /* DisplayObjectContainer.swift in Sources */,
+				18C9425D1AFC31A900D20904 /* MovieClip.swift in Sources */,
 				18DD46DD1AFA612D00A7992C /* TouchEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

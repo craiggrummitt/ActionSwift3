@@ -28,22 +28,10 @@ import UIKit
 public enum EventType:String {
     /** Event type for a display object that is added to a parent. */
     case Added = "Added"
-    /** Event type for a display object that is added to the stage */
-    case AddedToStage = "AddedToStage"
     /** Event type for a display object that is entering a new frame. */
     case EnterFrame = "EnterFrame"
     /** Event type for a display object that is removed from its parent. */
     case Removed = "Removed"
-    /** Event type for a display object that is removed from the stage. */
-    case RemovedFromStage = "RemovedFromStage"
-    /** Event type for a triggered button. */
-    case Triggered = "Triggered"
-    /** Event type for a movie that has reached the last frame. */
-    case MovieCompleted = "MovieCompleted"
-    /** Event type for a display object that is being flattened. */
-    case Flatten = "Flatten"
-    /** Event type for a resized Flash Player. */
-    case Resize = "Resize"
     /** Event type that may be used whenever something finishes. */
     case Complete = "Complete"
 }
