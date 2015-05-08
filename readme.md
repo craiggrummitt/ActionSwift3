@@ -1,8 +1,7 @@
 # ActionSwift 3.0
+*ActionScript 3 SDK in Swift*
 
 ![ActionSwift.png](ActionSwift.png)
-
-*ActionScript 3 SDK in Swift*
 
 Swift is awesome - but do you ever reminisce about the old days of ActionScript 3.0? The old days of DisplayObjects, Sprites, MovieClips, EventDispatchers - oh and who can forget gotoAndPlay? Well, now you can enjoy iOS native development using the power of Swift syntax but with the AS3 SDK! Whaa? How is this possible? Is this heresy?
 
