@@ -30,9 +30,10 @@ Easing classes are also included for convenience from [here](https://github.com/
 ActionSwiftSK is a sample project that you can play with ActionSwift3. Start with taking a look at GameViewController.swift. GameViewController does the following:
 
 1. Sets up the stage.
-2. Creates a sprite that draws a circle and a rectangle. 
-3. Creates a movieclip that displays textures defined by an array of strings referring to the images in the folder 'images.atlas'. 
-4. Shows how to create an event listener by setting up a drag-drop operation.
+2. Creates a 'play' sprite that draws a circle containing a triangle.
+3. Creates a 'stop' sprite that draws a rectangle containing a rectangle.
+4. Creates a movieclip that displays textures defined by an array of strings referring to the images in the folder 'images.atlas'. 
+5. Shows how to create an event listener by setting up clicks on all three sprites. The stop and play sprites 'stop' and 'play' the movieclip. Touching the movieclip activates a drag-drop operation.
 
 ![screenshot.png](screenshot.png)
 
