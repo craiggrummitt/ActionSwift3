@@ -1,13 +1,14 @@
 ![ActionSwift.png](ActionSwift.png)
 
 **ActionSwift 3.0**
+
 *ActionScript 3 SDK in Swift*
 
 Swift is awesome - but do you ever reminisce about the old days of ActionScript 3.0? The old days of DisplayObjects, Sprites, MovieClips, EventDispatchers - oh and who can forget gotoAndPlay? Well, now you can enjoy iOS native development using the power of Swift syntax but with the AS3 SDK! Whaa? How is this possible? Is this heresy?
 
 **ActionSwift3**
 
-ActionSwift3 is based on the SpriteKit SDK the most common AS3 SDK classes:
+Underneath the hood ActionSwift3 is based on the SpriteKit SDK but the ActionSwift 3 SDK is based on familiar AS3 SDK classes:
 
 *   DisplayObject
 *   InteractiveObject
@@ -20,7 +21,7 @@ ActionSwift3 is based on the SpriteKit SDK the most common AS3 SDK classes:
 *   Event
 *   EventHandler
 *   Touch
-*   TouchEvent (TouchEvent made more sense to use than MouseEvent)
+*   TouchEvent (in a touch environment TouchEvent makes more sense to use than MouseEvent)
 
 Easing classes are also included for convenience from [here](https://github.com/craiggrummitt/SpriteKitEasingSwift).
 
