@@ -1,6 +1,6 @@
-![ActionSwift.png](ActionSwift.png)
+# ActionSwift 3.0
 
-**ActionSwift 3.0**
+![ActionSwift.png](ActionSwift.png)
 
 *ActionScript 3 SDK in Swift*
 
