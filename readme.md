@@ -78,7 +78,7 @@ Just as you would expect, Sprites and MovieClips will dispatch events. As Swift 
 
 ```Swift
 movieClip.addEventListener(EventType.EnterFrame.rawValue, EventHandler(enterFrame, "enterFrame"))
-func eventHandler(event:Event) -> Void {
+func enterFrame(event:Event) -> Void {
     trace("This is called every frame")
 }
 ```
