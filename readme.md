@@ -25,9 +25,9 @@ Underneath the hood ActionSwift3 is based on the SpriteKit SDK but the ActionSwi
 
 Easing classes are also included for convenience from [here](https://github.com/craiggrummitt/SpriteKitEasingSwift).
 
-**ActionSwiftSK**
+**ActionSwift**
 
-ActionSwiftSK is a sample project that you can play with ActionSwift3. Start with taking a look at GameViewController.swift. GameViewController does the following:
+ActionSwift is a sample project that you can play with ActionSwift3. Start with taking a look at GameViewController.swift. GameViewController does the following:
 
 1. Sets up the stage.
 2. Creates a 'play' sprite that draws a circle containing a triangle.
@@ -73,6 +73,21 @@ movieClip.y = Stage.size.height - movieClip.height
 stage.addChild(movieClip)
 ```
 
+***TextField***
+
+Use familiar syntax to create a textfield. Build the basics of the textfield using the TextField class, and then apply text formatting to the defaultTextFormat property, using the TextFormat class.
+
+```Swift
+let text = TextField()
+text.width = 200
+text.text = "Salutations to you, world"
+
+let textFormat = TextFormat(font: "ArialMT", size: 20, leading: 20, color: UIColor.blackColor(), align:.Center)
+text.defaultTextFormat = textFormat
+
+stage.addChild(text)
+```
+
 ***EventDispatcher***
 
 Just as you would expect, Sprites and MovieClips will dispatch events. As Swift is not able to check equality between two functions, an additional class called 'EventHandler' stores the EventHandler, along with a string representing the EventHandler, that can be checked for equality. For example, here's how to set up an enterFrame event handler:
@@ -98,12 +113,21 @@ ActionSwift3 is a work in progress, feel free to contribute!
 
 Ideas for enhancements:
 
-*   TextField
 *   SimpleButton
 *   Date
 *   XML
 *   Sound
 *   Add more complex shapes on Graphics
+
+**Updates**
+
+1.1
+Added int and Boolean data types
+
+1.2
+Added TextField
+Resolved issue with stage updates not propogating
+Added license
 
 ***Credits***
 

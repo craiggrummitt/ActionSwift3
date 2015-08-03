@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180A4DD21B669C0B00D77CD4 /* TextFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A4DD11B669C0B00D77CD4 /* TextFormat.swift */; };
+		180A4DD41B669C5100D77CD4 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A4DD31B669C5100D77CD4 /* TextField.swift */; };
+		183432091B62F16500F1CD2E /* SKMultilineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183432081B62F16500F1CD2E /* SKMultilineLabel.swift */; };
 		18C9425D1AFC31A900D20904 /* MovieClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9425C1AFC31A900D20904 /* MovieClip.swift */; };
 		18C9425E1AFC32B500D20904 /* MovieClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9425C1AFC31A900D20904 /* MovieClip.swift */; };
 		18C9429F1AFD007800D20904 /* easing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9429C1AFD007800D20904 /* easing.swift */; };
@@ -61,6 +64,9 @@
 		18DD47101AFBFE3D00A7992C /* GraphicsNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD470E1AFBFDEE00A7992C /* GraphicsNode.swift */; };
 		18DD47131AFC059F00A7992C /* SpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD47121AFC059F00A7992C /* SpriteNode.swift */; };
 		18DD47141AFC064100A7992C /* SpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD47121AFC059F00A7992C /* SpriteNode.swift */; };
+		18DE35521B6FCD58007C9A93 /* SKMultilineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183432081B62F16500F1CD2E /* SKMultilineLabel.swift */; };
+		18DE35531B6FCD5B007C9A93 /* TextFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A4DD11B669C0B00D77CD4 /* TextFormat.swift */; };
+		18DE35541B6FCD5E007C9A93 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A4DD31B669C5100D77CD4 /* TextField.swift */; };
 		18EEBF871AFD5AC0007D8C4E /* ActionSwift.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EEBF861AFD5AC0007D8C4E /* ActionSwift.png */; };
 		18EEBF8A1AFD6B90007D8C4E /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EEBF891AFD6B90007D8C4E /* screenshot.png */; };
 /* End PBXBuildFile section */
@@ -111,20 +117,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		180A4DD11B669C0B00D77CD4 /* TextFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFormat.swift; path = text/TextFormat.swift; sourceTree = "<group>"; };
+		180A4DD31B669C5100D77CD4 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextField.swift; path = text/TextField.swift; sourceTree = "<group>"; };
+		183432081B62F16500F1CD2E /* SKMultilineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKMultilineLabel.swift; sourceTree = "<group>"; };
 		18C9425C1AFC31A900D20904 /* MovieClip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieClip.swift; path = display/MovieClip.swift; sourceTree = "<group>"; };
 		18C9429C1AFD007800D20904 /* easing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = easing.swift; sourceTree = "<group>"; };
 		18C9429D1AFD007800D20904 /* EasingDeclarations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasingDeclarations.swift; sourceTree = "<group>"; };
 		18C9429E1AFD007800D20904 /* SKEase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEase.swift; sourceTree = "<group>"; };
 		18C942A41AFD209500D20904 /* images.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = images.atlas; sourceTree = "<group>"; };
 		18C942A61AFD34CE00D20904 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
-		18DD46421AF9104500A7992C /* ActionSwiftSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActionSwiftSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18DD46421AF9104500A7992C /* ActionSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActionSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DD46461AF9104500A7992C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DD46471AF9104500A7992C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18DD464D1AF9104500A7992C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		18DD46501AF9104500A7992C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18DD46521AF9104500A7992C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		18DD46551AF9104500A7992C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		18DD465B1AF9104500A7992C /* ActionSwiftSKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActionSwiftSKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18DD465B1AF9104500A7992C /* ActionSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActionSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DD46601AF9104500A7992C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DD46611AF9104500A7992C /* ActionSwiftSKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSwiftSKTests.swift; sourceTree = "<group>"; };
 		18DD46701AF9105700A7992C /* ActionSwift3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionSwift3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +198,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180A4DD01B669BCC00D77CD4 /* text */ = {
+			isa = PBXGroup;
+			children = (
+				180A4DD31B669C5100D77CD4 /* TextField.swift */,
+				180A4DD11B669C0B00D77CD4 /* TextFormat.swift */,
+			);
+			name = text;
+			sourceTree = "<group>";
+		};
 		18C9429B1AFD004D00D20904 /* easing */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,8 +223,8 @@
 				18C942A61AFD34CE00D20904 /* readme.md */,
 				18EEBF861AFD5AC0007D8C4E /* ActionSwift.png */,
 				18EEBF891AFD6B90007D8C4E /* screenshot.png */,
-				18DD46441AF9104500A7992C /* ActionSwiftSK */,
-				18DD465E1AF9104500A7992C /* ActionSwiftSKTests */,
+				18DD46441AF9104500A7992C /* ActionSwift */,
+				18DD465E1AF9104500A7992C /* ActionSwiftTests */,
 				18DD46711AF9105700A7992C /* ActionSwift3 */,
 				18DD46801AF9105700A7992C /* ActionSwift3Tests */,
 				18DD46431AF9104500A7992C /* Products */,
@@ -216,15 +234,15 @@
 		18DD46431AF9104500A7992C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18DD46421AF9104500A7992C /* ActionSwiftSK.app */,
-				18DD465B1AF9104500A7992C /* ActionSwiftSKTests.xctest */,
+				18DD46421AF9104500A7992C /* ActionSwift.app */,
+				18DD465B1AF9104500A7992C /* ActionSwiftTests.xctest */,
 				18DD46701AF9105700A7992C /* ActionSwift3.framework */,
 				18DD467A1AF9105700A7992C /* ActionSwift3Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		18DD46441AF9104500A7992C /* ActionSwiftSK */ = {
+		18DD46441AF9104500A7992C /* ActionSwift */ = {
 			isa = PBXGroup;
 			children = (
 				18C942A41AFD209500D20904 /* images.atlas */,
@@ -235,6 +253,7 @@
 				18DD46541AF9104500A7992C /* LaunchScreen.xib */,
 				18DD46451AF9104500A7992C /* Supporting Files */,
 			);
+			name = ActionSwift;
 			path = ActionSwiftSK;
 			sourceTree = "<group>";
 		};
@@ -246,12 +265,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		18DD465E1AF9104500A7992C /* ActionSwiftSKTests */ = {
+		18DD465E1AF9104500A7992C /* ActionSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
 				18DD46611AF9104500A7992C /* ActionSwiftSKTests.swift */,
 				18DD465F1AF9104500A7992C /* Supporting Files */,
 			);
+			name = ActionSwiftTests;
 			path = ActionSwiftSKTests;
 			sourceTree = "<group>";
 		};
@@ -317,6 +337,7 @@
 		18DD46C51AF92DC100A7992C /* actionswift */ = {
 			isa = PBXGroup;
 			children = (
+				180A4DD01B669BCC00D77CD4 /* text */,
 				18DD46CB1AF950D800A7992C /* display */,
 				18C9429B1AFD004D00D20904 /* easing */,
 				18DD46C41AF92DA800A7992C /* events */,
@@ -350,6 +371,7 @@
 		18DD46E91AFBADAD00A7992C /* internal */ = {
 			isa = PBXGroup;
 			children = (
+				183432081B62F16500F1CD2E /* SKMultilineLabel.swift */,
 				18DD46EA1AFBAE9500A7992C /* StageScene.swift */,
 				18DD470E1AFBFDEE00A7992C /* GraphicsNode.swift */,
 				18DD47121AFC059F00A7992C /* SpriteNode.swift */,
@@ -371,9 +393,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		18DD46411AF9104500A7992C /* ActionSwiftSK */ = {
+		18DD46411AF9104500A7992C /* ActionSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18DD46651AF9104500A7992C /* Build configuration list for PBXNativeTarget "ActionSwiftSK" */;
+			buildConfigurationList = 18DD46651AF9104500A7992C /* Build configuration list for PBXNativeTarget "ActionSwift" */;
 			buildPhases = (
 				18DD463E1AF9104500A7992C /* Sources */,
 				18DD463F1AF9104500A7992C /* Frameworks */,
@@ -385,14 +407,14 @@
 			dependencies = (
 				18DD46861AF9105700A7992C /* PBXTargetDependency */,
 			);
-			name = ActionSwiftSK;
+			name = ActionSwift;
 			productName = ActionSwiftSK;
-			productReference = 18DD46421AF9104500A7992C /* ActionSwiftSK.app */;
+			productReference = 18DD46421AF9104500A7992C /* ActionSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		18DD465A1AF9104500A7992C /* ActionSwiftSKTests */ = {
+		18DD465A1AF9104500A7992C /* ActionSwiftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18DD46681AF9104500A7992C /* Build configuration list for PBXNativeTarget "ActionSwiftSKTests" */;
+			buildConfigurationList = 18DD46681AF9104500A7992C /* Build configuration list for PBXNativeTarget "ActionSwiftTests" */;
 			buildPhases = (
 				18DD46571AF9104500A7992C /* Sources */,
 				18DD46581AF9104500A7992C /* Frameworks */,
@@ -403,9 +425,9 @@
 			dependencies = (
 				18DD465D1AF9104500A7992C /* PBXTargetDependency */,
 			);
-			name = ActionSwiftSKTests;
+			name = ActionSwiftTests;
 			productName = ActionSwiftSKTests;
-			productReference = 18DD465B1AF9104500A7992C /* ActionSwiftSKTests.xctest */;
+			productReference = 18DD465B1AF9104500A7992C /* ActionSwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		18DD466F1AF9105700A7992C /* ActionSwift3 */ = {
@@ -451,6 +473,7 @@
 		18DD463A1AF9104500A7992C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Interactive Coconut";
 				TargetAttributes = {
@@ -470,7 +493,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 18DD463D1AF9104500A7992C /* Build configuration list for PBXProject "ActionSwiftSK" */;
+			buildConfigurationList = 18DD463D1AF9104500A7992C /* Build configuration list for PBXProject "ActionSwift" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -483,8 +506,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18DD46411AF9104500A7992C /* ActionSwiftSK */,
-				18DD465A1AF9104500A7992C /* ActionSwiftSKTests */,
+				18DD46411AF9104500A7992C /* ActionSwift */,
+				18DD465A1AF9104500A7992C /* ActionSwiftTests */,
 				18DD466F1AF9105700A7992C /* ActionSwift3 */,
 				18DD46791AF9105700A7992C /* ActionSwift3Tests */,
 			);
@@ -542,6 +565,7 @@
 				18DD46FD1AFBB4A300A7992C /* Stage.swift in Sources */,
 				18DD47081AFBB4DF00A7992C /* StageScene.swift in Sources */,
 				18DD470A1AFBB4E600A7992C /* InteractiveObject.swift in Sources */,
+				18DE35531B6FCD5B007C9A93 /* TextFormat.swift in Sources */,
 				18DD47001AFBB4A700A7992C /* EventHandler.swift in Sources */,
 				18DD470B1AFBB4E600A7992C /* DisplayObjectContainer.swift in Sources */,
 				18DD470D1AFBB4E600A7992C /* Graphics.swift in Sources */,
@@ -549,6 +573,8 @@
 				18DD47061AFBB4A700A7992C /* MyDrawView.swift in Sources */,
 				18DD47051AFBB4A700A7992C /* Global.swift in Sources */,
 				18DD47091AFBB4E600A7992C /* DisplayObject.swift in Sources */,
+				18DE35521B6FCD58007C9A93 /* SKMultilineLabel.swift in Sources */,
+				18DE35541B6FCD5E007C9A93 /* TextField.swift in Sources */,
 				18DD46FE1AFBB4A700A7992C /* EventDispatcher.swift in Sources */,
 				18C9425E1AFC32B500D20904 /* MovieClip.swift in Sources */,
 				18DD47101AFBFE3D00A7992C /* GraphicsNode.swift in Sources */,
@@ -572,12 +598,14 @@
 			files = (
 				18DD46CD1AF9510100A7992C /* DisplayObject.swift in Sources */,
 				18DD46D31AF96D3F00A7992C /* EventHandler.swift in Sources */,
+				183432091B62F16500F1CD2E /* SKMultilineLabel.swift in Sources */,
 				18C942A01AFD007800D20904 /* EasingDeclarations.swift in Sources */,
 				18DD46DB1AFA5F6800A7992C /* Touch.swift in Sources */,
 				18DD46E11AFAC8E300A7992C /* Sprite.swift in Sources */,
 				18DD46C31AF92D9700A7992C /* Event.swift in Sources */,
 				18DD46CA1AF9423100A7992C /* Array.swift in Sources */,
 				18C9429F1AFD007800D20904 /* easing.swift in Sources */,
+				180A4DD21B669C0B00D77CD4 /* TextFormat.swift in Sources */,
 				18DD46EB1AFBAE9500A7992C /* StageScene.swift in Sources */,
 				18DD46D51AF9B3A000A7992C /* InteractiveObject.swift in Sources */,
 				18DD46C81AF9345B00A7992C /* Object.swift in Sources */,
@@ -586,6 +614,7 @@
 				18DD46E81AFB0BEC00A7992C /* MyDrawView.swift in Sources */,
 				18DD47131AFC059F00A7992C /* SpriteNode.swift in Sources */,
 				18DD46DF1AFA831200A7992C /* Global.swift in Sources */,
+				180A4DD41B669C5100D77CD4 /* TextField.swift in Sources */,
 				18DD46E31AFAC96100A7992C /* Graphics.swift in Sources */,
 				18C942A11AFD007800D20904 /* SKEase.swift in Sources */,
 				18DD46911AF9110500A7992C /* EventDispatcher.swift in Sources */,
@@ -608,7 +637,7 @@
 /* Begin PBXTargetDependency section */
 		18DD465D1AF9104500A7992C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 18DD46411AF9104500A7992C /* ActionSwiftSK */;
+			target = 18DD46411AF9104500A7992C /* ActionSwift */;
 			targetProxy = 18DD465C1AF9104500A7992C /* PBXContainerItemProxy */;
 		};
 		18DD467D1AF9105700A7992C /* PBXTargetDependency */ = {
@@ -618,7 +647,7 @@
 		};
 		18DD467F1AF9105700A7992C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 18DD46411AF9104500A7992C /* ActionSwiftSK */;
+			target = 18DD46411AF9104500A7992C /* ActionSwift */;
 			targetProxy = 18DD467E1AF9105700A7992C /* PBXContainerItemProxy */;
 		};
 		18DD46861AF9105700A7992C /* PBXTargetDependency */ = {
@@ -737,7 +766,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ActionSwiftSK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ActionSwift;
 			};
 			name = Debug;
 		};
@@ -747,7 +776,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ActionSwiftSK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ActionSwift;
 			};
 			name = Release;
 		};
@@ -765,8 +794,8 @@
 				);
 				INFOPLIST_FILE = ActionSwiftSKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActionSwiftSK.app/ActionSwiftSK";
+				PRODUCT_NAME = ActionSwiftTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActionSwift.app/ActionSwift";
 			};
 			name = Debug;
 		};
@@ -780,8 +809,8 @@
 				);
 				INFOPLIST_FILE = ActionSwiftSKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActionSwiftSK.app/ActionSwiftSK";
+				PRODUCT_NAME = ActionSwiftTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActionSwift.app/ActionSwift";
 			};
 			name = Release;
 		};
@@ -863,7 +892,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		18DD463D1AF9104500A7992C /* Build configuration list for PBXProject "ActionSwiftSK" */ = {
+		18DD463D1AF9104500A7992C /* Build configuration list for PBXProject "ActionSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18DD46631AF9104500A7992C /* Debug */,
@@ -872,7 +901,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18DD46651AF9104500A7992C /* Build configuration list for PBXNativeTarget "ActionSwiftSK" */ = {
+		18DD46651AF9104500A7992C /* Build configuration list for PBXNativeTarget "ActionSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18DD46661AF9104500A7992C /* Debug */,
@@ -881,7 +910,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18DD46681AF9104500A7992C /* Build configuration list for PBXNativeTarget "ActionSwiftSKTests" */ = {
+		18DD46681AF9104500A7992C /* Build configuration list for PBXNativeTarget "ActionSwiftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18DD46691AF9104500A7992C /* Debug */,

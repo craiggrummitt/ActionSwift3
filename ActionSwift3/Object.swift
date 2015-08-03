@@ -10,6 +10,10 @@ import UIKit
 
 public class Object {
 
+    init() {
+        
+    }
+    
     public func toLocaleString()->String {
         return toString()
     }

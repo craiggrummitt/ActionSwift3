@@ -26,3 +26,7 @@ public func trace(parms:UInt) {
 public func trace(parms:Double) {
     println(parms)
 }
+
+typealias Boolean = Bool
+typealias int = Int
+

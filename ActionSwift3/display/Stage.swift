@@ -9,10 +9,9 @@
 import SpriteKit
 import UIKit
 
-public class Stage: DisplayObjectContainer {
+public class Stage: DisplayObjectContainer, StageSceneProtocol {
     private let skView:SKView
     static var size:CGSize = CGSize(width: 0, height: 0)
-    private var delegate:StageSceneProtocol?
     
     init(_ skView:SKView) {
         self.skView = skView
@@ -20,18 +19,24 @@ public class Stage: DisplayObjectContainer {
         
         super.init()
 
-        delegate = self
         
         let stageScene = StageScene(size: Stage.size)
+        stageScene.stageSceneDelegate = self
         stageScene.scaleMode = SKSceneScaleMode.ResizeFill
         stageScene.backgroundColor = UIColor.whiteColor()
         
         skView.presentScene(stageScene)
         
         stageScene.addChild(self.node)
-        println("Stage parent = \(self.parent)")
+        
     }
     class func getSize()->CGSize {
         return Stage.size
+    }
+    class var stageWidth:CGFloat {
+        return self.getSize().width
+    }
+    class var stageHeight:CGFloat {
+        return self.getSize().height
     }
 }

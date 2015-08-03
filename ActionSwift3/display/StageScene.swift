@@ -12,7 +12,7 @@ protocol StageSceneProtocol {
     func update(currentTime:CFTimeInterval)
 }
 public class StageScene: SKScene {
-    
+    var stageSceneDelegate:StageSceneProtocol?
     override public func didMoveToView(view: SKView) {
         
     }
@@ -28,5 +28,6 @@ public class StageScene: SKScene {
     
     override public func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        self.stageSceneDelegate?.update(currentTime)
     }
 }

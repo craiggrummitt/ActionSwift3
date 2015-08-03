@@ -17,8 +17,10 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         //create stage
         let stage = Stage(self.view as! SKView)
+        
         //create a sprite, add a rectangle and a circle to its graphics property
         let playButtonX = Stage.size.width - 30
+        
         let play = Sprite()
         play.graphics.beginFill(UIColor.whiteColor())
         play.graphics.drawCircle(playButtonX, 30, 22)
@@ -27,6 +29,7 @@ class GameViewController: UIViewController {
         play.name = "play"
         play.addEventListener(InteractiveEventType.TouchBegin.rawValue, EventHandler(spriteTouched, "spriteTouched"))
         stage.addChild(play)
+        
         let stop = Sprite()
         stop.graphics.beginFill(UIColor.whiteColor())
         stop.graphics.drawRect(10,10,44,44)
@@ -35,6 +38,7 @@ class GameViewController: UIViewController {
         stop.name = "stop"
         stop.addEventListener(InteractiveEventType.TouchBegin.rawValue, EventHandler(spriteTouched, "spriteTouched"))
         stage.addChild(stop)
+
         //create a movieclip, add textures from 'images.atlas', then control it just as you would in AS3
         movieClip = MovieClip(textureNames: walkingTextures)
         movieClip.x = 0
@@ -44,6 +48,17 @@ class GameViewController: UIViewController {
         movieClip.name = "walkingman"
         stage.addChild(movieClip)
 
+        //create a textfield, apply text formatting with a TextFormat object
+        let text = TextField()
+        text.width = 200
+        text.text = "Walking man"
+        
+        let textFormat = TextFormat(font: "ArialMT", size: 20, leading: 20, color: UIColor.blackColor(),align:.Center)
+        text.defaultTextFormat = textFormat
+        
+        text.x = (Stage.stageWidth / 2) - 100
+        text.y = 20
+        stage.addChild(text)
     }
     func spriteAdded(event:Event) -> Void {
         trace("sprite added ")
