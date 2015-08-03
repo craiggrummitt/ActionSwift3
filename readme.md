@@ -1,14 +1,13 @@
-![ActionSwift.png](ActionSwift.png)
-
-**ActionSwift 3.0**
-
+# ActionSwift 3.0
 *ActionScript 3 SDK in Swift*
+
+![ActionSwift.png](ActionSwift.png)
 
 Swift is awesome - but do you ever reminisce about the old days of ActionScript 3.0? The old days of DisplayObjects, Sprites, MovieClips, EventDispatchers - oh and who can forget gotoAndPlay? Well, now you can enjoy iOS native development using the power of Swift syntax but with the AS3 SDK! Whaa? How is this possible? Is this heresy?
 
 **ActionSwift3**
 
-Underneath the hood ActionSwift3 is based on the SpriteKit SDK but the ActionSwift 3 SDK is based on familiar AS3 SDK classes:
+Underneath the hood ActionSwift3 is based on the SpriteKit Framework but ActionSwift 3 SDK is based on familiar AS3 SDK classes:
 
 *   DisplayObject
 *   InteractiveObject
@@ -63,7 +62,7 @@ stage.addChild(sprite)
 
 ***MovieClip***
 
-To create a movieclip, you will need images within a folder with the extension 'atlas' in your project (eg.'images.atlas'). This will automatically generate a Texture Atlas. Set up an array of these image file names, and pass them in when you instantiate a MovieClip. These will now be the 'frames' of your movieclip, which you will be able to call familiar methods - gotoAndPlay(), gotoAndStop(), stop() and play(). Use Stage.size to get the dimensions of the device.
+To create a movieclip, you will need images within a folder with the extension 'atlas' in your project (eg.'images.atlas'). This will automatically generate a Texture Atlas. Set up an array of these image file names, and pass them in when you instantiate a MovieClip. These will now be the 'frames' of your movieclip, which you will be able to call familiar methods - gotoAndPlay(), gotoAndStop(), stop() and play(). Use Stage.size to get the dimensions of the device. Oh and x=0, y=0 is the top left of the stage. Hooray!
 
 ```Swift
 let walkingTextures = ["walking1","walking2","walking3"]
@@ -94,7 +93,7 @@ Just as you would expect, Sprites and MovieClips will dispatch events. As Swift 
 
 ```Swift
 movieClip.addEventListener(EventType.EnterFrame.rawValue, EventHandler(enterFrame, "enterFrame"))
-func eventHandler(event:Event) -> Void {
+func enterFrame(event:Event) -> Void {
     trace("This is called every frame")
 }
 ```
