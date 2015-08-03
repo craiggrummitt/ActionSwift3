@@ -27,7 +27,7 @@ Easing classes are also included for convenience from [here](https://github.com/
 
 **ActionSwift**
 
-ActionSwift is a sample project that you can play with ActionSwift3. Start with taking a look at GameViewController.swift. GameViewController does the following:
+ActionSwift is a sample project that you can use to play with ActionSwift3. Start with taking a look at GameViewController.swift. GameViewController does the following:
 
 1. Sets up the stage.
 2. Creates a 'play' sprite that draws a circle containing a triangle.
