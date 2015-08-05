@@ -17,28 +17,59 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         //create stage
         let stage = Stage(self.view as! SKView)
+
+        //------------------------------------------------------------------------------------------------------------------
+        //create a simple stop button
         
-        //create a sprite, add a rectangle and a circle to its graphics property
-        let playButtonX = Stage.size.width - 30
+        //create two sprites for up and down states for the stop button
+        //add a couple of rectangles to its graphics property to make a stop symbol
+        let stopUpState = Sprite()
+        stopUpState.graphics.beginFill(UIColor.whiteColor())
+        stopUpState.graphics.drawRect(0,0,44,44)
+        stopUpState.graphics.beginFill(UIColor(hex:"#B21212"))
+        stopUpState.graphics.drawRect(10,10,24,24)
         
-        let play = Sprite()
-        play.graphics.beginFill(UIColor.whiteColor())
-        play.graphics.drawCircle(playButtonX, 30, 22)
-        play.graphics.beginFill(UIColor.blueColor())
-        play.graphics.drawTriangle(playButtonX - 8, 20, playButtonX - 8, 40, playButtonX + 12, 30)
+        let stopDownState = Sprite()
+        stopDownState.graphics.beginFill(UIColor.whiteColor())
+        stopDownState.graphics.drawRect(0,0,44,44)
+        stopDownState.graphics.beginFill(UIColor(hex:"#FF0000"))
+        stopDownState.graphics.drawRect(8,8,28,28)
+        
+        let stop = SimpleButton(upState: stopUpState, downState: stopDownState)
+        stop.x = 10
+        stop.y = 10
+        stop.name = "stop"
+        stop.addEventListener(InteractiveEventType.TouchBegin.rawValue, EventHandler(spriteTouched, "spriteTouched"))
+        stage.addChild(stop)
+        
+        
+        
+        //------------------------------------------------------------------------------------------------------------------
+        //create a simple play button
+        
+        //create two sprites for up and down states for the play button
+        //add a circle and triangle to its graphics property to make a play symbol
+        let playUpState = Sprite()
+        playUpState.graphics.beginFill(UIColor.whiteColor())
+        playUpState.graphics.drawCircle(22, 22, 22)
+        playUpState.graphics.beginFill(UIColor(hex:"#0971B2"))
+        playUpState.graphics.drawTriangle(14, 12, 14, 32, 34, 22)
+        
+        let playDownState = Sprite()
+        playDownState.graphics.beginFill(UIColor.whiteColor())
+        playDownState.graphics.drawCircle(22, 22, 22)
+        playDownState.graphics.beginFill(UIColor(hex:"#1485CC"))
+        playDownState.graphics.drawTriangle(12, 10, 12, 34, 38, 22)
+        
+        let play = SimpleButton(upState: playUpState, downState: playDownState)
+        play.x = Stage.size.width - 54
+        play.y = 10
         play.name = "play"
         play.addEventListener(InteractiveEventType.TouchBegin.rawValue, EventHandler(spriteTouched, "spriteTouched"))
         stage.addChild(play)
         
-        let stop = Sprite()
-        stop.graphics.beginFill(UIColor.whiteColor())
-        stop.graphics.drawRect(10,10,44,44)
-        stop.graphics.beginFill(UIColor.redColor())
-        stop.graphics.drawRect(20,20,24,24)
-        stop.name = "stop"
-        stop.addEventListener(InteractiveEventType.TouchBegin.rawValue, EventHandler(spriteTouched, "spriteTouched"))
-        stage.addChild(stop)
-
+        
+        //------------------------------------------------------------------------------------------------------------------
         //create a movieclip, add textures from 'images.atlas', then control it just as you would in AS3
         movieClip = MovieClip(textureNames: walkingTextures)
         movieClip.x = 0
@@ -48,6 +79,9 @@ class GameViewController: UIViewController {
         movieClip.name = "walkingman"
         stage.addChild(movieClip)
 
+        
+        
+        //------------------------------------------------------------------------------------------------------------------
         //create a textfield, apply text formatting with a TextFormat object
         let text = TextField()
         text.width = 200
@@ -59,19 +93,23 @@ class GameViewController: UIViewController {
         text.x = (Stage.stageWidth / 2) - 100
         text.y = 20
         stage.addChild(text)
+
+
     }
     func spriteAdded(event:Event) -> Void {
         trace("sprite added ")
     }
     func spriteTouched(event:Event) -> Void {
         if let touchEvent = event as? TouchEvent {
-            if let currentTarget = touchEvent.currentTarget as? Sprite {
+            if let currentTarget = touchEvent.currentTarget as? DisplayObject {
                 if (currentTarget.name == "walkingman") {
                     //drag/drop
-                    if touchEvent.type == InteractiveEventType.TouchBegin.rawValue {
-                        currentTarget.startDrag()
-                    } else if touchEvent.type == InteractiveEventType.TouchEnd.rawValue {
-                        currentTarget.stopDrag()
+                    if let currentTarget = currentTarget as? Sprite {
+                        if touchEvent.type == InteractiveEventType.TouchBegin.rawValue {
+                            currentTarget.startDrag()
+                        } else if touchEvent.type == InteractiveEventType.TouchEnd.rawValue {
+                            currentTarget.stopDrag()
+                        }
                     }
                 } else if (currentTarget.name == "play") {
                     movieClip.play()

@@ -82,7 +82,6 @@ public class MovieClip: Sprite {
     }
     //private helper funcs
     internal func playTextures(textures:[SKTexture]) {
-        trace()
         if (loop) {
             spriteNode.runAction(
                 SKAction.repeatActionForever(

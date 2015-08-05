@@ -16,7 +16,6 @@
 		18C942A01AFD007800D20904 /* EasingDeclarations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9429D1AFD007800D20904 /* EasingDeclarations.swift */; };
 		18C942A11AFD007800D20904 /* SKEase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9429E1AFD007800D20904 /* SKEase.swift */; };
 		18C942A51AFD209500D20904 /* images.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18C942A41AFD209500D20904 /* images.atlas */; };
-		18C942A71AFD34CE00D20904 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 18C942A61AFD34CE00D20904 /* readme.md */; };
 		18DD46481AF9104500A7992C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46471AF9104500A7992C /* AppDelegate.swift */; };
 		18DD464E1AF9104500A7992C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD464D1AF9104500A7992C /* GameViewController.swift */; };
 		18DD46511AF9104500A7992C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DD464F1AF9104500A7992C /* Main.storyboard */; };
@@ -42,7 +41,6 @@
 		18DD46E11AFAC8E300A7992C /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46E01AFAC8E300A7992C /* Sprite.swift */; };
 		18DD46E31AFAC96100A7992C /* Graphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46E21AFAC96100A7992C /* Graphics.swift */; };
 		18DD46E61AFB040600A7992C /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46E51AFB040600A7992C /* Stage.swift */; };
-		18DD46E81AFB0BEC00A7992C /* MyDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46E71AFB0BEC00A7992C /* MyDrawView.swift */; };
 		18DD46EB1AFBAE9500A7992C /* StageScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46EA1AFBAE9500A7992C /* StageScene.swift */; };
 		18DD46FD1AFBB4A300A7992C /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46E51AFB040600A7992C /* Stage.swift */; };
 		18DD46FE1AFBB4A700A7992C /* EventDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46901AF9110500A7992C /* EventDispatcher.swift */; };
@@ -53,7 +51,6 @@
 		18DD47031AFBB4A700A7992C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46C91AF9423100A7992C /* Array.swift */; };
 		18DD47041AFBB4A700A7992C /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46C71AF9345B00A7992C /* Object.swift */; };
 		18DD47051AFBB4A700A7992C /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46DE1AFA831200A7992C /* Global.swift */; };
-		18DD47061AFBB4A700A7992C /* MyDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46E71AFB0BEC00A7992C /* MyDrawView.swift */; };
 		18DD47081AFBB4DF00A7992C /* StageScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46EA1AFBAE9500A7992C /* StageScene.swift */; };
 		18DD47091AFBB4E600A7992C /* DisplayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46CC1AF9510100A7992C /* DisplayObject.swift */; };
 		18DD470A1AFBB4E600A7992C /* InteractiveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46D41AF9B3A000A7992C /* InteractiveObject.swift */; };
@@ -67,6 +64,11 @@
 		18DE35521B6FCD58007C9A93 /* SKMultilineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183432081B62F16500F1CD2E /* SKMultilineLabel.swift */; };
 		18DE35531B6FCD5B007C9A93 /* TextFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A4DD11B669C0B00D77CD4 /* TextFormat.swift */; };
 		18DE35541B6FCD5E007C9A93 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A4DD31B669C5100D77CD4 /* TextField.swift */; };
+		18E1A2CA1B726B540050CCFA /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1A2C91B726B540050CCFA /* SimpleButton.swift */; };
+		18E1A2CB1B72AA240050CCFA /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1A2C91B726B540050CCFA /* SimpleButton.swift */; };
+		18E1A2CD1B72B61E0050CCFA /* InteractiveNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1A2CC1B72B61E0050CCFA /* InteractiveNode.swift */; };
+		18E1A2CF1B72BBF60050CCFA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1A2CE1B72BBF60050CCFA /* UIColor.swift */; };
+		18E1A2D11B72BC720050CCFA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1A2CE1B72BBF60050CCFA /* UIColor.swift */; };
 		18EEBF871AFD5AC0007D8C4E /* ActionSwift.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EEBF861AFD5AC0007D8C4E /* ActionSwift.png */; };
 		18EEBF8A1AFD6B90007D8C4E /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EEBF891AFD6B90007D8C4E /* screenshot.png */; };
 /* End PBXBuildFile section */
@@ -156,10 +158,12 @@
 		18DD46E01AFAC8E300A7992C /* Sprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sprite.swift; path = display/Sprite.swift; sourceTree = "<group>"; };
 		18DD46E21AFAC96100A7992C /* Graphics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Graphics.swift; path = display/Graphics.swift; sourceTree = "<group>"; };
 		18DD46E51AFB040600A7992C /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stage.swift; path = display/Stage.swift; sourceTree = "<group>"; };
-		18DD46E71AFB0BEC00A7992C /* MyDrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDrawView.swift; sourceTree = "<group>"; };
 		18DD46EA1AFBAE9500A7992C /* StageScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StageScene.swift; path = display/StageScene.swift; sourceTree = "<group>"; };
 		18DD470E1AFBFDEE00A7992C /* GraphicsNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphicsNode.swift; path = display/GraphicsNode.swift; sourceTree = "<group>"; };
 		18DD47121AFC059F00A7992C /* SpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpriteNode.swift; path = display/SpriteNode.swift; sourceTree = "<group>"; };
+		18E1A2C91B726B540050CCFA /* SimpleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleButton.swift; path = display/SimpleButton.swift; sourceTree = "<group>"; };
+		18E1A2CC1B72B61E0050CCFA /* InteractiveNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InteractiveNode.swift; path = display/InteractiveNode.swift; sourceTree = "<group>"; };
+		18E1A2CE1B72BBF60050CCFA /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		18EEBF861AFD5AC0007D8C4E /* ActionSwift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionSwift.png; sourceTree = "<group>"; };
 		18EEBF891AFD6B90007D8C4E /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -289,10 +293,6 @@
 				18DD46741AF9105700A7992C /* ActionSwift3.h */,
 				18DD46721AF9105700A7992C /* Supporting Files */,
 				18DD46C61AF92DD500A7992C /* com */,
-				18DD46C91AF9423100A7992C /* Array.swift */,
-				18DD46C71AF9345B00A7992C /* Object.swift */,
-				18DD46DE1AFA831200A7992C /* Global.swift */,
-				18DD46E71AFB0BEC00A7992C /* MyDrawView.swift */,
 			);
 			path = ActionSwift3;
 			sourceTree = "<group>";
@@ -337,10 +337,11 @@
 		18DD46C51AF92DC100A7992C /* actionswift */ = {
 			isa = PBXGroup;
 			children = (
-				180A4DD01B669BCC00D77CD4 /* text */,
 				18DD46CB1AF950D800A7992C /* display */,
 				18C9429B1AFD004D00D20904 /* easing */,
 				18DD46C41AF92DA800A7992C /* events */,
+				18E1A2D01B72BC410050CCFA /* extensions */,
+				180A4DD01B669BCC00D77CD4 /* text */,
 			);
 			name = actionswift;
 			sourceTree = "<group>";
@@ -358,12 +359,13 @@
 			children = (
 				18DD46E91AFBADAD00A7992C /* internal */,
 				18DD46CC1AF9510100A7992C /* DisplayObject.swift */,
-				18DD46D41AF9B3A000A7992C /* InteractiveObject.swift */,
 				18DD46D61AF9B3B400A7992C /* DisplayObjectContainer.swift */,
-				18DD46E01AFAC8E300A7992C /* Sprite.swift */,
 				18DD46E21AFAC96100A7992C /* Graphics.swift */,
-				18DD46E51AFB040600A7992C /* Stage.swift */,
+				18DD46D41AF9B3A000A7992C /* InteractiveObject.swift */,
 				18C9425C1AFC31A900D20904 /* MovieClip.swift */,
+				18DD46E01AFAC8E300A7992C /* Sprite.swift */,
+				18DD46E51AFB040600A7992C /* Stage.swift */,
+				18E1A2C91B726B540050CCFA /* SimpleButton.swift */,
 			);
 			name = display;
 			sourceTree = "<group>";
@@ -375,8 +377,20 @@
 				18DD46EA1AFBAE9500A7992C /* StageScene.swift */,
 				18DD470E1AFBFDEE00A7992C /* GraphicsNode.swift */,
 				18DD47121AFC059F00A7992C /* SpriteNode.swift */,
+				18E1A2CC1B72B61E0050CCFA /* InteractiveNode.swift */,
 			);
 			name = internal;
+			sourceTree = "<group>";
+		};
+		18E1A2D01B72BC410050CCFA /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18DD46C91AF9423100A7992C /* Array.swift */,
+				18E1A2CE1B72BBF60050CCFA /* UIColor.swift */,
+				18DD46C71AF9345B00A7992C /* Object.swift */,
+				18DD46DE1AFA831200A7992C /* Global.swift */,
+			);
+			name = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -556,11 +570,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18C942A71AFD34CE00D20904 /* readme.md in Sources */,
 				18DD47041AFBB4A700A7992C /* Object.swift in Sources */,
 				18DD47031AFBB4A700A7992C /* Array.swift in Sources */,
 				18DD47021AFBB4A700A7992C /* TouchEvent.swift in Sources */,
 				18DD47011AFBB4A700A7992C /* Touch.swift in Sources */,
+				18E1A2CB1B72AA240050CCFA /* SimpleButton.swift in Sources */,
 				18DD47141AFC064100A7992C /* SpriteNode.swift in Sources */,
 				18DD46FD1AFBB4A300A7992C /* Stage.swift in Sources */,
 				18DD47081AFBB4DF00A7992C /* StageScene.swift in Sources */,
@@ -570,12 +584,12 @@
 				18DD470B1AFBB4E600A7992C /* DisplayObjectContainer.swift in Sources */,
 				18DD470D1AFBB4E600A7992C /* Graphics.swift in Sources */,
 				18DD470C1AFBB4E600A7992C /* Sprite.swift in Sources */,
-				18DD47061AFBB4A700A7992C /* MyDrawView.swift in Sources */,
 				18DD47051AFBB4A700A7992C /* Global.swift in Sources */,
 				18DD47091AFBB4E600A7992C /* DisplayObject.swift in Sources */,
 				18DE35521B6FCD58007C9A93 /* SKMultilineLabel.swift in Sources */,
 				18DE35541B6FCD5E007C9A93 /* TextField.swift in Sources */,
 				18DD46FE1AFBB4A700A7992C /* EventDispatcher.swift in Sources */,
+				18E1A2D11B72BC720050CCFA /* UIColor.swift in Sources */,
 				18C9425E1AFC32B500D20904 /* MovieClip.swift in Sources */,
 				18DD47101AFBFE3D00A7992C /* GraphicsNode.swift in Sources */,
 				18DD464E1AF9104500A7992C /* GameViewController.swift in Sources */,
@@ -597,6 +611,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DD46CD1AF9510100A7992C /* DisplayObject.swift in Sources */,
+				18E1A2CA1B726B540050CCFA /* SimpleButton.swift in Sources */,
 				18DD46D31AF96D3F00A7992C /* EventHandler.swift in Sources */,
 				183432091B62F16500F1CD2E /* SKMultilineLabel.swift in Sources */,
 				18C942A01AFD007800D20904 /* EasingDeclarations.swift in Sources */,
@@ -604,6 +619,7 @@
 				18DD46E11AFAC8E300A7992C /* Sprite.swift in Sources */,
 				18DD46C31AF92D9700A7992C /* Event.swift in Sources */,
 				18DD46CA1AF9423100A7992C /* Array.swift in Sources */,
+				18E1A2CD1B72B61E0050CCFA /* InteractiveNode.swift in Sources */,
 				18C9429F1AFD007800D20904 /* easing.swift in Sources */,
 				180A4DD21B669C0B00D77CD4 /* TextFormat.swift in Sources */,
 				18DD46EB1AFBAE9500A7992C /* StageScene.swift in Sources */,
@@ -611,12 +627,12 @@
 				18DD46C81AF9345B00A7992C /* Object.swift in Sources */,
 				18DD470F1AFBFDEE00A7992C /* GraphicsNode.swift in Sources */,
 				18DD46E61AFB040600A7992C /* Stage.swift in Sources */,
-				18DD46E81AFB0BEC00A7992C /* MyDrawView.swift in Sources */,
 				18DD47131AFC059F00A7992C /* SpriteNode.swift in Sources */,
 				18DD46DF1AFA831200A7992C /* Global.swift in Sources */,
 				180A4DD41B669C5100D77CD4 /* TextField.swift in Sources */,
 				18DD46E31AFAC96100A7992C /* Graphics.swift in Sources */,
 				18C942A11AFD007800D20904 /* SKEase.swift in Sources */,
+				18E1A2CF1B72BBF60050CCFA /* UIColor.swift in Sources */,
 				18DD46911AF9110500A7992C /* EventDispatcher.swift in Sources */,
 				18DD46D71AF9B3B400A7992C /* DisplayObjectContainer.swift in Sources */,
 				18C9425D1AFC31A900D20904 /* MovieClip.swift in Sources */,

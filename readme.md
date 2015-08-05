@@ -16,6 +16,9 @@ Underneath the hood ActionSwift3 is based on the SpriteKit Framework but ActionS
 *   Graphics
 *   Stage
 *   MovieClip
+*   SimpleButton
+*   TextField
+*   TextFormat
 *   EventDispatcher
 *   Event
 *   EventHandler
@@ -72,6 +75,15 @@ movieClip.y = Stage.size.height - movieClip.height
 stage.addChild(movieClip)
 ```
 
+**SimpleButton**
+
+You can create a SimpleButton object, with an up and down state(not much point of over states on touch screens!) You can use sprites(with shapes on the graphics object) or movieclips(with textures) as the states.
+
+```Swift
+let play = SimpleButton(upState: playUpState, downState: playDownState)
+stage.addChild(sprite)
+```
+
 ***TextField***
 
 Use familiar syntax to create a textfield. Build the basics of the textfield using the TextField class, and then apply text formatting to the defaultTextFormat property, using the TextFormat class.
@@ -89,7 +101,7 @@ stage.addChild(text)
 
 ***EventDispatcher***
 
-Just as you would expect, Sprites and MovieClips will dispatch events. As Swift is not able to check equality between two functions, an additional class called 'EventHandler' stores the EventHandler, along with a string representing the EventHandler, that can be checked for equality. For example, here's how to set up an enterFrame event handler:
+Just as you would expect, Sprites, SimpleButtons and MovieClips will dispatch events. As Swift is not able to check equality between two functions, an additional class called 'EventHandler' stores the EventHandler, along with a string representing the EventHandler, that can be checked for equality. For example, here's how to set up an enterFrame event handler:
 
 ```Swift
 movieClip.addEventListener(EventType.EnterFrame.rawValue, EventHandler(enterFrame, "enterFrame"))
@@ -112,7 +124,6 @@ ActionSwift3 is a work in progress, feel free to contribute!
 
 Ideas for enhancements:
 
-*   SimpleButton
 *   Date
 *   XML
 *   Sound
@@ -127,6 +138,10 @@ Added int and Boolean data types
 Added TextField
 Resolved issue with stage updates not propogating
 Added license
+
+1.3
+Added SimpleButton
+Added UIColor extension for hexidecimal support
 
 ***Credits***
 
