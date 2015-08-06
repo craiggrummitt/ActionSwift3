@@ -14,7 +14,7 @@ public class Graphics: Object {
     var fillColor = UIColor.blackColor()
     var lineColor = UIColor.blackColor()
     var thickness:CGFloat = 1
-    var owner:Sprite?
+    weak var owner:Sprite?
     var shapes:[GraphicsNode] = []
     
     var userInteractionEnabled:Bool = true {

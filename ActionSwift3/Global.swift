@@ -29,4 +29,4 @@ public func trace(parms:Double) {
 
 typealias Boolean = Bool
 typealias int = Int
-
+typealias Number = CGFloat

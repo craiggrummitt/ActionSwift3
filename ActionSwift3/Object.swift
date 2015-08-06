@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class Object {
+public class Object:NSObject {
 
-    init() {
+    override init() {
         
     }
     

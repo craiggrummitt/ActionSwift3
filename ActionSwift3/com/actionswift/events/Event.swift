@@ -34,6 +34,10 @@ public enum EventType:String {
     case Removed = "Removed"
     /** Event type that may be used whenever something finishes. */
     case Complete = "Complete"
+    /** Sound Event for when a sound finishes playing */
+    case SoundComplete = "soundComplete"
+    /** Sound Event for an error */
+    case SoundError = "soundError"
 }
 
 public class Event: Object {

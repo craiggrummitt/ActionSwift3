@@ -19,6 +19,8 @@ Underneath the hood ActionSwift3 is based on the SpriteKit Framework but ActionS
 *   SimpleButton
 *   TextField
 *   TextFormat
+*   Sound
+*   SoundChannel
 *   EventDispatcher
 *   Event
 *   EventHandler
@@ -99,6 +101,15 @@ text.defaultTextFormat = textFormat
 stage.addChild(text)
 ```
 
+***Sound***
+
+Use sound to play sounds included in your project - a big difference though - now wav files are supported as well as mp3. *Hooray!* Loop the audio, or play it from a point in the file. As per the strange AS3 API, use SoundChannel to stop the sound.
+
+```Swift
+sound = Sound(name: "ButtonTap.wav")
+sound.play()
+```
+
 ***EventDispatcher***
 
 Just as you would expect, Sprites, SimpleButtons and MovieClips will dispatch events. As Swift is not able to check equality between two functions, an additional class called 'EventHandler' stores the EventHandler, along with a string representing the EventHandler, that can be checked for equality. For example, here's how to set up an enterFrame event handler:
@@ -126,7 +137,6 @@ Ideas for enhancements:
 
 *   Date
 *   XML
-*   Sound
 *   Add more complex shapes on Graphics
 
 **Updates**
@@ -142,6 +152,9 @@ Added license
 1.3
 Added SimpleButton
 Added UIColor extension for hexidecimal support
+
+1.4
+Added Sound, SoundChannel
 
 ***Credits***
 

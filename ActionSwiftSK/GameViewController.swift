@@ -13,6 +13,7 @@ import SpriteKit
 class GameViewController: UIViewController {
     let walkingTextures = ["walking1","walking2","walking3","walking4","walking5","walking6","walking7","walking8","walking9"]
     var movieClip:MovieClip!
+    var sound:Sound = Sound(name: "")
     override func viewDidLoad() {
         super.viewDidLoad()
         //create stage
@@ -112,8 +113,12 @@ class GameViewController: UIViewController {
                         }
                     }
                 } else if (currentTarget.name == "play") {
+                    sound = Sound(name: "ButtonTap.wav")
+                    sound.play()
                     movieClip.play()
                 } else if (currentTarget.name == "stop") {
+                    sound = Sound(name: "SecondBeep.wav")
+                    sound.play()
                     movieClip.stop()
                 }
             }

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18020EEC1B73AEFD00F637F2 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18020EEB1B73AEFD00F637F2 /* Sound.swift */; };
+		18020EEE1B73AF1100F637F2 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18020EEB1B73AEFD00F637F2 /* Sound.swift */; };
+		18020EF01B73B1D800F637F2 /* SoundChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18020EEF1B73B1D800F637F2 /* SoundChannel.swift */; };
+		18020EF31B73B87B00F637F2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18020EF11B73B86000F637F2 /* AVFoundation.framework */; };
+		18020EF51B73B94D00F637F2 /* DisplayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46CC1AF9510100A7992C /* DisplayObject.swift */; };
+		18020EF61B73B9B200F637F2 /* SoundChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18020EEF1B73B1D800F637F2 /* SoundChannel.swift */; };
+		18020EF81B73BAD900F637F2 /* ButtonTap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18020EF71B73BAD900F637F2 /* ButtonTap.wav */; };
+		18020EFC1B73C81E00F637F2 /* SecondBeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18020EFB1B73C81E00F637F2 /* SecondBeep.wav */; };
 		180A4DD21B669C0B00D77CD4 /* TextFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A4DD11B669C0B00D77CD4 /* TextFormat.swift */; };
 		180A4DD41B669C5100D77CD4 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A4DD31B669C5100D77CD4 /* TextField.swift */; };
 		183432091B62F16500F1CD2E /* SKMultilineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183432081B62F16500F1CD2E /* SKMultilineLabel.swift */; };
@@ -52,7 +60,6 @@
 		18DD47041AFBB4A700A7992C /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46C71AF9345B00A7992C /* Object.swift */; };
 		18DD47051AFBB4A700A7992C /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46DE1AFA831200A7992C /* Global.swift */; };
 		18DD47081AFBB4DF00A7992C /* StageScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46EA1AFBAE9500A7992C /* StageScene.swift */; };
-		18DD47091AFBB4E600A7992C /* DisplayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46CC1AF9510100A7992C /* DisplayObject.swift */; };
 		18DD470A1AFBB4E600A7992C /* InteractiveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46D41AF9B3A000A7992C /* InteractiveObject.swift */; };
 		18DD470B1AFBB4E600A7992C /* DisplayObjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46D61AF9B3B400A7992C /* DisplayObjectContainer.swift */; };
 		18DD470C1AFBB4E600A7992C /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD46E01AFAC8E300A7992C /* Sprite.swift */; };
@@ -119,6 +126,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		18020EEB1B73AEFD00F637F2 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sound.swift; path = media/Sound.swift; sourceTree = "<group>"; };
+		18020EEF1B73B1D800F637F2 /* SoundChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundChannel.swift; path = media/SoundChannel.swift; sourceTree = "<group>"; };
+		18020EF11B73B86000F637F2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		18020EF71B73BAD900F637F2 /* ButtonTap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonTap.wav; sourceTree = "<group>"; };
+		18020EFB1B73C81E00F637F2 /* SecondBeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SecondBeep.wav; sourceTree = "<group>"; };
 		180A4DD11B669C0B00D77CD4 /* TextFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFormat.swift; path = text/TextFormat.swift; sourceTree = "<group>"; };
 		180A4DD31B669C5100D77CD4 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextField.swift; path = text/TextField.swift; sourceTree = "<group>"; };
 		183432081B62F16500F1CD2E /* SKMultilineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKMultilineLabel.swift; sourceTree = "<group>"; };
@@ -188,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18020EF31B73B87B00F637F2 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +215,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18020EED1B73AF0300F637F2 /* media */ = {
+			isa = PBXGroup;
+			children = (
+				18020EEB1B73AEFD00F637F2 /* Sound.swift */,
+				18020EEF1B73B1D800F637F2 /* SoundChannel.swift */,
+			);
+			name = media;
+			sourceTree = "<group>";
+		};
+		18020EF41B73B88A00F637F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18020EF11B73B86000F637F2 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18020EFD1B73C82600F637F2 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				18020EF71B73BAD900F637F2 /* ButtonTap.wav */,
+				18020EFB1B73C81E00F637F2 /* SecondBeep.wav */,
+			);
+			name = audio;
+			sourceTree = "<group>";
+		};
 		180A4DD01B669BCC00D77CD4 /* text */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +288,7 @@
 		18DD46441AF9104500A7992C /* ActionSwift */ = {
 			isa = PBXGroup;
 			children = (
+				18020EFD1B73C82600F637F2 /* audio */,
 				18C942A41AFD209500D20904 /* images.atlas */,
 				18DD46471AF9104500A7992C /* AppDelegate.swift */,
 				18DD464D1AF9104500A7992C /* GameViewController.swift */,
@@ -290,9 +330,10 @@
 		18DD46711AF9105700A7992C /* ActionSwift3 */ = {
 			isa = PBXGroup;
 			children = (
+				18020EF41B73B88A00F637F2 /* Frameworks */,
 				18DD46741AF9105700A7992C /* ActionSwift3.h */,
-				18DD46721AF9105700A7992C /* Supporting Files */,
 				18DD46C61AF92DD500A7992C /* com */,
+				18DD46721AF9105700A7992C /* Supporting Files */,
 			);
 			path = ActionSwift3;
 			sourceTree = "<group>";
@@ -341,6 +382,7 @@
 				18C9429B1AFD004D00D20904 /* easing */,
 				18DD46C41AF92DA800A7992C /* events */,
 				18E1A2D01B72BC410050CCFA /* extensions */,
+				18020EED1B73AF0300F637F2 /* media */,
 				180A4DD01B669BCC00D77CD4 /* text */,
 			);
 			name = actionswift;
@@ -537,6 +579,8 @@
 				18EEBF8A1AFD6B90007D8C4E /* screenshot.png in Resources */,
 				18DD46561AF9104500A7992C /* LaunchScreen.xib in Resources */,
 				18C942A51AFD209500D20904 /* images.atlas in Resources */,
+				18020EF81B73BAD900F637F2 /* ButtonTap.wav in Resources */,
+				18020EFC1B73C81E00F637F2 /* SecondBeep.wav in Resources */,
 				18DD46531AF9104500A7992C /* Images.xcassets in Resources */,
 				18DD46511AF9104500A7992C /* Main.storyboard in Resources */,
 			);
@@ -575,17 +619,19 @@
 				18DD47021AFBB4A700A7992C /* TouchEvent.swift in Sources */,
 				18DD47011AFBB4A700A7992C /* Touch.swift in Sources */,
 				18E1A2CB1B72AA240050CCFA /* SimpleButton.swift in Sources */,
+				18020EF61B73B9B200F637F2 /* SoundChannel.swift in Sources */,
 				18DD47141AFC064100A7992C /* SpriteNode.swift in Sources */,
 				18DD46FD1AFBB4A300A7992C /* Stage.swift in Sources */,
 				18DD47081AFBB4DF00A7992C /* StageScene.swift in Sources */,
 				18DD470A1AFBB4E600A7992C /* InteractiveObject.swift in Sources */,
 				18DE35531B6FCD5B007C9A93 /* TextFormat.swift in Sources */,
 				18DD47001AFBB4A700A7992C /* EventHandler.swift in Sources */,
+				18020EF51B73B94D00F637F2 /* DisplayObject.swift in Sources */,
 				18DD470B1AFBB4E600A7992C /* DisplayObjectContainer.swift in Sources */,
 				18DD470D1AFBB4E600A7992C /* Graphics.swift in Sources */,
+				18020EEE1B73AF1100F637F2 /* Sound.swift in Sources */,
 				18DD470C1AFBB4E600A7992C /* Sprite.swift in Sources */,
 				18DD47051AFBB4A700A7992C /* Global.swift in Sources */,
-				18DD47091AFBB4E600A7992C /* DisplayObject.swift in Sources */,
 				18DE35521B6FCD58007C9A93 /* SKMultilineLabel.swift in Sources */,
 				18DE35541B6FCD5E007C9A93 /* TextField.swift in Sources */,
 				18DD46FE1AFBB4A700A7992C /* EventDispatcher.swift in Sources */,
@@ -617,6 +663,7 @@
 				18C942A01AFD007800D20904 /* EasingDeclarations.swift in Sources */,
 				18DD46DB1AFA5F6800A7992C /* Touch.swift in Sources */,
 				18DD46E11AFAC8E300A7992C /* Sprite.swift in Sources */,
+				18020EEC1B73AEFD00F637F2 /* Sound.swift in Sources */,
 				18DD46C31AF92D9700A7992C /* Event.swift in Sources */,
 				18DD46CA1AF9423100A7992C /* Array.swift in Sources */,
 				18E1A2CD1B72B61E0050CCFA /* InteractiveNode.swift in Sources */,
@@ -635,6 +682,7 @@
 				18E1A2CF1B72BBF60050CCFA /* UIColor.swift in Sources */,
 				18DD46911AF9110500A7992C /* EventDispatcher.swift in Sources */,
 				18DD46D71AF9B3B400A7992C /* DisplayObjectContainer.swift in Sources */,
+				18020EF01B73B1D800F637F2 /* SoundChannel.swift in Sources */,
 				18C9425D1AFC31A900D20904 /* MovieClip.swift in Sources */,
 				18DD46DD1AFA612D00A7992C /* TouchEvent.swift in Sources */,
 			);

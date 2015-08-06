@@ -8,7 +8,7 @@
 
 import SpriteKit
 public class DisplayObject: EventDispatcher, Equatable, StageSceneProtocol {
-    var parent:DisplayObjectContainer?
+    weak var parent:DisplayObjectContainer?
     var name:String = ""
     internal var node = SKNode()
     
