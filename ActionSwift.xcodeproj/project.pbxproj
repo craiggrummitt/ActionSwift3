@@ -78,6 +78,7 @@
 		18E1A2D11B72BC720050CCFA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1A2CE1B72BBF60050CCFA /* UIColor.swift */; };
 		18EEBF871AFD5AC0007D8C4E /* ActionSwift.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EEBF861AFD5AC0007D8C4E /* ActionSwift.png */; };
 		18EEBF8A1AFD6B90007D8C4E /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EEBF891AFD6B90007D8C4E /* screenshot.png */; };
+		18F664681B751F36001EEB3E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 18F664671B751F36001EEB3E /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,7 +140,6 @@
 		18C9429D1AFD007800D20904 /* EasingDeclarations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasingDeclarations.swift; sourceTree = "<group>"; };
 		18C9429E1AFD007800D20904 /* SKEase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEase.swift; sourceTree = "<group>"; };
 		18C942A41AFD209500D20904 /* images.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = images.atlas; sourceTree = "<group>"; };
-		18C942A61AFD34CE00D20904 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		18DD46421AF9104500A7992C /* ActionSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActionSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DD46461AF9104500A7992C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DD46471AF9104500A7992C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +178,7 @@
 		18E1A2CE1B72BBF60050CCFA /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		18EEBF861AFD5AC0007D8C4E /* ActionSwift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionSwift.png; sourceTree = "<group>"; };
 		18EEBF891AFD6B90007D8C4E /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
+		18F664671B751F36001EEB3E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,7 +264,7 @@
 		18DD46391AF9104500A7992C = {
 			isa = PBXGroup;
 			children = (
-				18C942A61AFD34CE00D20904 /* readme.md */,
+				18F664671B751F36001EEB3E /* README.md */,
 				18EEBF861AFD5AC0007D8C4E /* ActionSwift.png */,
 				18EEBF891AFD6B90007D8C4E /* screenshot.png */,
 				18DD46441AF9104500A7992C /* ActionSwift */,
@@ -624,6 +625,7 @@
 				18DD46FD1AFBB4A300A7992C /* Stage.swift in Sources */,
 				18DD47081AFBB4DF00A7992C /* StageScene.swift in Sources */,
 				18DD470A1AFBB4E600A7992C /* InteractiveObject.swift in Sources */,
+				18F664681B751F36001EEB3E /* README.md in Sources */,
 				18DE35531B6FCD5B007C9A93 /* TextFormat.swift in Sources */,
 				18DD47001AFBB4A700A7992C /* EventHandler.swift in Sources */,
 				18020EF51B73B94D00F637F2 /* DisplayObject.swift in Sources */,
