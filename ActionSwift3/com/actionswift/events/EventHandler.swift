@@ -16,7 +16,7 @@ import UIKit
 public class EventHandler: Object {
     var function:(Event)->Void
     var functionName:String
-    init(_ function:(Event)->Void,_ functionName:String) {
+    public init(_ function:(Event)->Void,_ functionName:String) {
         self.function = function
         self.functionName = functionName
     }

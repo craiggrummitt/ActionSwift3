@@ -9,9 +9,12 @@
 import Foundation
 import UIKit
 
+/**
+Add hex initializer, eg `UIColor(hex:"#FFFFFF")
+*/
 extension UIColor {
     
-    convenience init(var hex: String) {
+    convenience public init(var hex: String) {
         var alpha: Float = 100
         let hexLength = count(hex)
         if !(hexLength == 7 || hexLength == 9) {
@@ -44,6 +47,9 @@ extension UIColor {
         )
     }
 }
+/**
+Add subscripts to String
+*/
 extension String {
     
     subscript (i: Int) -> Character {

@@ -17,7 +17,7 @@ public class TextField: InteractiveObject {
     
     private var isDirty:Boolean = false
 
-    override init() {
+    override public init() {
         super.init()
         textFieldNode.dontUpdate = true
         self.node.addChild(textFieldNode)

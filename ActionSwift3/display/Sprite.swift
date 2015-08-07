@@ -8,12 +8,16 @@
 
 import SpriteKit
 
+/**
+Creates a Sprite. A sprite contains a graphics property that can be used to display shapes.
+A sprite can also be dragged, via the `startDrag` method.
+*/
 public class Sprite: DisplayObjectContainer {
     public var graphics:Graphics!
     private var dragging = false
     private var initialLoc:CGPoint = CGPoint(x: 0, y: 0)
     private var initialTouch:CGPoint = CGPoint(x: 0, y: 0)
-    override init() {
+    override public init() {
         graphics = Graphics()
         super.init()
         graphics.makeOwner(self)
@@ -25,6 +29,7 @@ public class Sprite: DisplayObjectContainer {
         super.enableUserInteraction(enabled)
         self.graphics.userInteractionEnabled = enabled
     }
+    ///Start dragging the sprite
     public func startDrag() {
         dragging = true
         self.addEventListener(InteractiveEventType.TouchMove.rawValue, EventHandler(touchEventHandler, "touchEventHandler"))
@@ -49,6 +54,7 @@ public class Sprite: DisplayObjectContainer {
         }
         
     }
+    ///Stop dragging the sprite
     public func stopDrag() {
         dragging = false
         self.removeEventListener(InteractiveEventType.TouchMove.rawValue, EventHandler(touchEventHandler, "touchEventHandler"))

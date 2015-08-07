@@ -6,6 +6,9 @@
 //  Copyright (c) 2015 Interactive Coconut. All rights reserved.
 //
 
+
+
+import UIKit
 /** The EventDispatcher class is the base class for all classes that dispatch events.
 *  This is the Starling version of the Flash class with the same name.
 *
@@ -24,9 +27,6 @@
 *  @see Event
 *  @see starling.display.DisplayObject DisplayObject
 */
-
-import UIKit
-
 public class EventDispatcher: Object {
     private var mEventListeners = Dictionary<String, [EventHandler]>()
 

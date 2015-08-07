@@ -7,18 +7,22 @@
 //
 
 import UIKit
-
-enum SimpleButtonState {
+/**
+SimpleButton's currentState is set to this.
+*/
+public enum SimpleButtonState {
     case Up
     case Down
 }
-
-class SimpleButton: InteractiveObject {
+/**
+Display a button with two states. A state can be represented by a DisplayObject, or any subclass thereof, eg. MovieClip or Sprite.
+*/
+public class SimpleButton: InteractiveObject {
     
     private var upState:DisplayObject
     private var downState:DisplayObject
     
-    init(upState:DisplayObject,downState:DisplayObject) {
+    public init(upState:DisplayObject,downState:DisplayObject) {
         //keeping non-optionals honest
         self.upState = upState
         self.downState = downState
@@ -36,7 +40,8 @@ class SimpleButton: InteractiveObject {
         self.currentState = .Up
         self.enabled = true
     }
-    var currentState:SimpleButtonState {
+    /** The current state of the button. Unlike AS3, this state can be set manually. */
+    public var currentState:SimpleButtonState {
         didSet {
             switch currentState {
             case .Up:
@@ -49,7 +54,7 @@ class SimpleButton: InteractiveObject {
             self.setUpEventListeners()
         }
     }
-    var enabled:Bool {
+    public var enabled:Bool {
         didSet {
             setUpEventListeners()
         }

@@ -9,7 +9,7 @@
 import SpriteKit
 import AVFoundation
 
-class SoundChannel: EventDispatcher,AVAudioPlayerDelegate {
+public class SoundChannel: EventDispatcher,AVAudioPlayerDelegate {
     var audioPlayer:AVAudioPlayer = AVAudioPlayer()
     
     internal func play(name:String,startTime:Number=0, loops:int=1) {
@@ -31,10 +31,10 @@ class SoundChannel: EventDispatcher,AVAudioPlayerDelegate {
     func stop() {
         self.audioPlayer.stop()
     }
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
+    public func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
         dispatchEvent(Event(EventType.SoundComplete.rawValue,false))
     }
-    func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer!, error: NSError!) {
+    public func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer!, error: NSError!) {
         dispatchEvent(Event(EventType.SoundError.rawValue,false))
     }
 }

@@ -8,6 +8,10 @@
 // Unfortunately extensions in frameworks can't be made public, at least for now - watch this space...
 //
 import Foundation
+
+/**
+Includes AS3 versions of Array methods
+*/
 extension Array {
     var length:Int {
         return self.count

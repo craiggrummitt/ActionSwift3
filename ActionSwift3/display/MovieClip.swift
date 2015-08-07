@@ -8,6 +8,10 @@
 
 import SpriteKit
 
+/** 
+Creates a movie clip from the provided textures and with the specified default framerate.
+The movie will have the size of the first frame. 
+*/
 public class MovieClip: Sprite {
     let PLAYING_KEY = "playing"
     internal var spriteNode  = SpriteNode()
@@ -15,9 +19,8 @@ public class MovieClip: Sprite {
     internal var imagesAtlas:SKTextureAtlas!
     internal var textures:[SKTexture] = []
     internal var mFPS:UInt
-    /** Creates a movie clip from the provided textures and with the specified default framerate.
-    *  The movie will have the size of the first frame. */
-    init(textureNames:[String], fps: UInt = 12, atlas:String = "images.atlas") {
+    
+    public init(textureNames:[String], fps: UInt = 12, atlas:String = "images.atlas") {
         self.mFPS = fps
         super.init()
         self.setTextures(textureNames, atlas: atlas)

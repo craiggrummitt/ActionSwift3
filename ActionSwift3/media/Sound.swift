@@ -12,11 +12,11 @@ import SpriteKit
 Be sure to store either the sound or soundChannel in an instance variable, as the sound will be "garbage collected"
 (or the Swift equivalent at least, *deinitialized* when there are no references to it)
 */
-class Sound: EventDispatcher {
+public class Sound: EventDispatcher {
     private var name:String
     private var soundChannel:SoundChannel = SoundChannel()
     
-    init(name:String) {
+    public init(name:String) {
         self.name = name
         
     }

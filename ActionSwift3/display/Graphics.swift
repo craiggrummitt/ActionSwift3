@@ -8,7 +8,10 @@
 
 import SpriteKit
 
-
+/**
+A Graphics class can be used to display shapes. First call `beginFill` if you want a fill color and call `lineStyle` to set the line style.
+Then you can draw a circle, elipse, rectangle or triangle.
+*/
 public class Graphics: Object {
     var node = SKNode()
     var fillColor = UIColor.blackColor()

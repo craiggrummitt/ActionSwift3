@@ -9,9 +9,10 @@
 import UIKit
 
 public class InteractiveObject: DisplayObject {
-    override init() {
+    override public init() {
         super.init()
         self.mouseEnabled = true
+
     }
     public var mouseEnabled:Bool {
         get {return self.node.userInteractionEnabled}

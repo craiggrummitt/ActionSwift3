@@ -6,6 +6,26 @@
 //  Copyright (c) 2015 Interactive Coconut. All rights reserved.
 //
 
+
+import UIKit
+
+/**
+All basic event types.
+*/
+public enum EventType:String {
+    /** Event type for a display object that is added to a parent. */
+    case Added = "Added"
+    /** Event type for a display object that is entering a new frame. */
+    case EnterFrame = "EnterFrame"
+    /** Event type for a display object that is removed from its parent. */
+    case Removed = "Removed"
+    /** Event type that may be used whenever something finishes. */
+    case Complete = "Complete"
+    /** Sound Event for when a sound finishes playing */
+    case SoundComplete = "soundComplete"
+    /** Sound Event for an error */
+    case SoundError = "soundError"
+}
 /** Event objects are passed as parameters to event listeners when an event occurs.
 *
 *  <p>EventDispatchers create instances of this class and send them to registered listeners.
@@ -23,23 +43,6 @@
 *
 *  @see EventDispatcher
 */
-import UIKit
-
-public enum EventType:String {
-    /** Event type for a display object that is added to a parent. */
-    case Added = "Added"
-    /** Event type for a display object that is entering a new frame. */
-    case EnterFrame = "EnterFrame"
-    /** Event type for a display object that is removed from its parent. */
-    case Removed = "Removed"
-    /** Event type that may be used whenever something finishes. */
-    case Complete = "Complete"
-    /** Sound Event for when a sound finishes playing */
-    case SoundComplete = "soundComplete"
-    /** Sound Event for an error */
-    case SoundError = "soundError"
-}
-
 public class Event: Object {
     private var mTarget:EventDispatcher?;
     private var mCurrentTarget:EventDispatcher?;
@@ -47,11 +50,11 @@ public class Event: Object {
     private var mBubbles:Bool;
     private var mStopsPropagation:Bool = false;
     private var mStopsImmediatePropagation:Bool = false;
-    init(_ type:String,_ bubbles:Bool = true) {
+    public init(_ type:String,_ bubbles:Bool = true) {
         self.mType = type
         self.mBubbles = bubbles
     }
-    init(_ type:EventType,_ bubbles:Bool = true) {
+    public init(_ type:EventType,_ bubbles:Bool = true) {
         self.mType = type.rawValue
         self.mBubbles = bubbles
     }

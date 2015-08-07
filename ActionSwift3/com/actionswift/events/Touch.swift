@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+All information about a single touch.
+*/
 public class Touch: Object {
     public var localX:CGFloat
     public var localY:CGFloat
@@ -15,7 +18,7 @@ public class Touch: Object {
     public var stageY:CGFloat
     public var sizeX:CGFloat
     public var sizeY:CGFloat
-    init(localX:CGFloat,localY:CGFloat,stageX:CGFloat,stageY:CGFloat,sizeX:CGFloat,sizeY:CGFloat) {
+    public init(localX:CGFloat,localY:CGFloat,stageX:CGFloat,stageY:CGFloat,sizeX:CGFloat,sizeY:CGFloat) {
         self.localX = localX
         self.localY = localY
         self.stageX = stageX

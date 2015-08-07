@@ -7,12 +7,15 @@
 //
 
 import SpriteKit
+/**
+The base class for all display objects. Contains basic properties such as `width`, `height`, `scaleX`, `scaleY`, `x` and `y`.
+*/
 public class DisplayObject: EventDispatcher, Equatable, StageSceneProtocol {
     weak var parent:DisplayObjectContainer?
     var name:String = ""
     internal var node = SKNode()
     
-    override init() {
+    override public init() {
         super.init()
 
     }

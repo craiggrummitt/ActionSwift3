@@ -27,6 +27,9 @@ public func trace(parms:Double) {
     println(parms)
 }
 
+///The return of AS3 data types
 typealias Boolean = Bool
+//Trying to keep this codebase agnostic, regardless of some weird idiosyncronacies of the original datatypes, such as AS3 `int` not following correct case conventions!
 typealias int = Int
 typealias Number = CGFloat
+

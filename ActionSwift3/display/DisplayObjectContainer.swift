@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+A DisplayObjectContainer can contain DisplayObjects, using `addChild`, `addChildAt`, `getChildAt`, `removeChildAt`, etc.
+*/
 public class DisplayObjectContainer: InteractiveObject {
     internal var children:[DisplayObject] = []
     public var numChildren:UInt = 0

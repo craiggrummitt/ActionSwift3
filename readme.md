@@ -29,6 +29,19 @@ Underneath the hood ActionSwift3 is based on the SpriteKit Framework but ActionS
 
 Easing classes are also included for convenience from [here](https://github.com/craiggrummitt/SpriteKitEasingSwift).
 
+API documentation can be found at [cocoadocs](http://cocoadocs.org/docsets/ActionSwift3/1.4/index.html)
+
+## Installation
+
+ActionSwift is available through [CocoaPods](https://cocoapods.org/pods/ActionSwift3). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "ActionSwift3"
+```
+
+Alternatively, if you would like access to the example project as well, clone the github project [here](https://github.com/craiggrummitt/ActionSwift3).
+
 **ActionSwift**
 
 ActionSwift is a sample project that you can use to play with ActionSwift3. Start with taking a look at GameViewController.swift. GameViewController does the following:
@@ -142,19 +155,19 @@ Ideas for enhancements:
 **Updates**
 
 1.1
-Added int and Boolean data types
+*   Added int and Boolean data types
 
 1.2
-Added TextField
-Resolved issue with stage updates not propogating
-Added license
+*   Added TextField
+*   Resolved issue with stage updates not propogating
+*   Added license
 
 1.3
-Added SimpleButton
-Added UIColor extension for hexidecimal support
+*   Added SimpleButton
+*   Added UIColor extension for hexidecimal support
 
 1.4
-Added Sound, SoundChannel
+*   Added Sound, SoundChannel
 
 ***Credits***
 
