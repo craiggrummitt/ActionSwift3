@@ -19,6 +19,8 @@ public class MovieClip: Sprite {
     internal var imagesAtlas:SKTextureAtlas!
     internal var textures:[SKTexture] = []
     internal var mFPS:UInt
+    private var initialWidth:CGFloat = 0
+    private var initialHeight:CGFloat = 0
     
     public init(textureNames:[String], fps: UInt = 12, atlas:String = "images.atlas") {
         self.mFPS = fps
@@ -47,6 +49,9 @@ public class MovieClip: Sprite {
         spriteNode.position.x = 0
         spriteNode.position.y = Stage.size.height
         node.addChild(spriteNode)
+        
+        initialWidth = spriteNode.frame.width
+        initialHeight = spriteNode.frame.height
     }
     //public methods
     /** 
@@ -126,10 +131,28 @@ public class MovieClip: Sprite {
     }
     
     override public var height:CGFloat {
-        return spriteNode.frame.height
+        get {
+            return spriteNode.frame.height
+        }
+        set(newValue) {
+            spriteNode.xScale = newValue / initialHeight
+        }
     }
     override public var width:CGFloat {
-        return spriteNode.frame.width
+        get {
+            return spriteNode.frame.width
+        }
+        set(newValue) {
+            spriteNode.xScale = newValue / initialWidth
+        }
+    }
+    override public var scaleX:CGFloat {
+        get {return spriteNode.xScale}
+        set(newValue) {spriteNode.xScale = newValue}
+    }
+    override public var scaleY:CGFloat {
+        get {return spriteNode.yScale}
+        set(newValue) {spriteNode.yScale = newValue}
     }
     override internal func enableUserInteraction(enabled:Bool) {
         //self.spriteNode.userInteractionEnabled = enabled

@@ -44,7 +44,6 @@ class GameViewController: UIViewController {
         stage.addChild(stop)
         
         
-        
         //------------------------------------------------------------------------------------------------------------------
         //create a simple play button
         
@@ -69,7 +68,6 @@ class GameViewController: UIViewController {
         play.addEventListener(InteractiveEventType.TouchBegin.rawValue, EventHandler(spriteTouched, "spriteTouched"))
         stage.addChild(play)
         
-        
         //------------------------------------------------------------------------------------------------------------------
         //create a movieclip, add textures from 'images.atlas', then control it just as you would in AS3
         movieClip = MovieClip(textureNames: walkingTextures)
@@ -80,7 +78,6 @@ class GameViewController: UIViewController {
         movieClip.name = "walkingman"
         stage.addChild(movieClip)
 
-        
         
         //------------------------------------------------------------------------------------------------------------------
         //create a textfield, apply text formatting with a TextFormat object

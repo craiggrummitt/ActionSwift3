@@ -12,7 +12,7 @@ import UIKit
 The base class of *everything* in AS3...
 */
 public class Object:NSObject {
-
+    
     override public init() {
         
     }

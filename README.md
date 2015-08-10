@@ -40,6 +40,12 @@ it, simply add the following line to your Podfile:
 pod "ActionSwift3"
 ```
 
+Don't forget to import the Pod where you would like to use it:
+
+```Swift
+import ActionSwift3
+```
+
 Alternatively, if you would like access to the example project as well, clone the github project [here](https://github.com/craiggrummitt/ActionSwift3).
 
 **ActionSwift**
