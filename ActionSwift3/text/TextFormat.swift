@@ -15,11 +15,11 @@ Set up your text formatting here, add it to your text field with the `defaultTex
     Leave leading as -1 and it will be automatically made the same as the font size
 */
 public class TextFormat:Object {
-    var font = "ArialMT"
-    var size:CGFloat = 12
-    var color = UIColor.blackColor()
-    var leading:CGFloat = 12
-    var align:SKLabelHorizontalAlignmentMode = .Left
+    public var font = "ArialMT"
+    public var size:CGFloat = 12
+    public var color = UIColor.blackColor()
+    public var leading:CGFloat = 12
+    public var align:SKLabelHorizontalAlignmentMode = .Left
     
     public init(font:String = "ArialMT", size:CGFloat = 12, color:UIColor = UIColor.blackColor(),leading:CGFloat = -1,align:SKLabelHorizontalAlignmentMode = .Left) {
         self.font = font
