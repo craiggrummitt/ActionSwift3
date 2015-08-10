@@ -20,11 +20,11 @@ public class Sound: EventDispatcher {
         self.name = name
         
     }
-    func load(name:String) {
+    public func load(name:String) {
         self.name = name
     }
     ///Returns a SoundChannel, which you can use to *stop* the Sound.
-    func play(startTime:Number = 0, loops:int = 0)->SoundChannel {
+    public func play(startTime:Number = 0, loops:int = 0)->SoundChannel {
         soundChannel = SoundChannel()
         soundChannel.play(self.name,startTime:startTime, loops:loops)
         return soundChannel
