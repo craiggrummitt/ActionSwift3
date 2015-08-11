@@ -44,6 +44,7 @@ public class EventDispatcher: Object {
     /** Removes an event listener from the object. */
     public func removeEventListener(type:String,_ listener:EventHandler) {
         if var listeners = mEventListeners[type] {
+            mEventListeners[type] = nil
             var numListeners = listeners.length
             var remainingListeners:[EventHandler] = []
             for (var i=0;i<numListeners; ++i) {

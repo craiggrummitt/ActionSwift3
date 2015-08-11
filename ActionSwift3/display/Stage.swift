@@ -31,6 +31,7 @@ public class Stage: DisplayObjectContainer, StageSceneProtocol {
         skView.presentScene(stageScene)
         
         stageScene.addChild(self.node)
+        self.stage = self
         
     }
     class public func getSize()->CGSize {

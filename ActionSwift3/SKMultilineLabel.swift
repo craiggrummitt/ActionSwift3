@@ -59,7 +59,6 @@ class SKMultilineLabel: SKNode {
 
         self.update(forceUpdate: true)
     }
-    
     //if you want to change properties without updating the text field,
     //  set dontUpdate to true and call the update method manually, passing forceUpdate as true.
     func update(forceUpdate:Bool = false) {
@@ -86,6 +85,7 @@ class SKMultilineLabel: SKNode {
             
             // creation of the SKLabelNode itself
             var label = SKLabelNode(fontNamed: fontName)
+            
             // name each label node so you can animate it if u wish
             label.name = "line\(lineCount)"
             label.horizontalAlignmentMode = alignment

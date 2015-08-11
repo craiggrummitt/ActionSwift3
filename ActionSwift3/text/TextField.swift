@@ -23,6 +23,7 @@ public class TextField: InteractiveObject {
         self.node.addChild(textFieldNode)
         textFieldNode.position.x = 0
         textFieldNode.position.y = Stage.size.height
+        
     }
     public var defaultTextFormat:TextFormat {
         get {return _textFormat}

@@ -135,7 +135,7 @@ public class MovieClip: Sprite {
             return spriteNode.frame.height
         }
         set(newValue) {
-            spriteNode.xScale = newValue / initialHeight
+            spriteNode.yScale = newValue / initialHeight
         }
     }
     override public var width:CGFloat {

@@ -19,6 +19,7 @@ public class DisplayObjectContainer: InteractiveObject {
         if let parent = child.node.parent {
             child.node.removeFromParent()
         }
+        child.stage = self.stage
         self.node.addChild(child.node)
         children.push(child)
         child.parent = self
@@ -44,9 +45,7 @@ public class DisplayObjectContainer: InteractiveObject {
         return(child)
     }
     public func contains(child:DisplayObject)->Bool {
-        let t = children[0] === child
-        let childIndex = children.indexOf(child)
-        return (children.indexOf(child) > -1)
+        return (getChildIndex(child) > -1)
     }
     public func getChildAt(index:UInt)->DisplayObject? {
         return(children.get(Int(index)))
@@ -60,10 +59,17 @@ public class DisplayObjectContainer: InteractiveObject {
         return nil
     }
     public func getChildIndex(child:DisplayObject)->Int {
-        return(children.indexOf(child))
+        var index:Int = -1
+        for (var i:Int=0;i<Int(self.numChildren);i++) {
+            let t = self.getChildAt(UInt(i))
+            if (t === child) {
+                index = i
+            }
+        }
+        return(index)
     }
     public func removeChild(child:DisplayObject)->DisplayObject {
-        let index = children.indexOf(child)
+        let index = getChildIndex(child)
         if index > -1  {
             self.node.removeChildrenInArray([child.node])
             children.removeAtIndex(index)

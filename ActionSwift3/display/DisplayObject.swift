@@ -11,8 +11,10 @@ import SpriteKit
 The base class for all display objects. Contains basic properties such as `width`, `height`, `scaleX`, `scaleY`, `x` and `y`.
 */
 public class DisplayObject: EventDispatcher, Equatable, StageSceneProtocol {
-    weak var parent:DisplayObjectContainer?
-    var name:String = ""
+    public weak var parent:DisplayObjectContainer?
+    public var name:String = ""
+    public weak var stage:Stage?
+    
     internal var node = SKNode()
     
     override public init() {
@@ -46,11 +48,12 @@ public class DisplayObject: EventDispatcher, Equatable, StageSceneProtocol {
         set (newValue) {node.position.x = newValue}
     }
     public var y:CGFloat {
-        get {return node.position.y}
+        get {return -node.position.y}
         set (newValue) {
             node.position.y = -newValue
         }
     }
+    
     internal var yRaw:CGFloat {
         get {return node.position.y}
         set (newValue) {

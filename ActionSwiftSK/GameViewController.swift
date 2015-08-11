@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         //create stage
         let stage = Stage(self.view as! SKView)
-
+        
         //------------------------------------------------------------------------------------------------------------------
         //create a simple stop button
         
@@ -35,8 +35,9 @@ class GameViewController: UIViewController {
         stopDownState.graphics.drawRect(0,0,44,44)
         stopDownState.graphics.beginFill(UIColor(hex:"#FF0000"))
         stopDownState.graphics.drawRect(8,8,28,28)
-        
+
         let stop = SimpleButton(upState: stopUpState, downState: stopDownState)
+
         stop.x = 10
         stop.y = 10
         stop.name = "stop"

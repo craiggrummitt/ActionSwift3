@@ -13,13 +13,15 @@ import UIKit
 Add hex initializer, eg `UIColor(hex:"#FFFFFF")
 */
 extension UIColor {
-    
+    /** initialize with hex string.
+Use format eg. "#FFFFFF"
+*/
     convenience public init(var hex: String) {
         var alpha: Float = 100
         let hexLength = count(hex)
         if !(hexLength == 7 || hexLength == 9) {
             // A hex must be either 7 or 9 characters (#GGRRBBAA)
-            println("improper call to 'colorFromHex', hex length must be 7 or 9 chars (#GGRRBBAA)")
+            println("improper call to 'colorFromHex', hex length must be 7 or 9 chars (#GGRRBBAA). You've called \(hex)")
             self.init(white: 0, alpha: 1)
             return
         }
