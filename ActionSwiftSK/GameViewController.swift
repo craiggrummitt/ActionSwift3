@@ -78,7 +78,6 @@ class GameViewController: UIViewController {
         movieClip.addEventListener(InteractiveEventType.TouchEnd.rawValue, EventHandler(spriteTouched, "spriteTouched"))
         movieClip.name = "walkingman"
         stage.addChild(movieClip)
-
         
         //------------------------------------------------------------------------------------------------------------------
         //create a textfield, apply text formatting with a TextFormat object

@@ -31,6 +31,8 @@ Easing classes are also included for convenience from [here](https://github.com/
 
 API documentation can be found at [cocoadocs](http://cocoadocs.org/docsets/ActionSwift3/1.4/index.html)
 
+You can find a tutorial - **Swift API for the Flash Guy** - [here](https://craiggrummitt.wordpress.com/2015/08/11/swift-api-for-the-flash-guy/).
+
 ## Installation
 
 ActionSwift is available through [CocoaPods](https://cocoapods.org/pods/ActionSwift3). To install
