@@ -33,13 +33,18 @@ API documentation can be found at [cocoadocs](http://cocoadocs.org/docsets/Actio
 
 You can find a tutorial - **Swift API for the Flash Guy** - [here](https://craiggrummitt.wordpress.com/2015/08/11/swift-api-for-the-flash-guy/).
 
+![SwiftAPIfortheFlashGuySmall.png](SwiftAPIfortheFlashGuySmall.png)
+
+
 ## Installation
 
 ActionSwift is available through [CocoaPods](https://cocoapods.org/pods/ActionSwift3). To install
-it, simply add the following line to your Podfile:
+it, add the following to your Podfile: (Static Swift frameworks require iOS 8)
 
 ```ruby
-pod "ActionSwift3"
+use_frameworks!
+platform :ios, '8.0'
+pod 'ActionSwift3'
 ```
 
 Don't forget to import the Pod where you would like to use it:

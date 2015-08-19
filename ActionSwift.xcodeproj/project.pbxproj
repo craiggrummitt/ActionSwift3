@@ -76,8 +76,6 @@
 		18E1A2CD1B72B61E0050CCFA /* InteractiveNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1A2CC1B72B61E0050CCFA /* InteractiveNode.swift */; };
 		18E1A2CF1B72BBF60050CCFA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1A2CE1B72BBF60050CCFA /* UIColor.swift */; };
 		18E1A2D11B72BC720050CCFA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1A2CE1B72BBF60050CCFA /* UIColor.swift */; };
-		18EEBF871AFD5AC0007D8C4E /* ActionSwift.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EEBF861AFD5AC0007D8C4E /* ActionSwift.png */; };
-		18EEBF8A1AFD6B90007D8C4E /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EEBF891AFD6B90007D8C4E /* screenshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +131,7 @@
 		18020EFB1B73C81E00F637F2 /* SecondBeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SecondBeep.wav; sourceTree = "<group>"; };
 		180A4DD11B669C0B00D77CD4 /* TextFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFormat.swift; path = text/TextFormat.swift; sourceTree = "<group>"; };
 		180A4DD31B669C5100D77CD4 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextField.swift; path = text/TextField.swift; sourceTree = "<group>"; };
+		1833525B1B84C8D20082DB1F /* SwiftAPIfortheFlashGuySmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwiftAPIfortheFlashGuySmall.png; sourceTree = "<group>"; };
 		183432081B62F16500F1CD2E /* SKMultilineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKMultilineLabel.swift; sourceTree = "<group>"; };
 		18642EF01B755FA000689AB1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		18C9425C1AFC31A900D20904 /* MovieClip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieClip.swift; path = display/MovieClip.swift; sourceTree = "<group>"; };
@@ -266,6 +265,7 @@
 				18642EF01B755FA000689AB1 /* README.md */,
 				18EEBF861AFD5AC0007D8C4E /* ActionSwift.png */,
 				18EEBF891AFD6B90007D8C4E /* screenshot.png */,
+				1833525B1B84C8D20082DB1F /* SwiftAPIfortheFlashGuySmall.png */,
 				18DD46441AF9104500A7992C /* ActionSwift */,
 				18DD465E1AF9104500A7992C /* ActionSwiftTests */,
 				18DD46711AF9105700A7992C /* ActionSwift3 */,
@@ -575,8 +575,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18EEBF871AFD5AC0007D8C4E /* ActionSwift.png in Resources */,
-				18EEBF8A1AFD6B90007D8C4E /* screenshot.png in Resources */,
 				18DD46561AF9104500A7992C /* LaunchScreen.xib in Resources */,
 				18C942A51AFD209500D20904 /* images.atlas in Resources */,
 				18020EF81B73BAD900F637F2 /* ButtonTap.wav in Resources */,
