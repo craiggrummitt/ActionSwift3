@@ -10,7 +10,7 @@ import SpriteKit
 /**
 The base class for all display objects. Contains basic properties such as `width`, `height`, `scaleX`, `scaleY`, `x` and `y`.
 */
-public class DisplayObject: EventDispatcher, Equatable, StageSceneProtocol {
+public class DisplayObject: EventDispatcher, StageSceneProtocol {
     public weak var parent:DisplayObjectContainer?
     public var name:String = ""
     public weak var stage:Stage?

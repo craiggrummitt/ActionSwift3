@@ -37,31 +37,31 @@ extension Array {
     }
     // Safely lookup an index that might be out of bounds,
     // returning nil if it does not exist
-    func get(index: Int) -> T? {
+    func get(index: Int) -> Element? {
         if 0 <= index && index < count {
             return self[index]
         } else {
             return nil
         }
     }
-    mutating func push(newElement: T) {
+    mutating func push(newElement: Element) {
         self.append(newElement)
     }
-    mutating func pop()->T? {
-        var last = self.last
+    mutating func pop()->Element? {
+        let last = self.last
         if let last = last {
             self.removeLast()
             return last
         }
         return nil
     }
-    mutating func splice(startIndex:UInt,deleteCount:UInt, values:[T])->Array {
+    mutating func splice(startIndex:UInt,deleteCount:UInt, values:[Element])->Array {
         var returnArray = self
         returnArray.removeRange(Range<Int>(start:Int(startIndex),end:Int(startIndex + deleteCount)))
-        returnArray.splice(values, atIndex: Int(startIndex))
+        returnArray.insertContentsOf(values, at: Int(startIndex))
         return returnArray
     }
-    mutating func splice(startIndex:UInt,deleteCount:UInt, values:T)->Array {
+    mutating func splice(startIndex:UInt,deleteCount:UInt, values:Element)->Array {
         return splice(startIndex, deleteCount: deleteCount, values: [values])
     }
 }

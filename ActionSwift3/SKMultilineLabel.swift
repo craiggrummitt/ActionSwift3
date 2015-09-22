@@ -61,7 +61,7 @@ class SKMultilineLabel: SKNode {
     }
     //if you want to change properties without updating the text field,
     //  set dontUpdate to true and call the update method manually, passing forceUpdate as true.
-    func update(forceUpdate:Bool = false) {
+    func update(forceUpdate forceUpdate:Bool = false) {
         if (dontUpdate && !forceUpdate) {return}
         if (labels.count>0) {
             for label in labels {

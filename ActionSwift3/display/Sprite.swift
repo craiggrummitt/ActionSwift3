@@ -44,7 +44,7 @@ public class Sprite: DisplayObjectContainer {
                     }
                 }
             } else if touchEvent.type == InteractiveEventType.TouchMove.rawValue {
-                if let currentTarget = touchEvent.currentTarget as? DisplayObject {
+                if let _ = touchEvent.currentTarget as? DisplayObject {
                     if let touch = touchEvent.touches.first {
                         self.x = initialLoc.x + touch.stageX - initialTouch.x
                         self.yRaw = initialLoc.y - touch.stageY + initialTouch.y
@@ -58,7 +58,7 @@ public class Sprite: DisplayObjectContainer {
     public func stopDrag() {
         dragging = false
         self.removeEventListener(InteractiveEventType.TouchMove.rawValue, EventHandler(touchEventHandler, "touchEventHandler"))
-        println("stop drag")
+        print("stop drag")
     }
     override internal func update(currentTime:CFTimeInterval) {
         super.update(currentTime)

@@ -12,19 +12,19 @@ public func ==(lhs: DisplayObject, rhs: DisplayObject) -> Bool {
     return lhs == rhs
 }
 public func trace(parms:String ...) {
-    println(parms)
+    print(parms)
 }
 public func trace(parms:Int) {
-    println(parms)
+    print(parms)
 }
 public func trace(parms:CGFloat) {
-    println(parms)
+    print(parms)
 }
 public func trace(parms:UInt) {
-    println(parms)
+    print(parms)
 }
 public func trace(parms:Double) {
-    println(parms)
+    print(parms)
 }
 
 ///The return of AS3 data types

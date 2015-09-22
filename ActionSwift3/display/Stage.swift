@@ -12,7 +12,7 @@ import UIKit
 /**
 Instantiate a Stage class passing in the skView.
 */
-public class Stage: DisplayObjectContainer, StageSceneProtocol {
+public class Stage: DisplayObjectContainer {
     private let skView:SKView
     static var size:CGSize = CGSize(width: 0, height: 0)
     

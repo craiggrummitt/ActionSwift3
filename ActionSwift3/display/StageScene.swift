@@ -16,14 +16,14 @@ public class StageScene: SKScene {
     override public func didMoveToView(view: SKView) {
         
     }
-    public override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        println("touched stage")
-        for touch in touches {
-            if let touch = touch as? UITouch {
+    public override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        print("touched stage")
+/*        for touch in touches {
+            if let parent = parent {
                 let loc = touch.locationInNode(parent)
                 var node = self.nodeAtPoint(loc)
             }
-        }
+        }*/
     }
     
     override public func update(currentTime: CFTimeInterval) {

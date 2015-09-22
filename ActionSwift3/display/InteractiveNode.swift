@@ -11,20 +11,20 @@ import SpriteKit
 class InteractiveNode: SKNode {
     weak var owner:DisplayObject?
     //Interactive
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         dispatchTouches(.TouchBegin, touches: touches)
     }
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         dispatchTouches(.TouchEnd, touches: touches)
     }
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         dispatchTouches(.TouchMove, touches: touches)
     }
-    func dispatchTouches(touchType:InteractiveEventType,touches:Set<NSObject>) {
+    func dispatchTouches(touchType:InteractiveEventType,touches:Set<UITouch>) {
         if let owner = owner as? InteractiveObject {
             var touchesToDispatch:[Touch] = []
             for touch in touches {
-                if let touch = touch as? UITouch {
+                if let parent = parent {
                     let loc = touch.locationInNode(parent)
                     let stageLoc = touch.locationInView(self.scene?.view)
                     touchesToDispatch.push(Touch(localX: loc.x, localY: loc.y, stageX: stageLoc.x, stageY: stageLoc.y, sizeX: touch.majorRadius, sizeY: touch.majorRadius))
