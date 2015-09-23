@@ -45,7 +45,7 @@ public class EventDispatcher: Object {
     public func removeEventListener(type:String,_ listener:EventHandler) {
         if var listeners = mEventListeners[type] {
             mEventListeners[type] = nil
-            var numListeners = listeners.length
+            let numListeners = listeners.length
             var remainingListeners:[EventHandler] = []
             for (var i=0;i<numListeners; ++i) {
                 if (listeners[i].functionName != listener.functionName) {
@@ -69,14 +69,14 @@ public class EventDispatcher: Object {
     *  travel up along the line of parents, until it either hits the root object or someone
     *  stops its propagation manually. */
     public func dispatchEvent(event:Event) {
-        var bubbles = event.bubbles
+        let bubbles = event.bubbles
         if (!bubbles && (mEventListeners.count == 0 || (mEventListeners[event.type] == nil))) {
             return // no need to do anything
         }
     
         // we save the current target and restore it later;
         // this allows users to re-dispatch events without creating a clone.
-        var previousTarget = event.target
+        let previousTarget = event.target
         event.setTarget(self);
     
         if (bubbles && self is DisplayObject) {
@@ -95,14 +95,14 @@ public class EventDispatcher: Object {
     *  method uses this method internally. */
     internal func invokeEvent(event:Event)->Bool {
         if var listeners = mEventListeners[event.type] {
-            var numListeners = listeners.length
+            let numListeners = listeners.length
             event.setCurrentTarget(self)
             
             // we can enumerate directly over the vector, because:
             // when somebody modifies the list while we're looping, "addEventListener" is not
             // problematic, and "removeEventListener" will create a new Vector, anyway.
             for (var i=0; i<numListeners; ++i) {
-                var listener = listeners[i]
+                let listener = listeners[i]
                 listener.function(event)
                 if (event.stopsImmediatePropagation) {
                     trace("STOPPING Propogation")
@@ -119,7 +119,7 @@ public class EventDispatcher: Object {
     internal func bubbleEvent(event:Event) {
         // we determine the bubble chain before starting to invoke the listeners.
         // that way, changes done by the listeners won't affect the bubble chain.
-        if var element = self as? DisplayObject {
+        if let element = self as? DisplayObject {
             var chain:[EventDispatcher]
             var length = 1
         
@@ -141,7 +141,7 @@ public class EventDispatcher: Object {
                 chain.push(elementParent)
             }
             for (var i=0; i<length; ++i) {
-                var stopPropagation:Bool = chain[i].invokeEvent(event)
+                let stopPropagation:Bool = chain[i].invokeEvent(event)
                 if (stopPropagation) {
                     break;
                 }
@@ -153,7 +153,7 @@ public class EventDispatcher: Object {
     }
     /** Returns if there are listeners registered for a certain event type. */
     public func hasEventListener(type:String)->Bool {
-        if var listeners = mEventListeners[type] {
+        if let listeners = mEventListeners[type] {
             return listeners.length != 0
         }
         return false

@@ -62,7 +62,7 @@ public class Graphics: Object {
         drawShape(shapeNode)
     }
     public func drawTriangle(x1:CGFloat,_ y1:CGFloat,_ x2:CGFloat,_ y2:CGFloat,_ x3:CGFloat,_ y3:CGFloat) {
-        var path = CGPathCreateMutable()
+        let path = CGPathCreateMutable()
         CGPathMoveToPoint(path, nil, x1, Stage.size.height - y1)
         CGPathAddLineToPoint(path, nil, x2, Stage.size.height - y2)
         CGPathAddLineToPoint(path, nil, x3, Stage.size.height - y3)

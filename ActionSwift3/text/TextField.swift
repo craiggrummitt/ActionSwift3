@@ -85,7 +85,7 @@ public class TextField: InteractiveObject {
     override internal func update(currentTime:CFTimeInterval) {
         super.update(currentTime)
         if (isDirty) {
-            println("Updating textField \(width), \(height)")
+            print("Updating textField \(width), \(height)")
             textFieldNode.update(forceUpdate:true)
             textFieldNode.position.x = (width / 2)
             isDirty = false
@@ -93,7 +93,7 @@ public class TextField: InteractiveObject {
     }
 
     public var length:Int {
-        return count(text)
+        return text.characters.count
     }
     override public var height:CGFloat {
         return textFieldNode.height

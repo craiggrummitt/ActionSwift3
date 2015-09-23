@@ -76,6 +76,8 @@
 		18E1A2CD1B72B61E0050CCFA /* InteractiveNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1A2CC1B72B61E0050CCFA /* InteractiveNode.swift */; };
 		18E1A2CF1B72BBF60050CCFA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1A2CE1B72BBF60050CCFA /* UIColor.swift */; };
 		18E1A2D11B72BC720050CCFA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1A2CE1B72BBF60050CCFA /* UIColor.swift */; };
+		B9330BF21BB1F1C500A3EB47 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9330BF11BB1F1C500A3EB47 /* String.swift */; settings = {ASSET_TAGS = (); }; };
+		B9330BF31BB1F23000A3EB47 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9330BF11BB1F1C500A3EB47 /* String.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +179,7 @@
 		18E1A2CE1B72BBF60050CCFA /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		18EEBF861AFD5AC0007D8C4E /* ActionSwift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionSwift.png; sourceTree = "<group>"; };
 		18EEBF891AFD6B90007D8C4E /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
+		B9330BF11BB1F1C500A3EB47 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,6 +434,7 @@
 				18E1A2CE1B72BBF60050CCFA /* UIColor.swift */,
 				18DD46C71AF9345B00A7992C /* Object.swift */,
 				18DD46DE1AFA831200A7992C /* Global.swift */,
+				B9330BF11BB1F1C500A3EB47 /* String.swift */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -530,7 +534,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Interactive Coconut";
 				TargetAttributes = {
 					18DD46411AF9104500A7992C = {
@@ -630,6 +634,7 @@
 				18020EEE1B73AF1100F637F2 /* Sound.swift in Sources */,
 				18DD470C1AFBB4E600A7992C /* Sprite.swift in Sources */,
 				18DD47051AFBB4A700A7992C /* Global.swift in Sources */,
+				B9330BF31BB1F23000A3EB47 /* String.swift in Sources */,
 				18DE35521B6FCD58007C9A93 /* SKMultilineLabel.swift in Sources */,
 				18DE35541B6FCD5E007C9A93 /* TextField.swift in Sources */,
 				18DD46FE1AFBB4A700A7992C /* EventDispatcher.swift in Sources */,
@@ -666,6 +671,7 @@
 				18DD46CA1AF9423100A7992C /* Array.swift in Sources */,
 				18E1A2CD1B72B61E0050CCFA /* InteractiveNode.swift in Sources */,
 				18C9429F1AFD007800D20904 /* easing.swift in Sources */,
+				B9330BF21BB1F1C500A3EB47 /* String.swift in Sources */,
 				180A4DD21B669C0B00D77CD4 /* TextFormat.swift in Sources */,
 				18DD46EB1AFBAE9500A7992C /* StageScene.swift in Sources */,
 				18DD46D51AF9B3A000A7992C /* InteractiveObject.swift in Sources */,
@@ -760,6 +766,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -828,6 +835,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ActionSwiftSK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.interactivecoconut.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ActionSwift;
 			};
 			name = Debug;
@@ -838,6 +846,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ActionSwiftSK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.interactivecoconut.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ActionSwift;
 			};
 			name = Release;
@@ -856,6 +865,7 @@
 				);
 				INFOPLIST_FILE = ActionSwiftSKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.interactivecoconut.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ActionSwiftTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActionSwift.app/ActionSwift";
 			};
@@ -871,6 +881,7 @@
 				);
 				INFOPLIST_FILE = ActionSwiftSKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.interactivecoconut.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ActionSwiftTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActionSwift.app/ActionSwift";
 			};
@@ -892,6 +903,7 @@
 				INFOPLIST_FILE = ActionSwift3/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.interactivecoconut.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -912,6 +924,7 @@
 				INFOPLIST_FILE = ActionSwift3/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.interactivecoconut.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -932,6 +945,7 @@
 				);
 				INFOPLIST_FILE = ActionSwift3Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.interactivecoconut.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActionSwiftSK.app/ActionSwiftSK";
 			};
@@ -946,6 +960,7 @@
 				);
 				INFOPLIST_FILE = ActionSwift3Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.interactivecoconut.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActionSwiftSK.app/ActionSwiftSK";
 			};

@@ -16,7 +16,7 @@ public class DisplayObjectContainer: InteractiveObject {
     public var numChildren:UInt = 0
     
     public func addChild(child:DisplayObject)->DisplayObject {
-        if let parent = child.node.parent {
+        if child.node.parent != nil {
             child.node.removeFromParent()
         }
         child.stage = self.stage
@@ -32,7 +32,7 @@ public class DisplayObjectContainer: InteractiveObject {
         return(addChildAt(child, index, dispatch:true))
     }
     private func addChildAt(child:DisplayObject,_ index:UInt, dispatch:Bool)->DisplayObject {
-        if let parent = child.node.parent {
+        if child.node.parent != nil {
             child.node.removeFromParent()
         }
         self.node.insertChild(child.node, atIndex: Int(index))
@@ -103,16 +103,16 @@ public class DisplayObjectContainer: InteractiveObject {
         addChildAt(child, index, dispatch:false)
     }
     public func swapChildren(child1:DisplayObject,child2:DisplayObject) {
-        var child1Index = getChildIndex(child1)
-        var child2Index = getChildIndex(child2)
+        let child1Index = getChildIndex(child1)
+        let child2Index = getChildIndex(child2)
         if (child1Index > -1 && child2Index > -1) {
             swapChildrenAt(UInt(child1Index), UInt(child2Index))
         }
     }
     public func swapChildrenAt(index1:UInt,_ index2:UInt) {
         if (index1>index2) {
-            var child1 = removeChildAt(index1, dispatch: false)
-            var child2 = removeChildAt(index2, dispatch: false)
+            let child1 = removeChildAt(index1, dispatch: false)
+            let child2 = removeChildAt(index2, dispatch: false)
             if let child1 = child1 {
                 addChildAt(child1, index1, dispatch: false)
             }

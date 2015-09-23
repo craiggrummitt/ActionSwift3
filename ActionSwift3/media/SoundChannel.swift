@@ -15,11 +15,14 @@ public class SoundChannel: EventDispatcher,AVAudioPlayerDelegate {
     internal func play(name:String,startTime:Number=0, loops:int=1) {
         var pathExtension = name.pathExtension
         if (pathExtension == "") {pathExtension = "mp3"}
-        var path = NSBundle.mainBundle().pathForResource(name.stringByDeletingPathExtension, ofType: pathExtension)
+        let path = NSBundle.mainBundle().pathForResource(name.stringByDeletingPathExtension, ofType: pathExtension)
         if let path = path {
-            var url = NSURL.fileURLWithPath(path)
-            var error: NSError?
-            self.audioPlayer = AVAudioPlayer(contentsOfURL: url, error: &error)
+            let url = NSURL.fileURLWithPath(path)
+            do {
+                try self.audioPlayer = AVAudioPlayer(contentsOfURL: url)
+            } catch {
+                print("Error: Audio player not instantiated")
+            }
             self.audioPlayer.delegate = self
             self.audioPlayer.numberOfLoops = loops
             if (startTime > 0) {
@@ -31,10 +34,10 @@ public class SoundChannel: EventDispatcher,AVAudioPlayerDelegate {
     func stop() {
         self.audioPlayer.stop()
     }
-    public func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
+    public func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         dispatchEvent(Event(EventType.SoundComplete.rawValue,false))
     }
-    public func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer!, error: NSError!) {
+    public func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer, error: NSError?) {
         dispatchEvent(Event(EventType.SoundError.rawValue,false))
     }
 }
