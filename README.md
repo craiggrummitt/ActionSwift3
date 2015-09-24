@@ -29,7 +29,7 @@ Underneath the hood ActionSwift3 is based on the SpriteKit Framework but ActionS
 
 Easing classes are also included for convenience from [here](https://github.com/craiggrummitt/SpriteKitEasingSwift).
 
-API documentation can be found at [cocoadocs](http://cocoadocs.org/docsets/ActionSwift3/1.4/index.html)
+API documentation can be found at [cocoadocs](http://cocoadocs.org/docsets/ActionSwift3/)
 
 You can find a tutorial - **Swift API for the Flash Guy** - [here](https://craiggrummitt.wordpress.com/2015/08/11/swift-api-for-the-flash-guy/).
 
@@ -181,6 +181,9 @@ Ideas for enhancements:
 
 1.4
 *   Added Sound, SoundChannel
+
+1.5
+*	Updated for Swift 2
 
 ***Credits***
 
