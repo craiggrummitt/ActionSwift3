@@ -10,22 +10,22 @@
 
 import UIKit
 /** The EventDispatcher class is the base class for all classes that dispatch events.
-*  This is the Starling version of the Flash class with the same name.
-*
-*  <p>The event mechanism is a key feature of Starling's architecture. Objects can communicate
-*  with each other through events. Compared the the Flash event system, Starling's event system
-*  was simplified. The main difference is that Starling events have no "Capture" phase.
-*  They are simply dispatched at the target and may optionally bubble up. They cannot move
-*  in the opposite direction.</p>
-*
-*  <p>As in the conventional Flash classes, display objects inherit from EventDispatcher
-*  and can thus dispatch events. Beware, though, that the Starling event classes are
-*  <em>not compatible with Flash events:</em> Starling display objects dispatch
-*  Starling events, which will bubble along Starling display objects - but they cannot
-*  dispatch Flash events or bubble along Flash display objects.</p>
-*
-*  @see Event
-*  @see starling.display.DisplayObject DisplayObject
+  This is the Starling version of the Flash class with the same name.
+
+  The event mechanism is a key feature of Starling's architecture. Objects can communicate
+  with each other through events. Compared the the Flash event system, Starling's event system
+  was simplified. The main difference is that Starling events have no "Capture" phase.
+  They are simply dispatched at the target and may optionally bubble up. They cannot move
+  in the opposite direction.
+
+  As in the conventional Flash classes, display objects inherit from EventDispatcher
+  and can thus dispatch events. Beware, though, that the Starling event classes are
+  <em>not compatible with Flash events:</em> Starling display objects dispatch
+  Starling events, which will bubble along Starling display objects - but they cannot
+  dispatch Flash events or bubble along Flash display objects.
+
+  @see Event
+  @see starling.display.DisplayObject DisplayObject
 */
 public class EventDispatcher: Object {
     private var mEventListeners = Dictionary<String, [EventHandler]>()

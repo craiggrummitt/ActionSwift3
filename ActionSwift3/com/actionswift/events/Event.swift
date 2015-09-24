@@ -27,21 +27,21 @@ public enum EventType:String {
     case SoundError = "soundError"
 }
 /** Event objects are passed as parameters to event listeners when an event occurs.
-*
-*  <p>EventDispatchers create instances of this class and send them to registered listeners.
-*  An event object contains information that characterizes an event, most importantly the
-*  event type and if the event bubbles. The target of an event is the object that
-*  dispatched it.</p>
-*
-*  <p>For some event types, this information is sufficient; other events may need additional
-*  information to be carried to the listener. In that case, you can subclass "Event" and add
-*  properties with all the information you require. The "EnterFrameEvent" is an example for
-*  this practice; it adds a property about the time that has passed since the last frame.</p>
-*
-*  <p>Furthermore, the event class contains methods that can stop the event from being
-*  processed by other listeners - either completely or at the next bubble stage.</p>
-*
-*  @see EventDispatcher
+
+  EventDispatchers create instances of this class and send them to registered listeners.
+  An event object contains information that characterizes an event, most importantly the
+  event type and if the event bubbles. The target of an event is the object that
+  dispatched it.
+
+  For some event types, this information is sufficient; other events may need additional
+  information to be carried to the listener. In that case, you can subclass "Event" and add
+  properties with all the information you require. The "EnterFrameEvent" is an example for
+  this practice; it adds a property about the time that has passed since the last frame.
+
+  Furthermore, the event class contains methods that can stop the event from being
+  processed by other listeners - either completely or at the next bubble stage.
+
+  @see EventDispatcher
 */
 public class Event: Object {
     private var mTarget:EventDispatcher?;
