@@ -18,7 +18,15 @@ self.addChild(multiLabel)
 
 import SpriteKit
 
-class SKMultilineLabel: SKNode {
+public class SKMultilineLabel: SKNode {
+    weak var owner:DisplayObject? {
+        didSet {
+            for label in labels {
+                label.owner = owner
+                label.userInteractionEnabled = true
+            }
+        }
+    }
     //props
     var labelWidth:CGFloat {didSet {update()}}
     var labelHeight:CGFloat = 0
@@ -37,7 +45,7 @@ class SKMultilineLabel: SKNode {
     var backgroundColor:UIColor = UIColor.whiteColor()
     //display objects
     var rect:SKShapeNode?
-    var labels:[SKLabelNode] = []
+    var labels:[LabelNode] = []
     var lineCount = 0
     
     init(text:String, labelWidth:CGFloat, pos:CGPoint, fontName:String="ChalkboardSE-Regular",fontSize:CGFloat=10,fontColor:UIColor=UIColor.blackColor(),leading:CGFloat=10, alignment:SKLabelHorizontalAlignmentMode = .Center, shouldShowBorder:Bool = false,shouldShowBackground:Bool = false,borderColor:UIColor = UIColor.whiteColor(),backgroundColor:UIColor = UIColor.whiteColor())
@@ -82,7 +90,11 @@ class SKMultilineLabel: SKNode {
             var lineStringBeforeAddingWord = ""
             
             // creation of the SKLabelNode itself
-            let label = SKLabelNode(fontNamed: fontName)
+            let label = LabelNode(fontNamed: fontName)
+            if let owner = owner {
+                label.owner = owner
+                label.userInteractionEnabled = true
+            }
             
             // name each label node so you can animate it if u wish
             label.name = "line\(lineCount)"
@@ -162,7 +174,7 @@ class SKMultilineLabel: SKNode {
             }
         }
     }
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

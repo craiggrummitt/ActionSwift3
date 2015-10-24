@@ -12,7 +12,9 @@ import SpriteKit
 
 class GameViewController: UIViewController {
     let walkingTextures = ["walking1","walking2","walking3","walking4","walking5","walking6","walking7","walking8","walking9"]
+    let birdTextures = ["bird-1","bird-2","bird-3"]
     var movieClip:MovieClip!
+    var bird:MovieClip!
     var sound:Sound = Sound(name: "")
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +73,15 @@ class GameViewController: UIViewController {
         
         //------------------------------------------------------------------------------------------------------------------
         //create a movieclip, add textures from 'images.atlas', then control it just as you would in AS3
+        bird = MovieClip(textureNames: birdTextures)
+        bird.x = Stage.stageWidth / 2
+        bird.y = Stage.stageHeight / 2
+        bird.addEventListener(InteractiveEventType.TouchBegin.rawValue, EventHandler(spriteTouched,"spriteTouched") )
+        bird.name = "bird"
+        stage.addChild(bird)
+        
+        //------------------------------------------------------------------------------------------------------------------
+        //create another movieclip
         movieClip = MovieClip(textureNames: walkingTextures)
         movieClip.x = 0
         movieClip.y = Stage.size.height - movieClip.height
@@ -78,7 +89,7 @@ class GameViewController: UIViewController {
         movieClip.addEventListener(InteractiveEventType.TouchEnd.rawValue, EventHandler(spriteTouched, "spriteTouched"))
         movieClip.name = "walkingman"
         stage.addChild(movieClip)
-        
+
         //------------------------------------------------------------------------------------------------------------------
         //create a textfield, apply text formatting with a TextFormat object
         let text = TextField()
@@ -117,6 +128,10 @@ class GameViewController: UIViewController {
                     sound = Sound(name: "SecondBeep.wav")
                     sound.play()
                     movieClip.stop()
+                } else if (currentTarget.name == "bird") {  //show rotation on click
+                    currentTarget.rotation += 10
+                    sound = Sound(name: "SecondBeep.wav")
+                    sound.play()
                 }
             }
         }

@@ -76,8 +76,11 @@
 		18E1A2CD1B72B61E0050CCFA /* InteractiveNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1A2CC1B72B61E0050CCFA /* InteractiveNode.swift */; };
 		18E1A2CF1B72BBF60050CCFA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1A2CE1B72BBF60050CCFA /* UIColor.swift */; };
 		18E1A2D11B72BC720050CCFA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1A2CE1B72BBF60050CCFA /* UIColor.swift */; };
-		B9330BF21BB1F1C500A3EB47 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9330BF11BB1F1C500A3EB47 /* String.swift */; settings = {ASSET_TAGS = (); }; };
-		B9330BF31BB1F23000A3EB47 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9330BF11BB1F1C500A3EB47 /* String.swift */; settings = {ASSET_TAGS = (); }; };
+		B9330BF21BB1F1C500A3EB47 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9330BF11BB1F1C500A3EB47 /* String.swift */; };
+		B9330BF31BB1F23000A3EB47 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9330BF11BB1F1C500A3EB47 /* String.swift */; };
+		B965BDAB1BDAD89E00E4875F /* LabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B965BDAA1BDAD89E00E4875F /* LabelNode.swift */; };
+		B965BDAC1BDADA9600E4875F /* LabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B965BDAA1BDAD89E00E4875F /* LabelNode.swift */; };
+		B965BDAD1BDADAA800E4875F /* InteractiveNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1A2CC1B72B61E0050CCFA /* InteractiveNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +183,7 @@
 		18EEBF861AFD5AC0007D8C4E /* ActionSwift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionSwift.png; sourceTree = "<group>"; };
 		18EEBF891AFD6B90007D8C4E /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 		B9330BF11BB1F1C500A3EB47 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		B965BDAA1BDAD89E00E4875F /* LabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LabelNode.swift; path = display/LabelNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +427,7 @@
 				18DD470E1AFBFDEE00A7992C /* GraphicsNode.swift */,
 				18DD47121AFC059F00A7992C /* SpriteNode.swift */,
 				18E1A2CC1B72B61E0050CCFA /* InteractiveNode.swift */,
+				B965BDAA1BDAD89E00E4875F /* LabelNode.swift */,
 			);
 			name = internal;
 			sourceTree = "<group>";
@@ -622,6 +627,7 @@
 				18DD47011AFBB4A700A7992C /* Touch.swift in Sources */,
 				18E1A2CB1B72AA240050CCFA /* SimpleButton.swift in Sources */,
 				18020EF61B73B9B200F637F2 /* SoundChannel.swift in Sources */,
+				B965BDAD1BDADAA800E4875F /* InteractiveNode.swift in Sources */,
 				18DD47141AFC064100A7992C /* SpriteNode.swift in Sources */,
 				18DD46FD1AFBB4A300A7992C /* Stage.swift in Sources */,
 				18DD47081AFBB4DF00A7992C /* StageScene.swift in Sources */,
@@ -638,6 +644,7 @@
 				18DE35521B6FCD58007C9A93 /* SKMultilineLabel.swift in Sources */,
 				18DE35541B6FCD5E007C9A93 /* TextField.swift in Sources */,
 				18DD46FE1AFBB4A700A7992C /* EventDispatcher.swift in Sources */,
+				B965BDAC1BDADA9600E4875F /* LabelNode.swift in Sources */,
 				18E1A2D11B72BC720050CCFA /* UIColor.swift in Sources */,
 				18C9425E1AFC32B500D20904 /* MovieClip.swift in Sources */,
 				18DD47101AFBFE3D00A7992C /* GraphicsNode.swift in Sources */,
@@ -661,6 +668,7 @@
 			files = (
 				18DD46CD1AF9510100A7992C /* DisplayObject.swift in Sources */,
 				18E1A2CA1B726B540050CCFA /* SimpleButton.swift in Sources */,
+				B965BDAB1BDAD89E00E4875F /* LabelNode.swift in Sources */,
 				18DD46D31AF96D3F00A7992C /* EventHandler.swift in Sources */,
 				183432091B62F16500F1CD2E /* SKMultilineLabel.swift in Sources */,
 				18C942A01AFD007800D20904 /* EasingDeclarations.swift in Sources */,

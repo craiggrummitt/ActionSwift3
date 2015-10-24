@@ -87,7 +87,9 @@ public class MovieClip: Sprite {
     public func play(fps: UInt = 12) {
         self.stop()
         playTextures(textures)
+
     }
+    
     //private helper funcs
     internal func playTextures(textures:[SKTexture]) {
         if (loop) {
@@ -153,6 +155,11 @@ public class MovieClip: Sprite {
     override public var scaleY:CGFloat {
         get {return spriteNode.yScale}
         set(newValue) {spriteNode.yScale = newValue}
+    }
+    
+    override public var rotation:CGFloat {
+        get {return -spriteNode.zRotation * 180 / CGFloat(M_PI)}
+        set(newValue) {spriteNode.zRotation = -newValue * CGFloat(M_PI) / 180}
     }
     override internal func enableUserInteraction(enabled:Bool) {
         //self.spriteNode.userInteractionEnabled = enabled
