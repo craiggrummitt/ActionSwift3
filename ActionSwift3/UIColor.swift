@@ -16,7 +16,8 @@ extension UIColor {
     /** initialize with hex string.
 Use format eg. "#FFFFFF"
 */
-    convenience public init(var hex: String) {
+    convenience public init(hex: String) {
+        var hex = hex
         var alpha: Float = 100
         let hexLength = hex.characters.count
         if !(hexLength == 7 || hexLength == 9) {

@@ -58,12 +58,14 @@ public class MovieClip: Sprite {
     gotoAndPlay works slightly different to AS3 - if you have loop set to false, it will work the same.
     However if you have loop set to true, it will loop from 'frame'.
     */
-    public func gotoAndPlay(var frame:UInt,fps: UInt = 12) {
+    public func gotoAndPlay(frame:UInt,fps: UInt = 12) {
+        var frame = frame
         self.stop()
         if (frame == 0) {frame = 1}
         playTextures(Array(textures[(Int(frame)-1)..<textures.count]))
     }
-    public func gotoAndStop(var frame:UInt) {
+    public func gotoAndStop(frame:UInt) {
+        var frame = frame
         self.stop()
         if (frame == 0) {frame = 1}
         spriteNode.texture = textures[Int(frame)-1]

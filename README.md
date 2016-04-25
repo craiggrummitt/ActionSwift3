@@ -189,6 +189,9 @@ Ideas for enhancements:
 *   Resolved issue with labels not registering taps
 *   Resolved issue with rotation
 
+1.7 
+*   Updated for Swift 3
+
 ***Credits***
 
 *   "Walking animation" by [Kyoux](http://kyoux.deviantart.com/)

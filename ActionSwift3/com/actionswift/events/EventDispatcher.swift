@@ -47,7 +47,7 @@ public class EventDispatcher: Object {
             mEventListeners[type] = nil
             let numListeners = listeners.length
             var remainingListeners:[EventHandler] = []
-            for (var i=0;i<numListeners; ++i) {
+            for i in 0..<numListeners {
                 if (listeners[i].functionName != listener.functionName) {
                     remainingListeners.push(listeners[i])
                     mEventListeners[type] = remainingListeners
@@ -101,7 +101,7 @@ public class EventDispatcher: Object {
             // we can enumerate directly over the vector, because:
             // when somebody modifies the list while we're looping, "addEventListener" is not
             // problematic, and "removeEventListener" will create a new Vector, anyway.
-            for (var i=0; i<numListeners; ++i) {
+            for i in 0..<numListeners {
                 let listener = listeners[i]
                 listener.function(event)
                 if (event.stopsImmediatePropagation) {
@@ -136,11 +136,11 @@ public class EventDispatcher: Object {
         
             var elementToLoop:DisplayObject? = element
             while let elementParent = elementToLoop?.parent {
-                length++
+                length += 1
                 elementToLoop = elementParent
                 chain.push(elementParent)
             }
-            for (var i=0; i<length; ++i) {
+            for i in 0..<length {
                 let stopPropagation:Bool = chain[i].invokeEvent(event)
                 if (stopPropagation) {
                     break;

@@ -23,7 +23,7 @@ public class DisplayObjectContainer: InteractiveObject {
         self.node.addChild(child.node)
         children.push(child)
         child.parent = self
-        numChildren++
+        numChildren += 1
         
         child.dispatchEvent(Event(.Added))
         return(child)
@@ -38,7 +38,7 @@ public class DisplayObjectContainer: InteractiveObject {
         self.node.insertChild(child.node, atIndex: Int(index))
         children.splice(index, deleteCount: 0, values: child)
         child.parent = self
-        numChildren++
+        numChildren += 1
         if (dispatch) {
             child.dispatchEvent(Event(.Added))
         }
@@ -60,7 +60,7 @@ public class DisplayObjectContainer: InteractiveObject {
     }
     public func getChildIndex(child:DisplayObject)->Int {
         var index:Int = -1
-        for (var i:Int=0;i<Int(self.numChildren);i++) {
+        for i in 0..<Int(self.numChildren) {
             let t = self.getChildAt(UInt(i))
             if (t === child) {
                 index = i
@@ -95,7 +95,7 @@ public class DisplayObjectContainer: InteractiveObject {
         return nil
     }
     public func removeChildren(beginIndex:UInt=0,_ endIndex:UInt = UInt.max) {
-        for (var i=beginIndex;i<endIndex;i++) {
+        for i in beginIndex..<endIndex {
             removeChildAt(i)
         }
     }

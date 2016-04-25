@@ -84,7 +84,7 @@ public class SKMultilineLabel: SKNode {
         var wordCount = -1
         lineCount = 0
         while (!finalLine) {
-            lineCount++
+            lineCount += 1
             var lineLength = CGFloat(0)
             var lineString = ""
             var lineStringBeforeAddingWord = ""
@@ -104,7 +104,7 @@ public class SKMultilineLabel: SKNode {
             
             while lineLength < CGFloat(labelWidth)
             {
-                wordCount++
+                wordCount += 1
                 if wordCount > words.count-1
                 {
                     //label.text = "\(lineString) \(words[wordCount])"
@@ -120,7 +120,7 @@ public class SKMultilineLabel: SKNode {
                 }
             }
             if lineLength > 0 {
-                wordCount--
+                wordCount -= 1
                 if (!finalLine) {
                     lineString = lineStringBeforeAddingWord
                 }

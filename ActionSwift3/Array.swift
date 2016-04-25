@@ -57,7 +57,7 @@ extension Array {
     }
     mutating func splice(startIndex:UInt,deleteCount:UInt, values:[Element])->Array {
         var returnArray = self
-        returnArray.removeRange(Range<Int>(start:Int(startIndex),end:Int(startIndex + deleteCount)))
+        returnArray.removeRange(Int(startIndex)..<Int(startIndex + deleteCount))
         returnArray.insertContentsOf(values, at: Int(startIndex))
         return returnArray
     }
