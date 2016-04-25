@@ -68,7 +68,7 @@ public class Event: Object {
         mStopsPropagation = true
     }
     override public func toString()->String {
-        return "\(_stdlib_getDemangledTypeName(self)) type=\(mType) bubbles=\(mBubbles)"
+        return "\(String(self.dynamicType)) type=\(mType) bubbles=\(mBubbles)"
     }
     /** @private */
     internal func setTarget(target:EventDispatcher){

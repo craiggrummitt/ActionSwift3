@@ -94,14 +94,14 @@ class SKEase {
     }
     class func rotateToWithNode(target:SKNode, easeFunction curve:CurveType, easeType:EaseType, time:NSTimeInterval, toValue to:CGFloat)->SKAction {
         let easingFunction = SKEase.getEaseFunction(curve, easeType: easeType)
-        let action = self.createFloatTween(target.zRotation, end: to, time: time, easingFunction: easingFunction) { (node:SKNode, CGFloat rotation) -> Void in
+        let action = self.createFloatTween(target.zRotation, end: to, time: time, easingFunction: easingFunction) { (node:SKNode, rotation) -> Void in
             node.zRotation=rotation
         }
         return action
     }
     class func rotateFromWithNode(target:SKNode, easeFunction curve:CurveType, easeType:EaseType, time:NSTimeInterval, fromValue from:CGFloat)->SKAction {
         let easingFunction = SKEase.getEaseFunction(curve, easeType: easeType)
-        let action = self.createFloatTween(from, end: target.zRotation, time: time, easingFunction: easingFunction) { (node:SKNode, CGFloat rotation) -> Void in
+        let action = self.createFloatTween(from, end: target.zRotation, time: time, easingFunction: easingFunction) { (node:SKNode,  rotation) -> Void in
             node.zRotation=rotation
         }
         return action
