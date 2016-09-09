@@ -9,24 +9,24 @@
 import SpriteKit
 import AVFoundation
 
-public class SoundChannel: EventDispatcher,AVAudioPlayerDelegate {
+open class SoundChannel: EventDispatcher,AVAudioPlayerDelegate {
     var audioPlayer:AVAudioPlayer = AVAudioPlayer()
     
-    internal func play(name:String,startTime:Number=0, loops:int=1) {
+    internal func play(_ name:String,startTime:Number=0, loops:int=1) {
         var pathExtension = name.pathExtension
         if (pathExtension == "") {pathExtension = "mp3"}
-        let path = NSBundle.mainBundle().pathForResource(name.stringByDeletingPathExtension, ofType: pathExtension)
+        let path = Bundle.main.path(forResource: name.stringByDeletingPathExtension, ofType: pathExtension)
         if let path = path {
-            let url = NSURL.fileURLWithPath(path)
+            let url = URL(fileURLWithPath: path)
             do {
-                try self.audioPlayer = AVAudioPlayer(contentsOfURL: url)
+                try self.audioPlayer = AVAudioPlayer(contentsOf: url)
             } catch {
                 print("Error: Audio player not instantiated")
             }
             self.audioPlayer.delegate = self
             self.audioPlayer.numberOfLoops = loops
             if (startTime > 0) {
-                self.audioPlayer.currentTime = NSTimeInterval(startTime)
+                self.audioPlayer.currentTime = TimeInterval(startTime)
             }
             self.audioPlayer.play()
         }
@@ -34,10 +34,10 @@ public class SoundChannel: EventDispatcher,AVAudioPlayerDelegate {
     func stop() {
         self.audioPlayer.stop()
     }
-    public func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+    open func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         dispatchEvent(Event(EventType.SoundComplete.rawValue,false))
     }
-    public func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer, error: NSError?) {
+    open func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
         dispatchEvent(Event(EventType.SoundError.rawValue,false))
     }
 }

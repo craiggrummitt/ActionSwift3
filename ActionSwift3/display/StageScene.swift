@@ -9,14 +9,14 @@
 import SpriteKit
 
 protocol StageSceneProtocol {
-    func update(currentTime:CFTimeInterval)
+    func update(_ currentTime:CFTimeInterval)
 }
-public class StageScene: SKScene {
+open class StageScene: SKScene {
     var stageSceneDelegate:StageSceneProtocol?
-    override public func didMoveToView(view: SKView) {
+    override open func didMove(to view: SKView) {
         
     }
-    public override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("touched stage")
 /*        for touch in touches {
             if let parent = parent {
@@ -26,7 +26,7 @@ public class StageScene: SKScene {
         }*/
     }
     
-    override public func update(currentTime: CFTimeInterval) {
+    override open func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
         self.stageSceneDelegate?.update(currentTime)
     }

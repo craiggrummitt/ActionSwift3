@@ -13,10 +13,10 @@ import UIKit
     http://stackoverflow.com/questions/24111984/how-do-you-test-functions-and-closures-for-equality
     https://devforums.apple.com/message/1035180#1035180
 */
-public class EventHandler: Object {
+open class EventHandler: Object {
     var function:(Event)->Void
     var functionName:String
-    public init(_ function:(Event)->Void,_ functionName:String) {
+    public init(_ function:@escaping (Event)->Void,_ functionName:String) {
         self.function = function
         self.functionName = functionName
     }

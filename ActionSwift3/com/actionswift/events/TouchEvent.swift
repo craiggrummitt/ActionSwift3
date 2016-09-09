@@ -19,8 +19,8 @@ public enum InteractiveEventType:String {
 /**
 A custom Event class, with information about touches.
 */
-public class TouchEvent: Event {
-    public var touches:[Touch]
+open class TouchEvent: Event {
+    open var touches:[Touch]
     public init(_ type:InteractiveEventType,_ touches:[Touch],_ bubbles:Bool = true) {
         self.touches = touches
         super.init(type.rawValue, bubbles)

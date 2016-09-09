@@ -27,13 +27,13 @@ class GameViewController: UIViewController {
         //create two sprites for up and down states for the stop button
         //add a couple of rectangles to its graphics property to make a stop symbol
         let stopUpState = Sprite()
-        stopUpState.graphics.beginFill(UIColor.whiteColor())
+        stopUpState.graphics.beginFill(UIColor.white)
         stopUpState.graphics.drawRect(0,0,44,44)
         stopUpState.graphics.beginFill(UIColor(hex:"#B21212"))
         stopUpState.graphics.drawRect(10,10,24,24)
         
         let stopDownState = Sprite()
-        stopDownState.graphics.beginFill(UIColor.whiteColor())
+        stopDownState.graphics.beginFill(UIColor.white)
         stopDownState.graphics.drawRect(0,0,44,44)
         stopDownState.graphics.beginFill(UIColor(hex:"#FF0000"))
         stopDownState.graphics.drawRect(8,8,28,28)
@@ -53,13 +53,13 @@ class GameViewController: UIViewController {
         //create two sprites for up and down states for the play button
         //add a circle and triangle to its graphics property to make a play symbol
         let playUpState = Sprite()
-        playUpState.graphics.beginFill(UIColor.whiteColor())
+        playUpState.graphics.beginFill(UIColor.white)
         playUpState.graphics.drawCircle(22, 22, 22)
         playUpState.graphics.beginFill(UIColor(hex:"#0971B2"))
         playUpState.graphics.drawTriangle(14, 12, 14, 32, 34, 22)
         
         let playDownState = Sprite()
-        playDownState.graphics.beginFill(UIColor.whiteColor())
+        playDownState.graphics.beginFill(UIColor.white)
         playDownState.graphics.drawCircle(22, 22, 22)
         playDownState.graphics.beginFill(UIColor(hex:"#1485CC"))
         playDownState.graphics.drawTriangle(12, 10, 12, 34, 38, 22)
@@ -96,7 +96,7 @@ class GameViewController: UIViewController {
         text.width = 200
         text.text = "Walking man"
         
-        let textFormat = TextFormat(font: "ArialMT", size: 20, leading: 20, color: UIColor.blackColor(),align:.Center)
+        let textFormat = TextFormat(font: "ArialMT", size: 20, color: UIColor.black, leading: 20,align:.center)
         text.defaultTextFormat = textFormat
         
         text.x = (Stage.stageWidth / 2) - 100
@@ -136,23 +136,9 @@ class GameViewController: UIViewController {
             }
         }
     }
-    override func shouldAutorotate() -> Bool {
-        return true
-    }
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return .AllButUpsideDown
-        } else {
-            return .All
-        }
-    }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
-    }
-
-    override func prefersStatusBarHidden() -> Bool {
-        return true
     }
 }

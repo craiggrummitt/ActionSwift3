@@ -11,11 +11,11 @@ import UIKit
 /**
 A DisplayObjectContainer can contain DisplayObjects, using `addChild`, `addChildAt`, `getChildAt`, `removeChildAt`, etc.
 */
-public class DisplayObjectContainer: InteractiveObject {
+open class DisplayObjectContainer: InteractiveObject {
     internal var children:[DisplayObject] = []
-    public var numChildren:UInt = 0
+    open var numChildren:UInt = 0
     
-    public func addChild(child:DisplayObject)->DisplayObject {
+    open func addChild(_ child:DisplayObject)->DisplayObject {
         if child.node.parent != nil {
             child.node.removeFromParent()
         }
@@ -28,14 +28,14 @@ public class DisplayObjectContainer: InteractiveObject {
         child.dispatchEvent(Event(.Added))
         return(child)
     }
-    public func addChildAt(child:DisplayObject,_ index:UInt)->DisplayObject {
+    open func addChildAt(_ child:DisplayObject,_ index:UInt)->DisplayObject {
         return(addChildAt(child, index, dispatch:true))
     }
-    private func addChildAt(child:DisplayObject,_ index:UInt, dispatch:Bool)->DisplayObject {
+    fileprivate func addChildAt(_ child:DisplayObject,_ index:UInt, dispatch:Bool)->DisplayObject {
         if child.node.parent != nil {
             child.node.removeFromParent()
         }
-        self.node.insertChild(child.node, atIndex: Int(index))
+        self.node.insertChild(child.node, at: Int(index))
         children.splice(index, deleteCount: 0, values: child)
         child.parent = self
         numChildren += 1
@@ -44,13 +44,13 @@ public class DisplayObjectContainer: InteractiveObject {
         }
         return(child)
     }
-    public func contains(child:DisplayObject)->Bool {
+    open func contains(_ child:DisplayObject)->Bool {
         return (getChildIndex(child) > -1)
     }
-    public func getChildAt(index:UInt)->DisplayObject? {
+    open func getChildAt(_ index:UInt)->DisplayObject? {
         return(children.get(Int(index)))
     }
-    public func getChildByName(name:String)->DisplayObject? {
+    open func getChildByName(_ name:String)->DisplayObject? {
         for child in children {
             if (child.name==name) {
                 return child
@@ -58,7 +58,7 @@ public class DisplayObjectContainer: InteractiveObject {
         }
         return nil
     }
-    public func getChildIndex(child:DisplayObject)->Int {
+    open func getChildIndex(_ child:DisplayObject)->Int {
         var index:Int = -1
         for i in 0..<Int(self.numChildren) {
             let t = self.getChildAt(UInt(i))
@@ -68,24 +68,24 @@ public class DisplayObjectContainer: InteractiveObject {
         }
         return(index)
     }
-    public func removeChild(child:DisplayObject)->DisplayObject {
+    open func removeChild(_ child:DisplayObject)->DisplayObject {
         let index = getChildIndex(child)
         if index > -1  {
-            self.node.removeChildrenInArray([child.node])
-            children.removeAtIndex(index)
+            self.node.removeChildren(in: [child.node])
+            children.remove(at: index)
         }
         child.parent = nil
         child.dispatchEvent(Event(.Removed))
         return (child)
     }
     
-    public func removeChildAt(index:UInt)->DisplayObject? {
+    open func removeChildAt(_ index:UInt)->DisplayObject? {
         return(removeChildAt(index, dispatch: true))
     }
-    private func removeChildAt(index:UInt, dispatch:Bool)->DisplayObject? {
+    fileprivate func removeChildAt(_ index:UInt, dispatch:Bool)->DisplayObject? {
         if let child = children.get(Int(index)) {
-            self.node.removeChildrenInArray([child.node])
-            children.removeAtIndex(Int(index))
+            self.node.removeChildren(in: [child.node])
+            children.remove(at: Int(index))
             child.parent = nil
             if (dispatch) {
                 child.dispatchEvent(Event(.Removed))
@@ -94,22 +94,22 @@ public class DisplayObjectContainer: InteractiveObject {
         }
         return nil
     }
-    public func removeChildren(beginIndex:UInt=0,_ endIndex:UInt = UInt.max) {
+    open func removeChildren(_ beginIndex:UInt=0,_ endIndex:UInt = UInt.max) {
         for i in beginIndex..<endIndex {
             removeChildAt(i)
         }
     }
-    public func setChildIndex(child:DisplayObject,_ index:UInt) {
+    open func setChildIndex(_ child:DisplayObject,_ index:UInt) {
         addChildAt(child, index, dispatch:false)
     }
-    public func swapChildren(child1:DisplayObject,child2:DisplayObject) {
+    open func swapChildren(_ child1:DisplayObject,child2:DisplayObject) {
         let child1Index = getChildIndex(child1)
         let child2Index = getChildIndex(child2)
         if (child1Index > -1 && child2Index > -1) {
             swapChildrenAt(UInt(child1Index), UInt(child2Index))
         }
     }
-    public func swapChildrenAt(index1:UInt,_ index2:UInt) {
+    open func swapChildrenAt(_ index1:UInt,_ index2:UInt) {
         if (index1>index2) {
             let child1 = removeChildAt(index1, dispatch: false)
             let child2 = removeChildAt(index2, dispatch: false)
@@ -121,7 +121,7 @@ public class DisplayObjectContainer: InteractiveObject {
             }
         }
     }
-    override internal func update(currentTime:CFTimeInterval) {
+    override internal func update(_ currentTime:CFTimeInterval) {
         super.update(currentTime)
         for child in children {
             child.update(currentTime)

@@ -13,7 +13,7 @@ Add subscripts to String
 extension String {
     
     subscript (i: Int) -> Character {
-        return self[self.startIndex.advancedBy(i)]   //advance(self.startIndex, i)
+        return self[self.characters.index(self.startIndex, offsetBy: i)]   //advance(self.startIndex, i)
     }
     
     subscript (i: Int) -> String {
@@ -23,8 +23,17 @@ extension String {
     subscript (r: Range<Int>) -> String {
         get {
             
-            let startIndex = self.startIndex.advancedBy(r.startIndex)
-            let endIndex = self.startIndex.advancedBy(r.endIndex - r.startIndex)
+            let startIndex = self.characters.index(self.startIndex, offsetBy: r.lowerBound)
+            let endIndex = self.characters.index(self.startIndex, offsetBy: r.upperBound - r.lowerBound)
+            
+            return self[startIndex..<endIndex]
+        }
+    }
+    subscript (r: CountableClosedRange<Int>) -> String {
+        get {
+            
+            let startIndex = self.characters.index(self.startIndex, offsetBy: r.lowerBound)
+            let endIndex = self.characters.index(self.startIndex, offsetBy: r.upperBound - r.lowerBound)
             
             return self[startIndex..<endIndex]
         }
@@ -39,13 +48,13 @@ extension String {
         return self.characters.count
     }
     func getFirstWord()->String {
-        return self.componentsSeparatedByString(" ")[0]
+        return self.components(separatedBy: " ")[0]
     }
     //resolve path extension
     var pathExtension: String? {
         return NSString(string: self).pathExtension
     }
     var stringByDeletingPathExtension: String {
-        return NSString(string: self).stringByDeletingPathExtension
+        return NSString(string: self).deletingPathExtension
     }
 }

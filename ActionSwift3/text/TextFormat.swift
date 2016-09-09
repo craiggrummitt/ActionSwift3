@@ -14,14 +14,14 @@ Set up your text formatting here, add it to your text field with the `defaultTex
     Get a list of iOS fonts here: http://iosfonts.com
     Leave leading as -1 and it will be automatically made the same as the font size
 */
-public class TextFormat:Object {
-    public var font = "ArialMT"
-    public var size:CGFloat = 12
-    public var color = UIColor.blackColor()
-    public var leading:CGFloat = 12
-    public var align:SKLabelHorizontalAlignmentMode = .Left
+open class TextFormat:Object {
+    open var font = "ArialMT"
+    open var size:CGFloat = 12
+    open var color = UIColor.black
+    open var leading:CGFloat = 12
+    open var align:SKLabelHorizontalAlignmentMode = .left
     
-    public init(font:String = "ArialMT", size:CGFloat = 12, color:UIColor = UIColor.blackColor(),leading:CGFloat = -1,align:SKLabelHorizontalAlignmentMode = .Left) {
+    public init(font:String = "ArialMT", size:CGFloat = 12, color:UIColor = UIColor.black,leading:CGFloat = -1,align:SKLabelHorizontalAlignmentMode = .left) {
         self.font = font
         self.size = size
         self.color = color

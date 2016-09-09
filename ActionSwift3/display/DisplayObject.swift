@@ -10,10 +10,10 @@ import SpriteKit
 /**
 The base class for all display objects. Contains basic properties such as `width`, `height`, `scaleX`, `scaleY`, `x` and `y`.
 */
-public class DisplayObject: EventDispatcher, StageSceneProtocol {
-    public weak var parent:DisplayObjectContainer?
-    public var name:String = ""
-    public weak var stage:Stage?
+open class DisplayObject: EventDispatcher, StageSceneProtocol {
+    open weak var parent:DisplayObjectContainer?
+    open var name:String = ""
+    open weak var stage:Stage?
     
     internal var node = SKNode()
     
@@ -21,33 +21,33 @@ public class DisplayObject: EventDispatcher, StageSceneProtocol {
         super.init()
 
     }
-    public var alpha:CGFloat {
+    open var alpha:CGFloat {
         get {return node.alpha}
         set(newValue) {node.alpha = newValue}
     }
-    public var height:CGFloat {
+    open var height:CGFloat {
         return node.frame.height
     }
-    public var width:CGFloat {
+    open var width:CGFloat {
         return node.frame.width
     }
-    public var rotation:CGFloat {
+    open var rotation:CGFloat {
         get {return -node.zRotation * 180 / CGFloat(M_PI)}
         set(newValue) {node.zRotation = -newValue * CGFloat(M_PI) / 180}
     }
-    public var scaleX:CGFloat {
+    open var scaleX:CGFloat {
         get {return node.xScale}
         set(newValue) {node.xScale = newValue}
     }
-    public var scaleY:CGFloat {
+    open var scaleY:CGFloat {
         get {return node.yScale}
         set(newValue) {node.yScale = newValue}
     }
-    public var x:CGFloat {
+    open var x:CGFloat {
         get {return node.position.x}
         set (newValue) {node.position.x = newValue}
     }
-    public var y:CGFloat {
+    open var y:CGFloat {
         get {return -node.position.y}
         set (newValue) {
             node.position.y = -newValue
@@ -60,7 +60,7 @@ public class DisplayObject: EventDispatcher, StageSceneProtocol {
             node.position.y = newValue
         }
     }
-    internal func update(currentTime:CFTimeInterval) {
+    internal func update(_ currentTime:CFTimeInterval) {
         dispatchEvent(Event(EventType.EnterFrame.rawValue,false))
     }
 }

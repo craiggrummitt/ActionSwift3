@@ -35,11 +35,11 @@ Use format eg. "#FFFFFF"
         
         // Establishing the rgb color
         var rgb: UInt32 = 0
-        let s: NSScanner = NSScanner(string: hex)
+        let s: Scanner = Scanner(string: hex)
         // Setting the scan location to ignore the leading `#`
         s.scanLocation = 1
         // Scanning the int into the rgb colors
-        s.scanHexInt(&rgb)
+        s.scanHexInt32(&rgb)
         
         // Creating the UIColor from hex int
         self.init(

@@ -43,13 +43,13 @@ public enum EventType:String {
 
   @see EventDispatcher
 */
-public class Event: Object {
-    private var mTarget:EventDispatcher?;
-    private var mCurrentTarget:EventDispatcher?;
-    private var mType:String;
-    private var mBubbles:Bool;
-    private var mStopsPropagation:Bool = false;
-    private var mStopsImmediatePropagation:Bool = false;
+open class Event: Object {
+    fileprivate var mTarget:EventDispatcher?;
+    fileprivate var mCurrentTarget:EventDispatcher?;
+    fileprivate var mType:String;
+    fileprivate var mBubbles:Bool;
+    fileprivate var mStopsPropagation:Bool = false;
+    fileprivate var mStopsImmediatePropagation:Bool = false;
     public init(_ type:String,_ bubbles:Bool = true) {
         self.mType = type
         self.mBubbles = bubbles
@@ -59,23 +59,23 @@ public class Event: Object {
         self.mBubbles = bubbles
     }
     /** Prevents listeners at the next bubble stage from receiving the event. */
-    public func stopPropagation() {
+    open func stopPropagation() {
         mStopsPropagation = true;
     }
     /** Prevents any other listeners from receiving the event. */
-    public func stopImmediatePropagation() {
+    open func stopImmediatePropagation() {
         mStopsImmediatePropagation = true
         mStopsPropagation = true
     }
-    override public func toString()->String {
-        return "\(String(self.dynamicType)) type=\(mType) bubbles=\(mBubbles)"
+    override open func toString()->String {
+       return "\(String(describing:type(of:self))) type=\(mType) bubbles=\(mBubbles)"
     }
     /** @private */
-    internal func setTarget(target:EventDispatcher){
+    internal func setTarget(_ target:EventDispatcher){
         mTarget = target
     }
     /** @private */
-    internal func setCurrentTarget(currentTarget:EventDispatcher) {
+    internal func setCurrentTarget(_ currentTarget:EventDispatcher) {
         mCurrentTarget = currentTarget
     }
     /** @private */
@@ -83,14 +83,14 @@ public class Event: Object {
     /** @private */
     internal var stopsImmediatePropagation:Bool { return mStopsImmediatePropagation }
     /** Indicates if event will bubble. */
-    public var bubbles:Bool { return mBubbles }
+    open var bubbles:Bool { return mBubbles }
     
     /** The object that dispatched the event. */
-    public var target:EventDispatcher? { return mTarget }
+    open var target:EventDispatcher? { return mTarget }
     
     /** The object the event is currently bubbling at. */
-    public var currentTarget:EventDispatcher? { return mCurrentTarget }
+    open var currentTarget:EventDispatcher? { return mCurrentTarget }
     
     /** A string that identifies the event. */
-    public var type:String { return mType }
+    open var type:String { return mType }
 }

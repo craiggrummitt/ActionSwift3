@@ -16,7 +16,7 @@ extension Array {
     var length:Int {
         return self.count
     }
-    func indexOf<T : Equatable>(x:T) -> Int {
+    func indexOf<T : Equatable>(_ x:T) -> Int {
         for i in 0..<self.length {
             if self[i] as? T == x {
                 return i
@@ -24,11 +24,11 @@ extension Array {
         }
         return -1
     }
-    func contains<T where T : Equatable>(obj: T) -> Bool {
+    func contains<T>(_ obj: T) -> Bool where T : Equatable {
         return self.filter({$0 as? T == obj}).count > 0
     }
     // Check index is safe
-    func contains(index: Int) -> Bool {
+    func contains(_ index: Int) -> Bool {
         if 0 <= index && index < count {
             return true
         } else {
@@ -37,14 +37,14 @@ extension Array {
     }
     // Safely lookup an index that might be out of bounds,
     // returning nil if it does not exist
-    func get(index: Int) -> Element? {
+    func get(_ index: Int) -> Element? {
         if 0 <= index && index < count {
             return self[index]
         } else {
             return nil
         }
     }
-    mutating func push(newElement: Element) {
+    mutating func push(_ newElement: Element) {
         self.append(newElement)
     }
     mutating func pop()->Element? {
@@ -55,13 +55,13 @@ extension Array {
         }
         return nil
     }
-    mutating func splice(startIndex:UInt,deleteCount:UInt, values:[Element])->Array {
+    mutating func splice(_ startIndex:UInt,deleteCount:UInt, values:[Element])->Array {
         var returnArray = self
-        returnArray.removeRange(Int(startIndex)..<Int(startIndex + deleteCount))
-        returnArray.insertContentsOf(values, at: Int(startIndex))
+        returnArray.removeSubrange(Int(startIndex)..<Int(startIndex + deleteCount))
+        returnArray.insert(contentsOf: values, at: Int(startIndex))
         return returnArray
     }
-    mutating func splice(startIndex:UInt,deleteCount:UInt, values:Element)->Array {
+    mutating func splice(_ startIndex:UInt,deleteCount:UInt, values:Element)->Array {
         return splice(startIndex, deleteCount: deleteCount, values: [values])
     }
 }

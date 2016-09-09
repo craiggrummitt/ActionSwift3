@@ -11,19 +11,19 @@ import UIKit
 public func ==(lhs: DisplayObject, rhs: DisplayObject) -> Bool {
     return lhs == rhs
 }
-public func trace(parms:String ...) {
+public func trace(_ parms:String ...) {
     print(parms)
 }
-public func trace(parms:Int) {
+public func trace(_ parms:Int) {
     print(parms)
 }
-public func trace(parms:CGFloat) {
+public func trace(_ parms:CGFloat) {
     print(parms)
 }
-public func trace(parms:UInt) {
+public func trace(_ parms:UInt) {
     print(parms)
 }
-public func trace(parms:Double) {
+public func trace(_ parms:Double) {
     print(parms)
 }
 

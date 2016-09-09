@@ -18,12 +18,12 @@ self.addChild(multiLabel)
 
 import SpriteKit
 
-public class SKMultilineLabel: SKNode {
+open class SKMultilineLabel: SKNode {
     weak var owner:DisplayObject? {
         didSet {
             for label in labels {
                 label.owner = owner
-                label.userInteractionEnabled = true
+                label.isUserInteractionEnabled = true
             }
         }
     }
@@ -41,14 +41,14 @@ public class SKMultilineLabel: SKNode {
     var dontUpdate = false
     var shouldShowBorder:Bool = false {didSet {update()}}
     var shouldShowBackground:Bool = false {didSet {update()}}
-    var borderColor:UIColor = UIColor.whiteColor()
-    var backgroundColor:UIColor = UIColor.whiteColor()
+    var borderColor:UIColor = UIColor.white
+    var backgroundColor:UIColor = UIColor.white
     //display objects
     var rect:SKShapeNode?
     var labels:[LabelNode] = []
     var lineCount = 0
     
-    init(text:String, labelWidth:CGFloat, pos:CGPoint, fontName:String="ChalkboardSE-Regular",fontSize:CGFloat=10,fontColor:UIColor=UIColor.blackColor(),leading:CGFloat=10, alignment:SKLabelHorizontalAlignmentMode = .Center, shouldShowBorder:Bool = false,shouldShowBackground:Bool = false,borderColor:UIColor = UIColor.whiteColor(),backgroundColor:UIColor = UIColor.whiteColor())
+    init(text:String, labelWidth:CGFloat, pos:CGPoint, fontName:String="ChalkboardSE-Regular",fontSize:CGFloat=10,fontColor:UIColor=UIColor.black,leading:CGFloat=10, alignment:SKLabelHorizontalAlignmentMode = .center, shouldShowBorder:Bool = false,shouldShowBackground:Bool = false,borderColor:UIColor = UIColor.white,backgroundColor:UIColor = UIColor.white)
     {
         self.text = text
         self.labelWidth = labelWidth
@@ -69,7 +69,7 @@ public class SKMultilineLabel: SKNode {
     }
     //if you want to change properties without updating the text field,
     //  set dontUpdate to true and call the update method manually, passing forceUpdate as true.
-    func update(forceUpdate forceUpdate:Bool = false) {
+    func update(forceUpdate:Bool = false) {
         if (dontUpdate && !forceUpdate) {return}
         if (labels.count>0) {
             for label in labels {
@@ -77,8 +77,8 @@ public class SKMultilineLabel: SKNode {
             }
             labels = []
         }
-        let separators = NSCharacterSet.whitespaceAndNewlineCharacterSet()
-        let words = text.componentsSeparatedByCharactersInSet(separators)
+        let separators = CharacterSet.whitespacesAndNewlines
+        let words = text.components(separatedBy: separators)
         
         var finalLine = false
         var wordCount = -1
@@ -93,7 +93,7 @@ public class SKMultilineLabel: SKNode {
             let label = LabelNode(fontNamed: fontName)
             if let owner = owner {
                 label.owner = owner
-                label.userInteractionEnabled = true
+                label.isUserInteractionEnabled = true
             }
             
             // name each label node so you can animate it if u wish
@@ -126,13 +126,13 @@ public class SKMultilineLabel: SKNode {
                 }
                 label.text = lineString
                 var linePos = pos
-                if (alignment == .Left) {
+                if (alignment == .left) {
                     linePos.x -= CGFloat(labelWidth / 2)
-                } else if (alignment == .Right) {
+                } else if (alignment == .right) {
                     linePos.x += CGFloat(labelWidth / 2)
                 }
                 linePos.y += -leading * CGFloat(lineCount)
-                label.position = CGPointMake( linePos.x , linePos.y )
+                label.position = CGPoint( x: linePos.x , y: linePos.y )
                 self.addChild(label)
                 labels.append(label)
             }
@@ -144,9 +144,9 @@ public class SKMultilineLabel: SKNode {
     func showBorder() {
         if (!shouldShowBorder && !shouldShowBackground) {return}
         if let rect = self.rect {
-            self.removeChildrenInArray([rect])
+            self.removeChildren(in: [rect])
         }
-        self.rect = SKShapeNode(rectOfSize: CGSize(width: labelWidth, height: labelHeight))
+        self.rect = SKShapeNode(rectOf: CGSize(width: labelWidth, height: labelHeight))
         if let rect = self.rect {
             if (shouldShowBackground) {
                 rect.fillColor = backgroundColor
@@ -157,7 +157,7 @@ public class SKMultilineLabel: SKNode {
             }
             rect.position = CGPoint(x: pos.x, y: pos.y - (CGFloat(labelHeight) / 2.0))
             
-            self.insertChild(rect, atIndex: 0)
+            self.insertChild(rect, at: 0)
             rect.zPosition = -1
         }
         

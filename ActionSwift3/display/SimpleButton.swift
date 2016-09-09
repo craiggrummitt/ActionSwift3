@@ -11,22 +11,22 @@ import UIKit
 SimpleButton's currentState is set to this.
 */
 public enum SimpleButtonState {
-    case Up
-    case Down
+    case up
+    case down
 }
 /**
 Display a button with two states. A state can be represented by a DisplayObject, or any subclass thereof, eg. MovieClip or Sprite.
 */
-public class SimpleButton: InteractiveObject {
+open class SimpleButton: InteractiveObject {
     
-    private var upState:DisplayObject
-    private var downState:DisplayObject
+    fileprivate var upState:DisplayObject
+    fileprivate var downState:DisplayObject
     
     public init(upState:DisplayObject,downState:DisplayObject) {
         //keeping non-optionals honest
         self.upState = upState
         self.downState = downState
-        self.currentState = .Up
+        self.currentState = .up
         self.enabled = true
         
         super.init()
@@ -34,55 +34,55 @@ public class SimpleButton: InteractiveObject {
         self.initProperties(upState, downState)
     }
     //required to ensure didSet gets called
-    private func initProperties(upState:DisplayObject, _ downState:DisplayObject) {
+    fileprivate func initProperties(_ upState:DisplayObject, _ downState:DisplayObject) {
         self.upState = upState
         self.downState = downState
-        self.currentState = .Up
+        self.currentState = .up
         self.enabled = true
     }
     /** The current state of the button. Unlike AS3, this state can be set manually. */
-    public var currentState:SimpleButtonState {
+    open var currentState:SimpleButtonState {
         didSet {
             switch currentState {
-            case .Up:
+            case .up:
                 self.node.removeAllChildren()
                 self.node.addChild(upState.node)
-            case .Down:
+            case .down:
                 self.node.removeAllChildren()
                 self.node.addChild(downState.node)
             }
             self.setUpEventListeners()
         }
     }
-    public var enabled:Bool {
+    open var enabled:Bool {
         didSet {
             setUpEventListeners()
         }
     }
-    private func setUpEventListeners() {
+    fileprivate func setUpEventListeners() {
         self.removeStateEventListeners()
         if (enabled) {
             switch currentState {
-            case .Up:
+            case .up:
                 upState.addEventListener(InteractiveEventType.TouchBegin.rawValue, EventHandler(touchEventHandler, "touchEventHandler"))
-            case .Down:
+            case .down:
                 upState.addEventListener(InteractiveEventType.TouchEnd.rawValue, EventHandler(touchEventHandler, "touchEventHandler"))
             }
         }
     }
-    private func removeStateEventListeners() {
+    fileprivate func removeStateEventListeners() {
         upState.removeEventListeners(InteractiveEventType.TouchBegin.rawValue)
         upState.removeEventListeners(InteractiveEventType.TouchEnd.rawValue)
     }
-    private func touchEventHandler(event:Event) -> Void {
+    fileprivate func touchEventHandler(_ event:Event) -> Void {
         if let touchEvent = event as? TouchEvent {
             if touchEvent.type == InteractiveEventType.TouchBegin.rawValue {
-                if (self.currentState == .Up) {
-                    self.currentState = .Down
+                if (self.currentState == .up) {
+                    self.currentState = .down
                 }
             } else if touchEvent.type == InteractiveEventType.TouchEnd.rawValue {
-                if (self.currentState == .Down) {
-                    self.currentState = .Up
+                if (self.currentState == .down) {
+                    self.currentState = .up
                 }
             }
         }

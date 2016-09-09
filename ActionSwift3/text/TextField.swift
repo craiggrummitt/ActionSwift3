@@ -11,11 +11,11 @@ import SpriteKit
 /** Set up your text field here. Beyond basic formatting (i.e. textColor), apply formatting using the `defaultTextFormat` property, passing in a TextFormat object. You also have background color, border color properties.
 */
 
-public class TextField: InteractiveObject {
+open class TextField: InteractiveObject {
     internal var textFieldNode = SKMultilineLabel(text: "", labelWidth: 100, pos: CGPoint(x: 0, y: 0))
-    public var _textFormat:TextFormat = TextFormat()
+    open var _textFormat:TextFormat = TextFormat()
     
-    private var isDirty:Boolean = false
+    fileprivate var isDirty:Boolean = false
 
     override public init() {
         super.init()
@@ -25,7 +25,7 @@ public class TextField: InteractiveObject {
         textFieldNode.position.y = Stage.size.height
        textFieldNode.owner = self
     }
-    public var defaultTextFormat:TextFormat {
+    open var defaultTextFormat:TextFormat {
         get {return _textFormat}
         set(newValue) {
             _textFormat = newValue
@@ -37,7 +37,7 @@ public class TextField: InteractiveObject {
             isDirty = true
         }
     }
-    public var textColor:UIColor {
+    open var textColor:UIColor {
         get {return textFieldNode.fontColor}
         set(newValue) {
             defaultTextFormat.color = newValue
@@ -45,14 +45,14 @@ public class TextField: InteractiveObject {
             isDirty = true
         }
     }
-    public var text:String {
+    open var text:String {
         get {return textFieldNode.text}
         set(newValue) {
             textFieldNode.text = newValue
             isDirty = true
         }
     }
-    public var background:Bool {
+    open var background:Bool {
         get {return textFieldNode.shouldShowBackground}
         set(newValue) {
             textFieldNode.shouldShowBackground = newValue
@@ -60,14 +60,14 @@ public class TextField: InteractiveObject {
         }
     }
     /** Background color - will only be active if `background` is set to true */
-    public var backgroundColor:UIColor {
+    open var backgroundColor:UIColor {
         get {return textFieldNode.backgroundColor}
         set(newValue) {
             textFieldNode.backgroundColor = newValue
             isDirty = true
         }
     }
-    public var border:Bool {
+    open var border:Bool {
         get {return textFieldNode.shouldShowBorder}
         set(newValue) {
             textFieldNode.shouldShowBorder = newValue
@@ -75,14 +75,14 @@ public class TextField: InteractiveObject {
         }
     }
     /** Border color - will only be active if `background` is set to true */
-    public var borderColor:UIColor {
+    open var borderColor:UIColor {
         get {return textFieldNode.borderColor}
         set(newValue) {
             textFieldNode.borderColor = newValue
             isDirty = true
         }
     }
-    override internal func update(currentTime:CFTimeInterval) {
+    override internal func update(_ currentTime:CFTimeInterval) {
         super.update(currentTime)
         if (isDirty) {
             print("Updating textField \(width), \(height)")
@@ -92,13 +92,13 @@ public class TextField: InteractiveObject {
         }
     }
 
-    public var length:Int {
+    open var length:Int {
         return text.characters.count
     }
-    override public var height:CGFloat {
+    override open var height:CGFloat {
         return textFieldNode.height
     }
-    override public var width:CGFloat {
+    override open var width:CGFloat {
         get {return textFieldNode.width}
         set(newValue) {
             textFieldNode.labelWidth = newValue

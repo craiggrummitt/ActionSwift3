@@ -8,18 +8,18 @@
 
 import UIKit
 
-public class InteractiveObject: DisplayObject {
+open class InteractiveObject: DisplayObject {
     override public init() {
         super.init()
         self.mouseEnabled = true
 
     }
-    public var mouseEnabled:Bool {
-        get {return self.node.userInteractionEnabled}
+    open var mouseEnabled:Bool {
+        get {return self.node.isUserInteractionEnabled}
         set(newValue) {
             self.enableUserInteraction(newValue)
         }
     }
-    internal func enableUserInteraction(enabled:Bool) {
+    internal func enableUserInteraction(_ enabled:Bool) {
     }
 }

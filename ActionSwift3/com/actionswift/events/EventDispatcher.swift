@@ -27,13 +27,13 @@ import UIKit
   @see Event
   @see starling.display.DisplayObject DisplayObject
 */
-public class EventDispatcher: Object {
-    private var mEventListeners = Dictionary<String, [EventHandler]>()
+open class EventDispatcher: Object {
+    fileprivate var mEventListeners = Dictionary<String, [EventHandler]>()
 
     /** Helper object. */
-    private static var sBubbleChains:[[EventDispatcher]] = []
+    fileprivate static var sBubbleChains:[[EventDispatcher]] = []
     /** Registers an event listener at a certain object. */
-    public func addEventListener(type:String,_ listener:EventHandler) {
+    open func addEventListener(_ type:String,_ listener:EventHandler) {
         if var listeners = mEventListeners[type] {
             listeners.push(listener)
             mEventListeners[type] = listeners
@@ -42,7 +42,7 @@ public class EventDispatcher: Object {
         }
     }
     /** Removes an event listener from the object. */
-    public func removeEventListener(type:String,_ listener:EventHandler) {
+    open func removeEventListener(_ type:String,_ listener:EventHandler) {
         if var listeners = mEventListeners[type] {
             mEventListeners[type] = nil
             let numListeners = listeners.length
@@ -57,7 +57,7 @@ public class EventDispatcher: Object {
     }
     /** Removes all event listeners with a certain type, or all of them if type is null.
     *  Be careful when removing all event listeners: you never know who else was listening. */
-    public func removeEventListeners(type:String?) {
+    open func removeEventListeners(_ type:String?) {
         if let type = type {
             mEventListeners[type] = nil
         } else {
@@ -68,7 +68,7 @@ public class EventDispatcher: Object {
     *  If an event with enabled 'bubble' property is dispatched to a display object, it will
     *  travel up along the line of parents, until it either hits the root object or someone
     *  stops its propagation manually. */
-    public func dispatchEvent(event:Event) {
+    open func dispatchEvent(_ event:Event) {
         let bubbles = event.bubbles
         if (!bubbles && (mEventListeners.count == 0 || (mEventListeners[event.type] == nil))) {
             return // no need to do anything
@@ -93,7 +93,7 @@ public class EventDispatcher: Object {
     *  Invokes an event on the current object. This method does not do any bubbling, nor
     *  does it back-up and restore the previous target on the event. The 'dispatchEvent'
     *  method uses this method internally. */
-    internal func invokeEvent(event:Event)->Bool {
+    internal func invokeEvent(_ event:Event)->Bool {
         if var listeners = mEventListeners[event.type] {
             let numListeners = listeners.length
             event.setCurrentTarget(self)
@@ -116,7 +116,7 @@ public class EventDispatcher: Object {
     }
     
     /** @private */
-    internal func bubbleEvent(event:Event) {
+    internal func bubbleEvent(_ event:Event) {
         // we determine the bubble chain before starting to invoke the listeners.
         // that way, changes done by the listeners won't affect the bubble chain.
         if let element = self as? DisplayObject {
@@ -152,7 +152,7 @@ public class EventDispatcher: Object {
         }
     }
     /** Returns if there are listeners registered for a certain event type. */
-    public func hasEventListener(type:String)->Bool {
+    open func hasEventListener(_ type:String)->Bool {
         if let listeners = mEventListeners[type] {
             return listeners.length != 0
         }

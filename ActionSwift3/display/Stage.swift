@@ -12,8 +12,8 @@ import UIKit
 /**
 Instantiate a Stage class passing in the skView.
 */
-public class Stage: DisplayObjectContainer {
-    private let skView:SKView
+open class Stage: DisplayObjectContainer {
+    fileprivate let skView:SKView
     static var size:CGSize = CGSize(width: 0, height: 0)
     
     public init(_ skView:SKView) {
@@ -25,8 +25,8 @@ public class Stage: DisplayObjectContainer {
         
         let stageScene = StageScene(size: Stage.size)
         stageScene.stageSceneDelegate = self
-        stageScene.scaleMode = SKSceneScaleMode.ResizeFill
-        stageScene.backgroundColor = UIColor.whiteColor()
+        stageScene.scaleMode = SKSceneScaleMode.resizeFill
+        stageScene.backgroundColor = UIColor.white
         
         skView.presentScene(stageScene)
         
@@ -34,13 +34,13 @@ public class Stage: DisplayObjectContainer {
         self.stage = self
         
     }
-    class public func getSize()->CGSize {
+    class open func getSize()->CGSize {
         return Stage.size
     }
-    class public var stageWidth:CGFloat {
+    class open var stageWidth:CGFloat {
         return self.getSize().width
     }
-    class public var stageHeight:CGFloat {
+    class open var stageHeight:CGFloat {
         return self.getSize().height
     }
 }
