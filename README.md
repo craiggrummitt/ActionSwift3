@@ -190,7 +190,10 @@ Ideas for enhancements:
 *   Resolved issue with rotation
 
 1.7 
-*   Updated for Swift 3
+*   Updated for Swift 2.3
+
+2.0
+*   Updated for Swift 3.0
 
 ***Credits***
 
