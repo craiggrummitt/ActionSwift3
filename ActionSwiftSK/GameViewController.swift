@@ -20,7 +20,6 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         //create stage
         let stage = Stage(self.view as! SKView)
-        
         //------------------------------------------------------------------------------------------------------------------
         //create a simple stop button
         

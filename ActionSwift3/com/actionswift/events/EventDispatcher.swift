@@ -93,7 +93,7 @@ open class EventDispatcher: Object {
     *  Invokes an event on the current object. This method does not do any bubbling, nor
     *  does it back-up and restore the previous target on the event. The 'dispatchEvent'
     *  method uses this method internally. */
-    internal func invokeEvent(_ event:Event)->Bool {
+    @discardableResult internal func invokeEvent(_ event:Event)->Bool {
         if var listeners = mEventListeners[event.type] {
             let numListeners = listeners.length
             event.setCurrentTarget(self)

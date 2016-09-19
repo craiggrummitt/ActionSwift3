@@ -44,7 +44,7 @@ class SKEase {
         }
         return currentFunction
     }
-    class func createPointTween(_ start:CGVector, end:CGVector, time:TimeInterval,easingFunction:AHEasingFunction, setterBlock setter:((SKNode,CGPoint)->Void))->SKAction {
+    class func createPointTween(_ start:CGVector, end:CGVector, time:TimeInterval,easingFunction:@escaping AHEasingFunction, setterBlock setter:@escaping ((SKNode,CGPoint)->Void))->SKAction {
         let action:SKAction = SKAction.customAction(withDuration: time, actionBlock: { (node:SKNode!, elapsedTime:CGFloat) -> Void in
             let timeEq = easingFunction(Float(elapsedTime)/Float(time))
             let xValue:CGFloat = start.dx + CGFloat(timeEq) * (end.dx - start.dx)
@@ -53,7 +53,7 @@ class SKEase {
         })
         return action
     }
-    class func createFloatTween(_ start:CGFloat, end:CGFloat, time:TimeInterval,easingFunction:AHEasingFunction, setterBlock setter:((SKNode,CGFloat)->Void))->SKAction {
+    class func createFloatTween(_ start:CGFloat, end:CGFloat, time:TimeInterval,easingFunction:@escaping AHEasingFunction, setterBlock setter:@escaping ((SKNode,CGFloat)->Void))->SKAction {
         let action:SKAction = SKAction.customAction(withDuration: time, actionBlock: { (node:SKNode!, elapsedTime:CGFloat) -> Void in
             let timeEq = easingFunction(Float(elapsedTime)/Float(time))
             let value:CGFloat = start+CGFloat(timeEq) * (end-start)
