@@ -160,8 +160,8 @@ open class MovieClip: Sprite {
     }
     
     override open var rotation:CGFloat {
-        get {return -spriteNode.zRotation * 180 / CGFloat(M_PI)}
-        set(newValue) {spriteNode.zRotation = -newValue * CGFloat(M_PI) / 180}
+        get {return -spriteNode.zRotation * 180 / CGFloat.pi}
+        set(newValue) {spriteNode.zRotation = -newValue * CGFloat.pi / 180}
     }
     override internal func enableUserInteraction(_ enabled:Bool) {
         //self.spriteNode.userInteractionEnabled = enabled

@@ -44,8 +44,8 @@ open class DisplayObject: EventDispatcher, StageSceneProtocol {
      Indicates the rotation of the DisplayObject instance, in degrees, from its original orientation. Values from 0 to 180 represent clockwise rotation; values from 0 to -180 represent counterclockwise rotation. Values outside this range are added to or subtracted from 360 to obtain a value within the range. For example, the statement my_video.rotation = 450 is the same as my_video.rotation = 90.
      **/
     open var rotation:CGFloat {
-        get {return -node.zRotation * 180 / CGFloat(M_PI)}
-        set(newValue) {node.zRotation = -newValue * CGFloat(M_PI) / 180}
+        get {return -node.zRotation * 180 / CGFloat.pi}
+        set(newValue) {node.zRotation = -newValue * CGFloat.pi / 180}
     }
     /**
      Indicates the horizontal scale (percentage) of the object as applied from the registration point. The default registration point is (0,0). 1.0 equals 100% scale.

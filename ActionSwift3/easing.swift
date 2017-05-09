@@ -17,8 +17,8 @@
 
 import UIKit
 
-let M_PI_2_f = Float(M_PI_2)
-let M_PI_f = Float(M_PI)
+let M_PI_2_f = Float.pi / 2
+let M_PI_f = Float.pi
 
 typealias AHEasingFunction = (Float)->Float
 
