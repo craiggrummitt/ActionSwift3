@@ -194,6 +194,9 @@ Ideas for enhancements:
 
 2.0
 *   Updated for Swift 3.0
+2.1
+*   Updated for Swift 4.0
+
 
 ***Credits***
 

@@ -68,7 +68,7 @@ open class Event: Object {
         mStopsPropagation = true
     }
     override open func toString()->String {
-       return "\(String(describing:type(of:self))) type=\(mType) bubbles=\(mBubbles)"
+       return "\(String(describing:Swift.type(of:self))) type=\(mType) bubbles=\(mBubbles)"
     }
     /** @private */
     internal func setTarget(_ target:EventDispatcher){
