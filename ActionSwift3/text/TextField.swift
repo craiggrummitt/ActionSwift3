@@ -93,7 +93,7 @@ open class TextField: InteractiveObject {
     }
 
     open var length:Int {
-        return text.characters.count
+        return text.count
     }
     override open var height:CGFloat {
         return textFieldNode.height

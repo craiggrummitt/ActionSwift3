@@ -29,9 +29,7 @@ Underneath the hood ActionSwift3 is based on the SpriteKit Framework but ActionS
 
 Easing classes are also included for convenience from [here](https://github.com/craiggrummitt/SpriteKitEasingSwift).
 
-API documentation can be found at [cocoadocs](http://cocoadocs.org/docsets/ActionSwift3/)
-
-You can find a tutorial - **Swift API for the Flash Guy** - [here](https://craiggrummitt.wordpress.com/2015/08/11/swift-api-for-the-flash-guy/).
+You can find a tutorial - **Swift API for the Flash Guy** - [here](https://craiggrummitt.com/2015/08/11/swift-api-for-the-flash-guy/).
 
 ![SwiftAPIfortheFlashGuySmall.png](SwiftAPIfortheFlashGuySmall.png)
 
@@ -164,39 +162,6 @@ Ideas for enhancements:
 *   Date
 *   XML
 *   Add more complex shapes on Graphics
-
-**Updates**
-
-1.1
-*   Added int and Boolean data types
-
-1.2
-*   Added TextField
-*   Resolved issue with stage updates not propogating
-*   Added license
-
-1.3
-*   Added SimpleButton
-*   Added UIColor extension for hexidecimal support
-
-1.4
-*   Added Sound, SoundChannel
-
-1.5
-*	Updated for Swift 2
-
-1.6
-*   Resolved issue with labels not registering taps
-*   Resolved issue with rotation
-
-1.7 
-*   Updated for Swift 2.3
-
-2.0
-*   Updated for Swift 3.0
-2.1
-*   Updated for Swift 4.0
-
 
 ***Credits***
 

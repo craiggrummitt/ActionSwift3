@@ -19,7 +19,7 @@ Use format eg. "#FFFFFF"
     convenience public init(hex: String) {
         var hex = hex
         var alpha: Float = 100
-        let hexLength = hex.characters.count
+        let hexLength = hex.count
         if !(hexLength == 7 || hexLength == 9) {
             // A hex must be either 7 or 9 characters (#GGRRBBAA)
             print("improper call to 'colorFromHex', hex length must be 7 or 9 chars (#GGRRBBAA). You've called \(hex)")

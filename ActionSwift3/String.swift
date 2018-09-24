@@ -13,7 +13,7 @@ Add subscripts to String
 extension String {
     
     subscript (i: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: i)]   //advance(self.startIndex, i)
+        return self[self.index(self.startIndex, offsetBy: i)]   //advance(self.startIndex, i)
     }
     
     subscript (i: Int) -> String {
@@ -23,8 +23,8 @@ extension String {
     subscript (r: Range<Int>) -> String {
         get {
             
-            let startIndex = self.characters.index(self.startIndex, offsetBy: r.lowerBound)
-            let endIndex = self.characters.index(self.startIndex, offsetBy: r.upperBound - r.lowerBound)
+            let startIndex = self.index(self.startIndex, offsetBy: r.lowerBound)
+            let endIndex = self.index(self.startIndex, offsetBy: r.upperBound - r.lowerBound)
             
             return String(self[startIndex..<endIndex])
         }
@@ -32,8 +32,8 @@ extension String {
     subscript (r: CountableClosedRange<Int>) -> String {
         get {
             
-            let startIndex = self.characters.index(self.startIndex, offsetBy: r.lowerBound)
-            let endIndex = self.characters.index(self.startIndex, offsetBy: r.upperBound - r.lowerBound)
+            let startIndex = self.index(self.startIndex, offsetBy: r.lowerBound)
+            let endIndex = self.index(self.startIndex, offsetBy: r.upperBound - r.lowerBound)
             
             return String(self[startIndex..<endIndex])
         }
@@ -45,7 +45,7 @@ extension String {
         return (self as NSString).floatValue
     }
     func length()->Int {
-        return self.characters.count
+        return self.count
     }
     func getFirstWord()->String {
         return self.components(separatedBy: " ")[0]

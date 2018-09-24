@@ -8,9 +8,6 @@
 
 import UIKit
 
-public func ==(lhs: DisplayObject, rhs: DisplayObject) -> Bool {
-    return lhs == rhs
-}
 public func trace(_ parms:String ...) {
     print(parms)
 }
