@@ -121,7 +121,7 @@ open class MovieClip: Sprite {
     /** Get the current number of the frame. */
     open var currentFrame:Int {
         if let texture = spriteNode.texture {
-            return textures.index(of: texture)!
+            return textures.firstIndex(of: texture)!
         } else {
             return -1
         }

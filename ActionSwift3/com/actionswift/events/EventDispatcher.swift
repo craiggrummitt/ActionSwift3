@@ -43,7 +43,7 @@ open class EventDispatcher: Object {
     }
     /** Removes an event listener from the object. */
     open func removeEventListener(_ type:String,_ listener:EventHandler) {
-        if var listeners = mEventListeners[type] {
+        if let listeners = mEventListeners[type] {
             mEventListeners[type] = nil
             let numListeners = listeners.length
             var remainingListeners:[EventHandler] = []
@@ -94,7 +94,7 @@ open class EventDispatcher: Object {
     *  does it back-up and restore the previous target on the event. The 'dispatchEvent'
     *  method uses this method internally. */
     @discardableResult internal func invokeEvent(_ event:Event)->Bool {
-        if var listeners = mEventListeners[event.type] {
+        if let listeners = mEventListeners[event.type] {
             let numListeners = listeners.length
             event.setCurrentTarget(self)
             
